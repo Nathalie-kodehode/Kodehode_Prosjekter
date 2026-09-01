@@ -22,14 +22,32 @@ border-radius: 50px;}
 
 h4 {color:white;text-align:center;text-decoration: none; font-family:Georgia, 'Times New Roman', Times, serif;}
 
+h5 {color:white;text-align:center;text-decoration: none; font-family:Georgia, 'Times New Roman', Times, serif;}
 
+button:hover
+{background-color: rgb(255, 200, 3);
+    color: rgb(49, 45, 0);
+}
 
 .fire {background-color:rgb(249, 77, 47); 
     color:white;
-    cursor:pointer}
+    cursor:pointer;
+    width: 150px;
+    height: 40px;
+position:relative;
+left:30%;}
+
 .grass{background-color:rgb(74, 165, 29); 
     color:white;
-    cursor:pointer}
+    cursor:pointer;
+     width: 150px;
+    height: 40px;
+position:relative;
+left:37%}
 .water{background-color:rgb(78, 159, 240); 
     color:white;
-    cursor:pointer}
+    cursor:pointer;
+     width: 150px;
+    height: 40px;
+position: relative;
+left:44%}
