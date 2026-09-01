@@ -1,0 +1,16 @@
+/*
+selector {
+property:value;
+property:value;
+property:value;
+}
+*/
+
+* {margin:10px;
+    padding: 2px}
+
+    h1 {color:brown}
+
+.fire {background-color:rgb(249, 77, 47); color:white}
+.grass{background-color:rgb(74, 165, 29); color:white}
+.water{background-color:rgb(78, 159, 240); color:white}
