@@ -9,8 +9,27 @@ property:value;
 * {margin:10px;
     padding: 2px}
 
-    h1 {color:brown}
+h1 {color:white; text-align:center;text-decoration: underline; font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
-.fire {background-color:rgb(249, 77, 47); color:white}
-.grass{background-color:rgb(74, 165, 29); color:white}
-.water{background-color:rgb(78, 159, 240); color:white}
+h2 {color:white; font-family: Georgia, 'Times New Roman', Times, serif;}
+
+h3 {color:white;text-align:left;text-decoration: underline; font-family:Georgia, 'Times New Roman', Times, serif;}
+
+main {background-color: rgb(6, 7, 7);
+margin:30px;
+border-radius: 50px;}
+
+h4 {color:white;text-align:center;text-decoration: none; font-family:Georgia, 'Times New Roman', Times, serif;}
+
+
+
+.fire {background-color:rgb(249, 77, 47); 
+    color:white;
+    cursor:pointer}
+.grass{background-color:rgb(74, 165, 29); 
+    color:white;
+    cursor:pointer}
+.water{background-color:rgb(78, 159, 240); 
+    color:white;
+    cursor:pointer}
