@@ -51,6 +51,7 @@ h4 {
 /* Choose Below */
 h5 {
   color: white;
+  font-size: 30px;
   text-align: center;
   text-decoration: none;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -58,12 +59,17 @@ h5 {
 
 main {
   background-color: rgb(6, 7, 7);
+  opacity: 100%;
   margin: 30px;
   border-radius: 50px;
 }
 
 /* Info table */
 section {
+    color:rgb(255, 255, 255);
+    column-rule-color: beige;
+    background-color: black;
+ font-style:italic;
   border: 50px;
   margin: 10px;
 }
@@ -72,6 +78,7 @@ button:hover {
   background-color: rgb(255, 200, 3);
   color: rgb(49, 45, 0);
 }
+
 
 /* Charmander */
 .fire {
