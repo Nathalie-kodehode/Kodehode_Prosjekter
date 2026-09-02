@@ -6,48 +6,93 @@ property:value;
 }
 */
 
-* {margin:10px;
-    padding: 2px}
-
-h1 {color:white; text-align:center;text-decoration: underline; font-family: Georgia, 'Times New Roman', Times, serif;
+* {
+  margin: 10px;
+  padding: 2px;
 }
 
-h2 {color:white; font-family: Georgia, 'Times New Roman', Times, serif;}
-
-h3 {color:white;text-align:left;text-decoration: underline; font-family:Georgia, 'Times New Roman', Times, serif;}
-
-main {background-color: rgb(6, 7, 7);
-margin:30px;
-border-radius: 50px;}
-
-h4 {color:white;text-align:center;text-decoration: none; font-family:Georgia, 'Times New Roman', Times, serif;}
-
-h5 {color:white;text-align:center;text-decoration: none; font-family:Georgia, 'Times New Roman', Times, serif;}
-
-button:hover
-{background-color: rgb(255, 200, 3);
-    color: rgb(49, 45, 0);
+body {
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
 }
 
-.fire {background-color:rgb(249, 77, 47); 
-    color:white;
-    cursor:pointer;
-    width: 150px;
-    height: 40px;
-position:relative;
-left:30%;}
+/* Title */
+h1 {
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
 
-.grass{background-color:rgb(74, 165, 29); 
-    color:white;
-    cursor:pointer;
-     width: 150px;
-    height: 40px;
-position:relative;
-left:37%}
-.water{background-color:rgb(78, 159, 240); 
-    color:white;
-    cursor:pointer;
-     width: 150px;
-    height: 40px;
-position: relative;
-left:44%}
+/* Subtitle */
+h2 {
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* Name of Pokemon */
+h3 {
+  color: white;
+  text-align: left;
+  text-decoration: underline;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* Tabletext */
+h4 {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* Choose Below */
+h5 {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+main {
+  background-color: rgb(6, 7, 7);
+  margin: 30px;
+  border-radius: 50px;
+}
+
+button:hover {
+  background-color: rgb(255, 200, 3);
+  color: rgb(49, 45, 0);
+}
+
+.fire {
+  background-color: rgb(249, 77, 47);
+  color: white;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  position: relative;
+  left: 30%;
+}
+
+.grass {
+  background-color: rgb(74, 165, 29);
+  color: white;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  position: relative;
+  left: 37%;
+}
+
+.water {
+  background-color: rgb(78, 159, 240);
+  color: white;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  position: relative;
+  left: 44%;
+}
