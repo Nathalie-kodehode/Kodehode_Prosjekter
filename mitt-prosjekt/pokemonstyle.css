@@ -62,11 +62,18 @@ main {
   border-radius: 50px;
 }
 
+/* Info table */
+section {
+  border: 50px;
+  margin: 10px;
+}
+
 button:hover {
   background-color: rgb(255, 200, 3);
   color: rgb(49, 45, 0);
 }
 
+/* Charmander */
 .fire {
   background-color: rgb(249, 77, 47);
   color: white;
@@ -77,6 +84,7 @@ button:hover {
   left: 30%;
 }
 
+/* Bulbasaur */
 .grass {
   background-color: rgb(74, 165, 29);
   color: white;
@@ -87,6 +95,7 @@ button:hover {
   left: 37%;
 }
 
+/* Squirtle */
 .water {
   background-color: rgb(78, 159, 240);
   color: white;
