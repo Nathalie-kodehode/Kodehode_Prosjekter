@@ -69,7 +69,7 @@ section {
     color:rgb(255, 255, 255);
     column-rule-color: beige;
     background-color: black;
- font-style:italic;
+ font-style:none;
   border: 50px;
   margin: 10px;
 }
