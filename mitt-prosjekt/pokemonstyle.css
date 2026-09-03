@@ -25,6 +25,7 @@ body {
 /* Title */
 h1 {
   color: white;
+  font-size: 40px;
   text-align: center;
   text-decoration: underline;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -33,6 +34,7 @@ h1 {
 /* Subtitle */
 h2 {
   color: white;
+  font-size: 30px;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
@@ -40,10 +42,10 @@ h2 {
 h3 {
   color: white;
    background-color: black;
-  padding: 35px;
+  padding: 20px;
   opacity: 100%;
   border-radius: 45px;
-  margin: 10px;
+  margin: 0px;
   font-size: 25px;
   text-align: left;
   text-decoration: underline;
@@ -53,6 +55,7 @@ h3 {
 /* Tabletext */
 h4 {
   color: white;
+  padding: 5px;
   font-size: 20px;
   text-align: left;
   text-decoration: underline;
@@ -81,7 +84,7 @@ p {
 /* Borders */
 main {
   background-color: black;
-  padding: 35px;
+  padding:15px;
   opacity: 100%;
   margin: 30px;
   border-radius: 50px;
@@ -91,7 +94,7 @@ main {
 section {
   color: rgb(255, 255, 255);
   padding: 15px;
-  border-radius: 45px;
+  border-radius: 50px;
   column-rule-color: beige;
   background-color: black;
   font-style: none;
