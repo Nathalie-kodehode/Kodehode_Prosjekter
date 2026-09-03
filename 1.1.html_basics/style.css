@@ -64,6 +64,8 @@ article {
     display: inline-block
 }
 
+#welcome {color: blue;}
+
 .green {
 background-color: rgb(27, 193, 152);
 }
