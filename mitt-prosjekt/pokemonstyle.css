@@ -11,6 +11,7 @@ property:value;
   padding: 2px;
 }
 
+/* Background */
 body {
   background-image: url("images/background.jpg");
   background-size: cover;
@@ -35,6 +36,12 @@ h2 {
 /* Name of Pokemon */
 h3 {
   color: white;
+   background-color: black;
+  padding: 25px;
+  opacity: 100%;
+  border-radius: 45px;
+  margin: 10px;
+  font-size: 25px;
   text-align: left;
   text-decoration: underline;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -43,8 +50,9 @@ h3 {
 /* Tabletext */
 h4 {
   color: white;
-  text-align: center;
-  text-decoration: none;
+  font-size: 20px;
+  text-align: left;
+  text-decoration: underline;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
@@ -57,8 +65,21 @@ h5 {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+/* Paragraph */
+p {
+  font-size: 18px;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* Images */
+img
+
+
+/* Borders */
 main {
-  background-color: rgb(6, 7, 7);
+  background-color: black;
+  padding: 25px;
   opacity: 100%;
   margin: 30px;
   border-radius: 50px;
@@ -66,19 +87,21 @@ main {
 
 /* Info table */
 section {
-    color:rgb(255, 255, 255);
-    column-rule-color: beige;
-    background-color: black;
- font-style:none;
+  color: rgb(255, 255, 255);
+  padding: 15px;
+  border-radius: 45px;
+  column-rule-color: beige;
+  background-color: black;
+  font-style: none;
   border: 50px;
-  margin: 10px;
+  margin: 20px;
 }
 
+/* Button */
 button:hover {
   background-color: rgb(255, 200, 3);
   color: rgb(49, 45, 0);
 }
-
 
 /* Charmander */
 .fire {
