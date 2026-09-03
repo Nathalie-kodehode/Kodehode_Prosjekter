@@ -78,8 +78,13 @@ p {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-/* ID Selector */
-
+/* ID for Dotted Line */
+#Nextline {
+  border-top: 5px red dotted;
+  border-bottom: 5px white dotted;
+  text-decoration:none;
+  
+}
 
 /* Borders */
 main {
