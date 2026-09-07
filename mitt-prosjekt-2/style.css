@@ -34,7 +34,7 @@ nav ul li {
   line-height: 35px;
   border-radius: 10px;
   border: 1px solid darkgrey;
-  margin: 5px;
+  margin: 10px;
 }
 
 nav ul li:hover {
@@ -65,3 +65,43 @@ nav a:focus {
   outline: 3px solid black;
 }
 
+
+/* Main Content */
+main {
+    background-color: chocolate;
+    width: 90%;
+    margin: 30px auto;
+    padding: 30px 0;
+}
+
+section {
+    background-color: gainsboro;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+   /* text-align: center; */
+}
+
+
+/* Ordered List */
+#ordered-list {
+list-style-position: inside;
+border: 3px solid green;
+}
+
+ol li {
+    list-style: upper-roman;
+}
+
+/* Unordered List */
+#unordered-list {
+list-style-position: inside;
+border: 3px solid blue;
+
+/* UL Images */
+#tomato {
+    list-style-image: url ("./images/tomato.svg");
+}
+
+}
