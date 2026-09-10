@@ -29,9 +29,27 @@ a {
 .container {
   max-width: 1100px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
-/* Come back to this for sections, container, heading */
+section {
+  padding: 50px 0;
+}
+
+img {
+  width: 100%;
+}
+
+.small-heading {
+  color: #2563eb;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
 
 /* Header */
 
@@ -40,10 +58,6 @@ header {
   padding: 20px 50px;
   border: 1px solid black;
   border-bottom: 1px solid #cdcdcd;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
 }
 
 .logo {
@@ -60,4 +74,114 @@ header {
 
 .nav-container li a {
   color: #333;
+}
+
+/* Hero */
+
+#hero {
+  background-color: #eaf2ff;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero-image {
+  width: 50%;
+  border-radius: 16px;
+}
+
+.hero-text {
+  width: 50%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.hero-text h2 {
+  font-size: 48px;
+}
+
+.hero-text h3 {
+  margin-bottom: 0px;
+}
+
+.hero-text p {
+  margin-bottom: 20px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* Buttons */
+
+.button {
+  padding: 12px 18px;
+  border-radius: 8px;
+}
+
+.button:hover {
+  background-color: mediumaquamarine;
+  border-color: green;
+  color: white;
+}
+
+.blue-button {
+  background-color: #2563eb;
+  color: white;
+  border: solid 2px #2563eb;
+}
+
+.white-button {
+  background-color: white;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+}
+
+/* Products Section */
+
+.product-row {
+  display: flex;
+  gap: 20px;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow: hidden;
+}
+
+.product-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.product-bottom {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.product-image {
+  height: 220px;
+  object-fit: cover;
 }
