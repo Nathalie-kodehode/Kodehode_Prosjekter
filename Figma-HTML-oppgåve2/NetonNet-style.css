@@ -5,3 +5,46 @@
   box-sizing: border-box;
 }
 
+/* Global Styling */
+
+.h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 30px;
+}
+
+.h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  color: black;
+}
+
+.h3 {
+   font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+/* Header */
+
+.header {
+ background: #005582;
+  display: flex;
+}
+
+.header-left {
+display: flex;
+margin: 10px;
+gap: 15px;
+  justify-content: start ;
+}
+
+.header-right {
+  margin: 10px;
+align-self: flex-end;
+}
+
+.h4-header {
+  color: white;
+font-family: arial;
+}
