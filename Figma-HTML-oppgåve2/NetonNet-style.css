@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Global Styling */
+/* Font Styling */
 
 .h1 {
   font-family: Arial, Helvetica, sans-serif;
@@ -19,32 +19,61 @@
   color: black;
 }
 
-.h3 {
+.h2-red {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  color: #CC2C2C;
+}
+
+.h3-black {
    font-family: Arial, Helvetica, sans-serif;
+   color: black;
+   font-weight: lighter;
 
 }
 
-
-/* Header */
-
-.header {
- background: #005582;
-  display: flex;
+.h3-gray {
+  font-family: Arial, Helvetica, sans-serif;
+  color:#A0A0A0;
+  font-weight: lighter;
 }
 
-.header-left {
-display: flex;
-margin: 10px;
-gap: 15px;
-  justify-content: start ;
-}
-
-.header-right {
-  margin: 10px;
-align-self: flex-end;
+.h4-blue {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #0295D5;
 }
 
 .h4-header {
   color: white;
 font-family: arial;
+font-weight: lighter;
 }
+
+
+/* HEADER */
+
+.header {
+ background: #005582;
+  display: flex;
+  justify-content: center;
+  gap: 1100px;
+}
+
+.header-left {
+display: flex;
+margin: 10px;
+margin-top: 20px;
+gap: 15px;
+  justify-content: start;
+}
+
+.header-right {
+  display: flex;
+  margin: 10px;
+  margin-top: 20px;
+
+}
+
+/* MAIN */
+
