@@ -77,7 +77,12 @@ gap: 15px;
 
 /* MAIN */
 
+
+
 /* Logo */
+.logo {
+  padding: 15px;
+}
 
 /* Searchbar */
 
