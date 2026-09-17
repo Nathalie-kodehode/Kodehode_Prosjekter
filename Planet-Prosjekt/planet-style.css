@@ -1,3 +1,10 @@
+/* CSS Variables */
+:root {
+    --primary-color: #8086b4;
+    --secondary-color: #212b51;
+    --background-color: #000000;
+}
+
 /* CSS Reset */
 * {
     margin: 0;
@@ -5,10 +12,22 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Global Styling */
 
+.container {
+    background-color: var(--primary-color);
+    display: flex ;
+       width: auto;
+    padding: 20px;
+    margin: 0 auto;
+}
+
 .header-container {
-       background-color: rgb(33, 43, 81);
+       background-color: var(--secondary-color);
     color: white;
     display: flex;
     padding: 10px;
@@ -16,18 +35,23 @@
 
 
 .box {
-    background-color: rgb(33, 43, 81);
+    background-color: var(--secondary-color);
     color: white;
     display: flex;
     padding: 10px;
     height: 50px;
+       display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   text-decoration: underline
 }
 
 .hero-box {
     background-image: url(https://images.unsplash.com/photo-1706211306706-8f36d91c8379?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-size: 100% 100%;
 background-position: center;
-min-width: 1920px;
+width: auto;
 min-height: 1020px;
   height: 1020px;
      display: flex;
@@ -35,6 +59,7 @@ min-height: 1020px;
     justify-content: center;
      row-gap: 600px;
 }
+
 
 h1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -65,7 +90,8 @@ p {
 
 /* Header */
 .header-container {
-gap: 90px;
+gap: 1000px;
+width: auto;
 }
 
 
@@ -92,4 +118,15 @@ align-items: start;
     align-items: end;
     padding-left: 50px;
     list-style:georgian;
+}
+
+.facts {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 50px;
+}
+
+.facts-1 {
+    background-color:var(--primary-color);
 }
