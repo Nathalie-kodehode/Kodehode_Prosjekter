@@ -29,13 +29,13 @@
 h1 {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--whitetext-color);
-  font-size: 60px;
+  font-size: 70px;
 }
 
 .h1-sus {
    font-family: Arial, Helvetica, sans-serif;
   color: var(--whitetext-color);
-  font-size: 90px;
+  font-size: 120px;
 }
 
 h2 {
@@ -160,9 +160,9 @@ gap: 15px;
   justify-content: start;
   align-items: center;
   background-color: var(--whitetext-color);
-  width: 400px;
+  width: 900px;
   height: 35px;
-  border-radius: 15px;
+  border-radius: 8px;
   flex-direction: row;
   gap: 5px
 }
@@ -172,6 +172,7 @@ gap: 15px;
   margin-left: 10px;
   flex-direction: row;
   justify-self: start;
+  align-items: center;
 }
 
 /* CATEGORIES */
@@ -188,14 +189,27 @@ gap: 15px;
 
 .hero {
   background-image: image-set(url(NetonNet-images/hero-image.png));
-  margin-left: 400px;
-  margin-bottom: 0;
+    background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+   width: 1800px;
+  height: 800px;
+  margin: 30px;
+  margin-top: 10px;
   display: flex;
   align-items: center;
-  background-position: center;
-  background-size: contain;
-  width: 1800px;
-  height: 800px;
-  background-repeat: no-repeat;
-
+  justify-content: center;
+  justify-self: center;
 }
+
+.hero-text {
+display: flex;
+flex-direction: column;
+justify-self: start;
+align-items: center;
+margin-right: 1000px;
+gap: 15px;
+}
+
+/* CATEGORIES */
+
