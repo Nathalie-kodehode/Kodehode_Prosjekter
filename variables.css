@@ -1,0 +1,57 @@
+/* CSS Variables */
+:root {
+   
+   /* Colours */
+    --primary-color: #2563eb;
+    --fire-mode: #FF0000;
+    --background-color: #ffc0cb:
+
+    /* Spacing */
+
+--small-space: 1rem;
+--medium-space: 1.5rem;
+--large-space: 2rem;
+
+/* Font-Size */
+
+--small-font: 1rem;
+--medium-font: 1.5rem;
+--large-font: 2rem;
+
+/* Border-Radius */
+--border-radius: 8px;
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.primary-color {
+    color: var(--primary-color)
+}
+
+.fire-mode {
+    color: var(--fire-mode);
+}
+
+h1 {
+    color: var(#2563eb)
+}
+
+h2 {
+    color: var(--fire-mode)
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var()
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
