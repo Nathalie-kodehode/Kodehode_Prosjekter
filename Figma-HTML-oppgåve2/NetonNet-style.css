@@ -3,18 +3,17 @@
 :root {
   /* Main Colours */
   --primary-color: #005582;
-  --secondary-color: #0295D5;
-  --tertiary-color: #F7F7F7;
+  --secondary-color: #0295d5;
+  --tertiary-color: #f7f7f7;
 
   /* Font Colours */
   --whitetext-color: #ffffff;
-  --graytext-color: #A0A0A0;
+  --graytext-color: #a0a0a0;
   --blacktext-color: #000000;
 
   /* Other Colours */
-  --price-color:#CC2C2C;
-  --button-color: #027AB3;
-
+  --price-color: #cc2c2c;
+  --button-color: #027ab3;
 }
 
 /* CSS Reset */
@@ -33,7 +32,7 @@ h1 {
 }
 
 .h1-sus {
-   font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: var(--whitetext-color);
   font-size: 120px;
 }
@@ -51,16 +50,15 @@ h2 {
 }
 
 .h3-black {
-   font-family: Arial, Helvetica, sans-serif;
-   color: var(--blacktext-color);
-   font-weight: lighter;
-
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--blacktext-color);
+  font-weight: lighter;
 }
 
 .h4-black {
-   font-family: Arial, Helvetica, sans-serif;
-   color: var(--blacktext-color);
-   font-weight: lighter;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--blacktext-color);
+  font-weight: lighter;
 }
 
 .h4-gray {
@@ -70,8 +68,8 @@ h2 {
 }
 
 .h4-white {
-   font-family: Arial, Helvetica, sans-serif;
-  color:var(--whitetext-color);
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--whitetext-color);
   font-weight: lighter;
 }
 
@@ -83,25 +81,24 @@ h2 {
 
 .h4-header {
   color: var(--whitetext-color);
-font-family: arial;
-font-weight: lighter;
+  font-family: arial;
+  font-weight: lighter;
 }
-
 
 /* HEADER */
 
 .header {
- background: var(--primary-color);
+  background: var(--primary-color);
   display: flex;
   justify-content: center;
   gap: 1100px;
 }
 
 .header-left {
-display: flex;
-margin: 10px;
-margin-top: 10px;
-gap: 15px;
+  display: flex;
+  margin: 10px;
+  margin-top: 10px;
+  gap: 15px;
   justify-content: start;
   align-items: center;
 }
@@ -111,7 +108,6 @@ gap: 15px;
   margin: 10px;
   margin-top: 10px;
   align-items: center;
-
 }
 
 /* MAIN 1 - LOGO, PROFIL & HANDLEVOGN */
@@ -138,17 +134,17 @@ gap: 15px;
 }
 
 .profil {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
 
 .handlevogn {
-    display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-   gap: 10px;
+  gap: 10px;
 }
 
 /* MAIN 2 - MENY & SØKEFELT */
@@ -166,7 +162,7 @@ gap: 15px;
 .menu {
   display: flex;
   flex-direction: row;
-    justify-content: start;
+  justify-content: start;
   align-items: center;
   gap: 15px;
 }
@@ -180,7 +176,7 @@ gap: 15px;
   height: 45px;
   border-radius: 8px;
   flex-direction: row;
-  gap: 5px
+  gap: 5px;
 }
 
 .search-img {
@@ -206,7 +202,7 @@ gap: 15px;
 
 .cat-boxes {
   display: flex;
-flex-direction: row;
+  flex-direction: row;
   justify-self: center;
   align-self: center;
   gap: 130px;
@@ -221,69 +217,69 @@ flex-direction: row;
 }
 
 .cat-data {
- display: flex;
+  display: flex;
   flex-direction: column;
   justify-self: center;
   align-items: center;
-    gap: 10px;
+  gap: 10px;
 }
 
 .cat-game {
- display: flex;
+  display: flex;
   flex-direction: column;
   justify-self: center;
   align-items: center;
-    gap: 10px;
+  gap: 10px;
 }
 
 .cat-hjem {
- display: flex;
+  display: flex;
   flex-direction: column;
   justify-self: center;
   align-items: center;
-    gap: 10px;
+  gap: 10px;
 }
 
 .cat-tv {
- display: flex;
+  display: flex;
   flex-direction: column;
   justify-self: center;
   align-items: center;
-    gap: 10px;
+  gap: 10px;
 }
 
 .cat-lyd {
- display: flex;
+  display: flex;
   flex-direction: column;
   justify-self: center;
   align-items: center;
-    gap: 10px;
+  gap: 10px;
 }
 
 .cat-phone {
- display: flex;
+  display: flex;
   flex-direction: column;
   justify-self: center;
   align-items: center;
-    gap: 10px;
+  gap: 10px;
 }
 
 .cat-dryer {
- display: flex;
+  display: flex;
   flex-direction: column;
   justify-self: center;
   align-items: center;
-    gap: 10px;
+  gap: 10px;
 }
 
 /* HERO IMAGE */
 
 .hero {
   background-image: image-set(url(NetonNet-images/hero-image.png));
-    background-position: center;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-   width: 1800px;
+  width: 1800px;
   height: 800px;
   display: flex;
   align-items: center;
@@ -292,11 +288,37 @@ flex-direction: row;
 }
 
 .hero-text {
-display: flex;
-flex-direction: column;
-justify-self: start;
-align-items: center;
-margin-right: 1000px;
-gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-self: start;
+  align-items: center;
+  margin-right: 1000px;
+  gap: 15px;
 }
 
+/* IMAGE MENU */
+
+.image-menu {
+  display: flex;
+  margin-top: 20px;
+  height: 30px;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.img-blue {
+  width: 100px;
+  border-radius: 15px;
+  height: 10px;
+  display: flex;
+  background-color: var(--button-color);
+}
+
+.img-gray {
+  width: 100px;
+  border-radius: 15px;
+  height: 10px;
+  display: flex;
+  background-color: var(--graytext-color);
+}
