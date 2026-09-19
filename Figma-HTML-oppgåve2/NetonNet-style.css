@@ -213,3 +213,27 @@ gap: 15px;
 
 /* CATEGORIES */
 
+.categories {
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.cat-boxes {
+  display: flex;
+flex-direction: row;
+  justify-self: center;
+  align-self: center;
+  gap: 100px;
+}
+
+.cat-pc {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
