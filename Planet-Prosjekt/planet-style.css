@@ -44,7 +44,7 @@ html {
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   text-decoration: underline
+   text-decoration: none
 }
 
 .hero-box {
@@ -62,29 +62,29 @@ min-height: 1020px;
 
 
 h1 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       color: white;
        font-size: 150px;
        font-weight: lighter;
 }
 
 h2 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: white;
 }
 
 h3 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: white;
 }
 
 h4 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: white;
 }
 
 p {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: white;
 }
 
@@ -120,13 +120,56 @@ align-items: start;
     list-style:georgian;
 }
 
-.facts {
+.container-facts {
+    display: flex;
+}
+
+#facts {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     padding: 20px;
-    gap: 50px;
+    gap: 100px;
 }
 
 .facts-1 {
     background-color:var(--primary-color);
+}
+
+.moon-box {
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+
+.moonrow-1 {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+
+.moonrow-2 {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+
+.moonrow-3 {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+
+ul {
+list-style-type: none;
+
+}
+
+.planet-image {
+height: 200px;
+width: 200px;
 }
