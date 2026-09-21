@@ -1,0 +1,127 @@
+/* ========================= */
+/* GLOBAL                    */
+/* ========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+  line-height: 1.5;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ========================= */
+/* HEADER                    */
+/* ========================= */
+
+header {
+  background-color: #dbeafe;
+  padding: 30px 0;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+/* ========================= */
+/* SECTIONS                  */
+/* ========================= */
+
+section {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+section h2 {
+  color: #1d4ed8;
+  margin-bottom: 10px;
+}
+
+section p {
+  margin-bottom: 10px;
+}
+
+/* ========================= */
+/* FORM                      */
+/* ========================= */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* INPUTS                    */
+
+input,
+textarea,
+select {
+  padding: 10px;
+  border: 1px solid #999;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* Try these during the lesson:
+   border: 2px solid red;
+   border-radius: 20px;
+*/
+
+/* BUTTON                    */
+
+button {
+  padding: 12px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* LABEL                     */
+
+label {
+  font-weight: bold;
+}
+
+/* CHECKBOX / RADIO LABELS   */
+
+.choice-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* JAVASCRIPT DEMO TEXT      */
+
+#char-count {
+  font-size: 14px;
+  color: #555;
+}
+
+#success-message {
+  margin-top: 15px;
+  font-weight: bold;
+  color: green;
+}
+
+textarea {
+    resize:none;
+    height: 200px;
+    min-height: 100px;
+}
