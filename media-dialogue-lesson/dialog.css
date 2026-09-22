@@ -1,0 +1,96 @@
+/* ========================= */
+/* GLOBAL                    */
+/* ========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+  line-height: 1.5;
+}
+
+.container {
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ========================= */
+/* HEADER                    */
+/* ========================= */
+
+header {
+  background-color: #dbeafe;
+  padding: 30px 0;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+/* ========================= */
+/* SECTIONS                  */
+/* ========================= */
+
+section {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+section h2 {
+  color: #1d4ed8;
+  margin-bottom: 10px;
+}
+
+section p {
+  margin-bottom: 10px;
+}
+
+/* ========================= */
+/* EXAMPLE BOX               */
+/* ========================= */
+
+.example-box {
+  background-color: #eef2f7;
+  border: 1px solid #cbd5e1;
+  padding: 20px;
+  margin-top: 15px;
+}
+
+/* ========================= */
+/* BUTTON                    */
+/* ========================= */
+
+button {
+  padding: 12px 16px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ========================= */
+/* DIALOG                    */
+/* ========================= */
+
+/* Dialog styling goes here */
+
+/* ========================= */
+/* SUMMARY                   */
+/* ========================= */
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
