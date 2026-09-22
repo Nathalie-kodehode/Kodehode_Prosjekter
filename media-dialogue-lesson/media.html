@@ -27,21 +27,34 @@
         </p>
 
         <!-- Video demo goes here -->
+         <video src="media/example-video.mp4" type="video/mp4" 
+         controls
+         muted
+         loop
+         poster="media/paint.jpg"
+         >
+         Your browser does not support this video.
+
+         </video>
       </section>
 
       <!-- VIDEO ATTRIBUTES -->
       <section>
         <h2>Useful video attributes</h2>
         <p>Videos can use extra attributes to change how they behave.</p>
-
+<p> When using a poster, you can set the css to: 
+    width: 100%;
+    aspect ratio: 16/9; 
+    object-fit: cover; 
+    to make srue the image stays the same size as the video.</p>
         <div class="example-box">
           <p><strong>Common attributes:</strong></p>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>controls = show video controls</li>
+            <li>autoplay = starts video automatically</li>
+            <li>loop = repeats video</li>
+            <li>muted = starts with no sound</li>
+            <li>poster = thumbnail image for video</li>
           </ul>
         </div>
       </section>
@@ -52,6 +65,9 @@
         <p>We use the <code>&lt;audio&gt;</code> tag to add sound or music.</p>
 
         <!-- Audio demo goes here -->
+         <audio src="media/metal pipe falling sound effect.mp3" type="audio/mp3" autoplay loop controls> You have been spared.
+
+         </audio>
       </section>
 
       <!-- AUDIO ATTRIBUTES -->
@@ -62,10 +78,10 @@
         <div class="example-box">
           <p><strong>Common attributes:</strong></p>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>controls</li>
+            <li>autoplay</li>
+            <li>loop</li>
+            <li>muted</li>
           </ul>
         </div>
       </section>
@@ -79,6 +95,10 @@
         </p>
 
         <!-- iframe demo goes here -->
+         <iframe src="https://www.google.com/maps/embed?..." 
+         title="google maps"
+         allowfullscreen
+         > </iframe>
       </section>
 
       <!-- IFRAME NOTES -->
@@ -89,10 +109,10 @@
         <div class="example-box">
           <p><strong>Common attributes:</strong></p>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>title desc for accessibility</li>
+            <li>allowfullscreen</li>
+            <li>src sets the webpage sourcecode</li>
+            <li>width and height = sets the size of the iframe</li>
           </ul>
         </div>
       </section>
