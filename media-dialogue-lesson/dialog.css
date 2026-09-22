@@ -84,6 +84,39 @@ button {
 /* ========================= */
 
 /* Dialog styling goes here */
+dialog {
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    /* Do not use Flexbox to center the dialog, as the parent is the body */
+}
+
+dialog-h3 {
+    margin-bottom: 10px;
+}
+
+dialog-p {
+    margin-bottom: 10px;
+}
+
+dialog form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+dialog textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+dialog::backdrop {
+    background-color:rgb(0, 0, 0, 0.7);
+}
 
 /* ========================= */
 /* SUMMARY                   */
