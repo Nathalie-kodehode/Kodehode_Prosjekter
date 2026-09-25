@@ -18,6 +18,8 @@
   box-sizing: border-box;
 }
 
+/* GLOBAL STYLING FOR ALL PAGES */
+
 /* Font */
 
 .h1-black {
@@ -36,6 +38,59 @@ h4 {
 }
 
 
+/* HEADER */
+.header {
+    display: flex;
+width: auto;
+padding: 14px 30px;
+justify-content: center;
+align-items: center;
+gap: 80px;
+background-color: var(--darkgreen-color);
+}
+
+.header-box {
+    display: flex;
+width: 1080px;
+padding: 10px 20px;
+justify-content: space-between;
+align-items: center;
+flex-shrink: 0;
+}
+
+
+/* Searchbar */
+.searchbar {
+    display: flex;
+width: 403px;
+padding: 10px;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+}
+
+
+
+/* FOOTER */
+
+.footer-text {
+  color: var(--white-color);
+  font-weight: lighter;
+}
+
+.footer {
+  display: flex;
+  width: auto;
+  padding: 20px 110px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--darkgreen-color);
+}
+
+
+/* LANDING PAGE STYLING */
+
+/* HERO IMAGE */
 .hero-heading {
     display: flex;
     flex-direction: row;
@@ -51,20 +106,3 @@ align-self: stretch;
 }
 
 
-
-
-
-
-.footer-text {
-  color: var(--white-color);
-  font-weight: lighter;
-}
-
-.footer {
-  display: flex;
-  width: auto;
-  padding: 20px 110px;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--darkgreen-color);
-}
