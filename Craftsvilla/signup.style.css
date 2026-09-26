@@ -1,0 +1,337 @@
+/* Colours */
+:root {
+  /* Palette */
+  --darkgreen-color: #343934;
+  --green-color: #738875;
+  --orange-color: #db995a;
+  --yellow-color: #f8f0e0;
+  --red-color: #c5283d;
+  /* Default */
+  --white-color: #ffffff;
+  --black-color: #000000;
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FONT STYLING */
+
+.h1-black {
+  color: black;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  font-size: 45px;
+  font-weight: lighter;
+}
+
+.h1-red {
+  color: var(--red-color);
+  font-weight: bolder;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  font-size: 45px;
+  font-weight: lighter;
+}
+
+h2 {
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  color: var(--red-color);
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+.h2-orange {
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  color: var(--orange-color);
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+h3 {
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  color: var(--black-color);
+  font-weight: lighter;
+}
+
+.h3-search {
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  color: var(--black-color);
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+.h3-button {
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  color: var(--white-color);
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+.h3-herotext {
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  color: var(--black-color);
+  font-weight: lighter;
+  font-size: 22px;
+}
+
+h4 {
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+}
+
+p {
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+}
+
+.title-feature {
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  color: var(--white-color);
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.p-feature {
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  color: var(--black-color);
+  font-size: 35px;
+  font-weight: lighter;
+}
+
+.p-form {
+      font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  color: var(--white-color);
+  font-size: 25px;
+  font-weight: lighter;
+}
+
+/* BODY */
+
+body {
+  background-color: var(--yellow-color);
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  width: auto;
+  padding: 14px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  background-color: var(--darkgreen-color);
+}
+
+.header-box {
+  display: flex;
+  width: 1080px;
+  padding: 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  padding: 3px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-button {
+  background-color: var(--darkgreen-color);
+  border-color: var(--darkgreen-color);
+  border-radius: 45px;
+}
+
+.logo-button:hover {
+  background-color: var(--red-color);
+}
+
+/* Searchbar */
+.searchbar {
+  display: flex;
+  width: 403px;
+  padding: 10px;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--white-color);
+  border-radius: 35px;
+}
+
+/* Signup, Community & Feedback buttons */
+.header-button {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--green-color);
+  border-radius: 35px;
+  border-color: var(--darkgreen-color);
+}
+
+.header-button:hover {
+background-color: var(--red-color);
+}
+
+/* FOOTER */
+
+.footer-text {
+  color: var(--white-color);
+  font-weight: lighter;
+}
+
+.footer {
+  display: flex;
+  width: auto;
+  padding: 20px 110px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--darkgreen-color);
+}
+
+/* END OF GLOBAL STYLING */
+
+/* SIGN UP STYLING */
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    display: flex;
+height: 49px;
+padding: 10px;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+align-self: stretch;
+border-radius: 15px;
+}
+
+label {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--orange-color);
+font-size: 25px;
+font-weight: bolder;
+}
+
+#text {
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+}
+#email {
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+}
+
+#date {
+    display: flex;
+    justify-content: start;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+}
+
+#password {
+     display: flex;
+    justify-content: start;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px; 
+}
+
+#tel {
+       display: flex;
+    justify-content: start;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+}
+
+.signup-form {
+    display: flex;
+width: 1208px;
+height: 1645px;
+padding: 30px 100px;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+background-color: var(--darkgreen-color);
+margin: 50px;
+}
+
+
+.form-head {
+    display: flex;
+height: 182px;
+padding: 10px 80px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 20px;
+flex-shrink: 0;
+align-self: stretch;
+border: 2px solid red;
+}
+
+.form-field {
+    display: flex;
+justify-content: start;
+align-items: center;
+align-self: stretch;
+border: 2px solid red;
+}
+
+.form-div {
+    display: flex;
+width: 460px;
+height: 109px;
+padding: 0 21px;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 10px;
+border: 2px solid red;
+}
+
+.multi-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-one {
+    display: flex;
+justify-content: start;
+align-items: center;
+align-self: stretch;
+border: 2px solid red;
+}
