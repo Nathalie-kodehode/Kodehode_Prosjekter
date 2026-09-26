@@ -18,9 +18,7 @@
   box-sizing: border-box;
 }
 
-/* GLOBAL STYLING FOR ALL PAGES */
-
-/* Font */
+/* FONT STYLING */
 
 .h1-black {
   color: black;
@@ -80,9 +78,34 @@ h4 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+p {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.title-feature {
+    font-family: Arial, Helvetica, sans-serif;
+color: var(--white-color);
+font-size: 30px;
+font-weight: bolder;
+}
+
+.p-feature {
+    font-family: Arial, Helvetica, sans-serif;
+color: var(--black-color);
+font-size: 35px;
+font-weight: lighter;
+}
+
+/* BODY */
+
 body {
     background-color: var(--yellow-color);
+    width: auto;
+    height: auto;
 }
+
+
 
 /* HEADER */
 .header {
@@ -116,7 +139,7 @@ gap: 10px;
 .logo-button {
   background-color: var(--darkgreen-color);
   border-color: var(--darkgreen-color);
-  border-style: none;
+  border-radius: 45px;
 }
 
 /* Searchbar */
@@ -158,6 +181,8 @@ border-radius: 35px;
   background-color: var(--darkgreen-color);
 }
 
+/* END OF GLOBAL STYLING */
+
 
 /* LANDING PAGE STYLING */
 
@@ -183,7 +208,8 @@ width: 1194px;
 height: 101px;
 flex-direction: column;
 justify-self: center;
-margin-top: 20px
+margin-top: 20px;
+text-align: center;
 }
 
 /* FEATURES */
@@ -209,7 +235,7 @@ width: 367px;
 height: 469px;
 padding: 20px 30px;
 flex-direction: column;
-justify-content: space-evenly;
+gap: 30px;
 align-items: center;
 background-color: var(--orange-color);
 border-radius: 15px;
