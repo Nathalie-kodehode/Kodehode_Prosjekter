@@ -131,6 +131,7 @@ body {
 }
 
 /* HEADER */
+
 .header {
   display: flex;
   width: auto;
@@ -150,6 +151,7 @@ body {
   flex-shrink: 0;
 }
 
+/* Logo */
 .logo {
   display: flex;
   padding: 3px;
@@ -162,6 +164,10 @@ body {
   background-color: var(--darkgreen-color);
   border-color: var(--darkgreen-color);
   border-radius: 45px;
+}
+
+.logo-button:hover {
+  background-color: var(--red-color);
 }
 
 /* Searchbar */
@@ -187,6 +193,10 @@ body {
   border-color: var(--darkgreen-color);
 }
 
+.header-button:hover {
+background-color: var(--red-color);
+}
+
 /* FOOTER */
 
 .footer-text {
@@ -208,6 +218,7 @@ body {
 /* LANDING PAGE STYLING */
 
 /* HERO IMAGE */
+
 .hero-heading {
   display: flex;
   padding-top: 50px;
