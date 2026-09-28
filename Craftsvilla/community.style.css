@@ -130,6 +130,12 @@ body {
   background-color: var(--yellow-color);
 }
 
+main {
+    display: flex;
+    justify-content: center;
+}
+
+
 /* HEADER */
 
 .header {
@@ -214,3 +220,50 @@ background-color: var(--red-color);
 }
 
 /* END OF GLOBAL STYLING */
+
+/* COMMUNITY STYLING */
+
+.community-container {
+    width: 1250px;
+    display: flex;
+    padding: 50px;
+    margin: 50px;
+    flex-direction: column;
+    gap: 30px;
+    border: 2px solid red;
+
+}
+
+.com-title {
+    display: flex;
+width: auto;
+justify-content: flex-start;
+align-items: center;
+gap: 10px;
+border: 2px solid red;
+}
+
+.post-box {
+    display: flex;
+width: auto;
+padding: 0px 0px;
+justify-content: center;
+align-items: center;
+gap: 30px;
+background-color: var(--darkgreen-color);
+border-radius: 15px;
+ border: 2px solid red;
+}
+
+.post-img {
+    display: flex;
+    margin: 30px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    border: 2px solid var(--white-color);
+    border-radius: 15px;
+
+}
+
