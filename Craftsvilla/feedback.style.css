@@ -249,6 +249,18 @@ input {
   border-radius: 15px;
 }
 
+textarea {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 15px;
+  resize: none;
+  height: 150px;
+  min-height: 100px;
+}
+
 input[type="checkbox"] {
   transform: scale(2, 2);
   accent-color: var(--check-color);
@@ -319,9 +331,18 @@ label {
   font-size: 16px;
 }
 
+#message {
+  display: flex;
+  justify-content: start;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  font-size: 16px;
+}
+
 /* FORM STYLING */
 
-.signup-form {
+.feedback-form {
   display: flex;
   width: 1208px;
   height: 1645px;
@@ -344,11 +365,18 @@ label {
   gap: 20px;
   align-self: stretch;
   border: 2px solid red;
+  margin-bottom: 20px;
+}
+
+.feedback-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .form-div {
   display: flex;
-  width: 460px;
+  width: 500px;
   height: 109px;
   padding: 0 21px;
   flex-direction: column;
@@ -358,17 +386,7 @@ label {
   border: 2px solid red;
 }
 
-.feedback-form {
-    display: flex;
-height: auto;
-margin: 50px;
-padding: 20px 80px;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 20px;
-flex-shrink: 0;
-align-self: stretch;
-background-color: var(--darkgreen-color);
-border: 2px solid red;
+.textarea-box {
+  border: 2px solid red;
+  height: auto;
 }
