@@ -258,6 +258,7 @@ textarea {
   border-radius: 15px;
   resize: none;
   height: 150px;
+  width: 500px;
   min-height: 100px;
 }
 
@@ -346,7 +347,7 @@ label {
   display: flex;
   width: 1208px;
   height: 1645px;
-  padding: 30px 100px;
+  padding: 50px 50px;
   flex-direction: column;
   align-items: flex-start;
   background-color: var(--darkgreen-color);
@@ -365,13 +366,13 @@ label {
   gap: 20px;
   align-self: stretch;
   border: 2px solid red;
-  margin-bottom: 20px;
 }
 
 .feedback-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  border: 2px solid red;
 }
 
 .form-div {
@@ -388,5 +389,6 @@ label {
 
 .textarea-box {
   border: 2px solid red;
-  height: auto;
+  height: 220px;
+  width: 550px;
 }
