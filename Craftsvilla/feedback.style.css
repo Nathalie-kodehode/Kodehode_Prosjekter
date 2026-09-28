@@ -263,7 +263,12 @@ textarea {
 }
 
 input[type="checkbox"] {
-  transform: scale(2, 2);
+  transform: scale(1.5, 1.5);
+  accent-color: var(--check-color);
+}
+
+input[type="radio"] {
+  transform: scale(1.5, 1.5);
   accent-color: var(--check-color);
 }
 
@@ -279,6 +284,17 @@ label {
 .terms-label {
   color: var(--white-color);
   font-size: 20px;
+
+}
+
+.choice-label {
+   color: var(--white-color);
+  font-size: 20px;
+    display: flex;
+  flex-direction: row;
+align-items: center;
+gap: 15px;
+  border: 2px solid red;
 }
 
 /* HASHTAG STYLES */
@@ -370,14 +386,16 @@ label {
 
 .feedback-container {
   display: flex;
+  height: auto;
   flex-direction: column;
   gap: 20px;
   border: 2px solid red;
+  margin-bottom: 20px;
 }
 
 .form-div {
   display: flex;
-  width: 500px;
+  width: 560px;
   height: 109px;
   padding: 0 21px;
   flex-direction: column;
@@ -391,4 +409,21 @@ label {
   border: 2px solid red;
   height: 220px;
   width: 550px;
+}
+
+.choice-box {
+    border: 2px solid red;
+  height: 250px;
+  width: 650px;
+}
+
+.permission-box {
+  display: flex;
+  width: auto;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap:15px;
+  margin-top: 20px;
+  border: 2px solid red;
 }
