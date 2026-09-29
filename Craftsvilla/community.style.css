@@ -360,7 +360,7 @@ main {
 
 .comments {
   display: flex;
-  height: 300px;
+  height: auto;
     background-color: var(--green-color);
       border: 2px solid red;
       border-radius: 15px;
@@ -381,13 +381,18 @@ gap: 20px;
   padding: 12px 25px;
 align-items: center;
 gap: 20px;
+  border: 2px solid red;
+
 }
 
 .comments-text {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
   gap: 10px;
+  border: 2px solid red;
 
 }
 
@@ -405,9 +410,12 @@ gap: 20px;
 }
 
 .profile-pic {
-  height: auto;
-  width: 80px;
-    border: 2px solid var(--red-color);
+  background-image: url(https://images.unsplash.com/photo-1753164725054-763fe44e3be8?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+ background-size: cover;
+  height: 70px;
+  width: 70px;
+    border: 2px solid var(--white-color);
     border-radius: 50px;
 }
 
