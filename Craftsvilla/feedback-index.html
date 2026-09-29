@@ -76,17 +76,33 @@
             <!-- Name -->
             <div class="form-div">
               <label for="text">Name / Username</label>
-              <input type="text" id="text" placeholder="Text here..." />
+              <input
+                type="text"
+                id="text"
+                required
+                placeholder="Text here..."
+              />
             </div>
             <!-- Email -->
             <div class="form-div">
               <label for="email">Email</label>
-              <input type="email" id="email" placeholder="Text here..." />
+              <input
+                type="email"
+                id="email"
+                required
+                placeholder="Text here..."
+              />
             </div>
             <!-- Phone -->
             <div class="form-div">
               <label for="tel">Phone Number</label>
-              <input type="tel" id="tel" pattern="[0-9]{4}" placeholder="1234..." />
+              <input
+                type="tel"
+                id="tel"
+                pattern="[0-9]{4}"
+                required
+                placeholder="1234..."
+              />
             </div>
             <!-- Textarea 1 -->
             <div class="form-div textarea-box">
@@ -124,16 +140,16 @@
           </section>
           <!-- Permission -->
           <section class="feedback-container form-div">
-<h3 class="h3-orange"> Permission</h3>
+            <h3 class="h3-orange">Permission</h3>
             <div class="permission-box">
               <label class="terms-label">
                 I accept that CRAFTSVILLA's terms and conditions.</label
               >
-              <input type="checkbox" id="checkbox" />
+              <input type="checkbox" id="checkbox" required />
             </div>
-             </section>
-         
-                 <section class="button-container">
+          </section>
+
+          <section class="button-container">
             <button class="submit-button">
               <h3 class="submit">Submit</h3>
             </button>

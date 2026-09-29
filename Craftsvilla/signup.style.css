@@ -268,6 +268,11 @@ label {
   font-size: 20px;
 }
 
+.choice-label {
+  color: var(--orange-color);
+  font-size: 20px;
+}
+
 /* HASHTAG STYLES */
 
 #text {
@@ -331,7 +336,6 @@ label {
   background-color: var(--darkgreen-color);
   margin: 50px;
   border-radius: 15px;
-  border: 2px solid red;
 }
 
 .form-head {
@@ -343,7 +347,6 @@ label {
   align-items: center;
   gap: 20px;
   align-self: stretch;
-  border: 2px solid red;
 }
 
 .form-field {
@@ -351,7 +354,6 @@ label {
   justify-content: start;
   align-items: center;
   align-self: stretch;
-  border: 2px solid red;
   margin-bottom: 15px;
 }
 
@@ -364,7 +366,6 @@ label {
   justify-content: center;
   align-items: flex-start;
   gap: 10px;
-  border: 2px solid red;
 }
 
 .multi-input {
@@ -377,7 +378,6 @@ label {
   justify-content: start;
   align-items: center;
   align-self: stretch;
-  border: 2px solid red;
 }
 
 /* INTEREST FORM (IT GOT A LITTLE COMPLICATED SORRY) */
@@ -391,13 +391,11 @@ label {
   align-items: flex-start;
   flex-shrink: 0;
   align-self: stretch;
-  border: 2px solid red;
 }
 
 .interest-title {
   display: flex;
   padding: 20px;
-  border: 2px solid red;
 }
 .row {
   display: flex;
@@ -414,7 +412,6 @@ label {
   padding: 10px;
   align-items: center;
   gap: 15px;
-  border: 2px solid red;
 }
 
 .terms {
@@ -425,7 +422,6 @@ label {
 .terms-text {
   display: flex;
   padding: 20px;
-  border: 2px solid red;
 }
 
 .terms-button {
