@@ -359,9 +359,44 @@ main {
 }
 
 .comments {
+  display: flex;
+  flex-direction: column;
     background-color: var(--green-color);
       border: 2px solid red;
+      border-radius: 15px;
+      gap: 15px;
 
 }
+
+.comments-box {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--darkgreen-color);
+}
+
+.comments-text {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.comment-name {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: var(--orange-color);
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.comment {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: var(--white-color);
+  font-size: 16px;
+}
+
+.profile-pic {
+background: url(/Craftsvilla/craft-images/hero-image.png) / cover no-repeat;
+}
+
 
 
