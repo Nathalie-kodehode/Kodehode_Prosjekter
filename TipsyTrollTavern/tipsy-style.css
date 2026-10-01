@@ -210,3 +210,71 @@ footer {
 }
 
 /* Message Form */
+
+.message-button {
+    display: flex;
+width: 562px;
+height: 421px;
+padding: 20px;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+  border: 2px solid black;
+
+}
+
+/* Form Section */
+
+.message-form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Form Styling */
+
+label {
+      border: 2px solid black;
+}
+
+input {
+    display: flex;
+    flex-direction: column;
+}
+
+#message {
+display: flex;
+padding: 10px;
+justify-content: flex-start;
+height: 220px;
+min-height: 220px;
+max-height: 220px;
+min-width: 520px;
+max-width: 520px;
+width: 520px;
+flex-shrink: 0;
+align-self: stretch;
+}
+
+
+/* Name and Email */
+.form-title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.name-email {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Textarea and Button Section */
+
+.send-button {
+width: 372px;
+height: 86px;
+flex-shrink: 0;
+border-radius: 50px;
+}
