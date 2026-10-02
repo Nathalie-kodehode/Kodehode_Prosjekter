@@ -2,6 +2,7 @@
 :root {
   --navbar-color: #2f4f3e;
   --border-color: #99aa5d;
+  --image-color: #513c3c;
   --section-color: #091a0d;
   --white-color: #ffffff;
 }
@@ -149,7 +150,8 @@ section {
   gap: 10px;
   flex-shrink: 0;
   align-self: stretch;
-  border: 2px solid red;
+  border-radius: 2px;
+  border: 2px solid var(--image-color);
 }
 
 .section-special {
@@ -188,11 +190,30 @@ section {
 /* Hero Image */
 .hero-image {
   display: flex;
-  padding: 0px 150px;
-  flex-direction: column;
+  padding: 0px 0px;
+  flex-direction: row;
   align-items: center;
-  gap: 10px;
-  border: 2px solid black;
+  justify-content: center;
+  gap: 0px;
+  border-radius: 2px;
+  border: 2px solid var(--image-color);
+}
+
+.banner-l {
+  display: flex;
+  height: 767px;
+  width: 200px;
+}
+
+.hero-m {
+  display: flex;
+  
+}
+
+.banner-r {
+    display: flex;
+    height: 767px;
+  width: 200px;
 }
 
 .hero-text {
