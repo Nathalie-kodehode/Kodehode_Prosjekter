@@ -73,6 +73,7 @@ header {
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
+  border-bottom: 2px solid var(--image-color);
   background-image: url(https://plus.unsplash.com/premium_photo-1673360514085-709dc992855a?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 }
 
@@ -91,11 +92,12 @@ main {
 footer {
   display: flex;
   width: auto;
-  height: 50px;
+  height: 60px;
   padding: 11px 84px;
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
+  border-top: 2px solid var(--image-color);
   background-image: url(https://plus.unsplash.com/premium_photo-1673360514085-709dc992855a?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 }
 
@@ -108,7 +110,7 @@ footer {
   width: 300px;
   height: 35px;
   font-size: 16px;
-  gap:10px;
+  gap: 10px;
   background-color: var(--navbar-color);
   border: 2px solid var(--border-color);
 }
@@ -164,7 +166,8 @@ section {
   align-items: center;
   flex-shrink: 0;
   align-self: stretch;
-  border: 2px solid red;
+  border-radius: 2px;
+  border: 2px solid var(--image-color);
 }
 
 .section-about {
@@ -187,7 +190,7 @@ section {
   align-items: center;
   flex-shrink: 0;
   align-self: stretch;
-  border: 2px solid red;
+  border: 2px solid var(--image-color);
 }
 
 /* Hero Image */
@@ -210,26 +213,25 @@ section {
 
 .hero-m {
   display: flex;
-  
 }
 
 .banner-r {
-    display: flex;
-    height: 767px;
+  display: flex;
+  height: 767px;
   width: 200px;
-}
-
-.hero-text {
-  width: 912px;
-  height: 231px;
-  border: 2px solid black;
 }
 
 /* Daily Special */
 .special-image {
+  display: flex;
+  background-image: url(tipsy-images/beer.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 900px;
   height: 552px;
-  border: 2px solid black;
+  border-radius: 2px;
+  border: 2px solid var(--section-color);
 }
 
 .special-menu {
@@ -240,21 +242,23 @@ section {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid black;
+  border-radius: 2px;
+  border: 2px solid var(--image-color);
 }
 
 .special-title {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   width: 420px;
   height: 110px;
   flex-shrink: 0;
-  border: 2px solid black;
 }
 
 .special-desc {
   width: 420px;
   height: 378px;
   flex-shrink: 0;
-  border: 2px solid black;
 }
 
 /* About Us */
@@ -262,13 +266,15 @@ section {
 .left-img {
   width: 300px;
   height: 360px;
-  border: 2px solid black;
+  border-radius: 2px;
+  border: 2px solid var(--section-color);
 }
 
 .right-img {
   width: 300px;
   height: 360px;
-  border: 2px solid black;
+  border-radius: 2px;
+  border: 2px solid var(--section-color);
 }
 
 .about-us {
@@ -279,21 +285,20 @@ section {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid black;
+  border-radius: 2px;
+  border: 2px solid var(--image-color);
 }
 
 .about-title {
   height: 52px;
   flex-shrink: 0;
   align-self: stretch;
-  border: 2px solid black;
 }
 
 .about-text {
   height: 250px;
   flex-shrink: 0;
   align-self: stretch;
-  border: 2px solid black;
 }
 
 /* Message Form */
@@ -306,14 +311,18 @@ section {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  border: 2px solid black;
+  border: 2px solid var(--image-color);
+  border-radius: 2px;
 }
 
 /* Form Section */
 
 .message-form {
   display: flex;
+  margin: 20px;
   flex-direction: column;
+  align-items: center;
+  width: 500px;
   gap: 40px;
 }
 
@@ -325,20 +334,24 @@ label {
   font-family: "Amarante";
   color: var(--section-color);
   font-weight: Bolder;
-  font-size: 25px;
+  font-size: 28px;
   display: flex;
-  align-items: center;
-  height: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  height: 30px;
   justify-content: flex-start;
-  border: 2px solid black;
 }
 
 input {
+  font-family: "Amarante";
+  font-size: 20px;
+  font-weight: lighter;
   display: flex;
   border: 4px solid var(--navbar-color);
   border-radius: 6px;
   width: 500px;
-  height: 40px;
+  height: 60px;
   flex-direction: column;
 }
 
@@ -355,18 +368,37 @@ input {
   max-width: 520px;
   width: 520px;
   flex-shrink: 0;
+  margin-top: 20px;
   align-self: stretch;
   border: 4px solid var(--navbar-color);
   border-radius: 6px;
-  font-family: "Metamorphous";
+  font-family: "Amarante";
+  font-size: 20px;
+  font-weight: lighter;
+  color: var(--section-color);
 }
 
 .form-section {
   display: flex;
   height: 420px;
   flex-direction: column;
-  gap: 50px;
-  border: 2px solid black;
+  gap: 10px;
+  border-radius: 2px;
+  border: 2px solid var(--image-color);
+}
+
+/* Hot Babe */
+.hotbabe {
+  background-image: url(tipsy-images/hot\ babe\ ready\ to\ serve.png);
+  background-position: center;
+  background-size: 160%;
+  display: flex;
+  height: 420px;
+  width: 300px;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 2px;
+  border: 2px solid var(--image-color);
 }
 
 /* Name and Email */
@@ -374,9 +406,10 @@ input {
   display: flex;
   color: var(--section-color);
   flex-direction: column;
-  align-self: flex-start;
+  align-self: start;
+  margin-left: 25px;
+  margin-top: 20px;
   justify-content: flex-start;
-  border: 2px solid black;
 }
 
 .name-email {
@@ -385,14 +418,26 @@ input {
   gap: 10px;
 }
 
-/* Textarea and Button Section */
+/* Button Section */
 
 .send-button {
-  font-family: "Amarante";
-  color: var(--section-color);
+  font-family: "Metamorphous";
+  background-color: var(--navbar-color);
+  color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
   font-size: 30px;
-  width: 372px;
-  height: 86px;
+  width: 370px;
+  height: 85px;
   flex-shrink: 0;
   border-radius: 50px;
+  border-color: var(--navbar-color);
+}
+
+.send-button:hover {
+  background-color: var(--special-color);
+  border-color: var(--special-color);
+  color: var(--white-color);
 }
