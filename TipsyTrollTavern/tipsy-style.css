@@ -5,6 +5,7 @@
   --image-color: #513c3c;
   --section-color: #091a0d;
   --white-color: #ffffff;
+  --special-color: #881c8b;
 }
 
 /* CSS Reset */
@@ -25,6 +26,7 @@ h1 {
 
 h2 {
   font-family: "Amarante";
+  text-decoration: underline;
   font-weight: bolder;
   font-size: 45px;
   color: var(--section-color);
@@ -33,8 +35,8 @@ h2 {
 h3 {
   font-family: "Amarante";
   font-weight: bolder;
-  font-size: 40px;
-  color: var(--section-color);
+  font-size: 38px;
+  color: var(--special-color);
 }
 
 h4 {
@@ -173,7 +175,8 @@ section {
   align-items: center;
   flex-shrink: 0;
   align-self: stretch;
-  border: 2px solid red;
+  border-radius: 2px;
+  border: 2px solid var(--image-color);
 }
 
 .section-message {
@@ -242,7 +245,7 @@ section {
 
 .special-title {
   width: 420px;
-  height: 90px;
+  height: 110px;
   flex-shrink: 0;
   border: 2px solid black;
 }
