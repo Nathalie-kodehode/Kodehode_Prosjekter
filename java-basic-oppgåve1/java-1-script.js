@@ -1,5 +1,5 @@
 /******************************************************************************
-OPPGAVE 1
+OPPGAVE 1 FERDIG
 
 Din første oppgave er å koble denne JavaScript-filen til index.html-filen
 ved å bruke en av metodene vi viste i første forelesning.
@@ -9,17 +9,16 @@ javascript.js
 ******************************************************************************/
 
 // Løs denne oppgaven i index.html
-//FERDIG LØST
 
 /******************************************************************************
-OPPGAVE 2
+OPPGAVE 2 FERDIG
 
 I forrige undervisning lærte vi hvordan man lager variabler som kan holde ulike
 typer verdier. Lag noen variabler med følgende datatyper:
-- String (tekst)
-- Number (tall)
-- Boolean (sann/usann)
-- Array (liste)
+- String (tekst) FERDIG
+- Number (tall) FERDIG
+- Boolean (sann/usann) FERDIG
+- Array (liste) FERDIG
 
 Du kan velge hva innholdet i variablene skal være. Prøv å bruke både let og 
 const når du definerer variablene.
@@ -27,7 +26,27 @@ const når du definerer variablene.
 
 // Skriv koden for oppgave 2 her
 
+// STRING
+let peanutString = "Eg er ein peanøtt" //Han er ein peanøtt
+console.log (peanutString);
+peanutString = "Nei, eg er IKKJE ein peanøtt" //No er han ikkje ein peanøtt
+console.log (peanutString);
 
+// NUMBER
+const bananerNumber = 150 //Antall bananer eg har
+console.log (bananerNumber)
+
+// BOOLEAN
+let småballerTrue = true //(truth) ballene mine er små... :(
+console.log (småballerTrue);
+let storeballerFalse = false //(lie) ballene mine er STORE >:)
+console.log (storeballerFalse);
+
+// ARRAY
+let handlelisteArray = ["ost", "agurk", "tortilla"] //Jævla trist taco om du berre skal ha dette her LOL
+console.log (handlelisteArray[0]); //0 = Ost (litt usikker på kvifor den starter på 0 og ikkje 1, er sikkert noko meg må define sjølv?)
+console.log (handlelisteArray[1]); //1= Agurk
+console.log (handlelisteArray[2]); //2 = Tortilla
 
 /******************************************************************************
 OPPGAVE 3
@@ -40,6 +59,8 @@ Skriv noen eksempler der du tester disse operatorene.
 ******************************************************************************/
 
 // Skriv koden for oppgave 3 her
+
+
 
 /******************************************************************************
 OPPGAVE 4
