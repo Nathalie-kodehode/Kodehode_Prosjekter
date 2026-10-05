@@ -76,3 +76,68 @@ console.log (penisMessage);
 
 const fixedValue = "I WILL NEVER CHANGE"
 console.log (fixedValue);
+
+// Operators
+
+const num1 = 10;
+const num2= 5;
+
+console.log (num1, num2);
+
+// Arithmetic operators
+console.log (num1 + num2); //Plus
+console.log (num1 - num2); //Minus
+console.log (num1 * num2); //Multiplication
+console.log (num1 / num2); //Division
+console.log (num1 % num2); //Modulus (remainer)
+// More examples of modulus below
+console.log (10 % 5);
+console.log (20 % 17);
+
+// Using the + operator to concatenate (add together) strings
+const firstName = "John";
+const lastName = "Halo";
+const fullName = firstName + " " + lastName;
+
+console.log (firstName);
+console.log (lastName);
+console.log (firstName + " " + lastName)
+console.log (fullName)
+
+//Compund Assignments
+
+let counter = 0;
+
+// Shortut, do not repeat yourself
+counter += 1;
+console.log (counter);
+
+counter -= 5;
+console.log (counter);
+
+// Increment/Decrement by 1
+let productStock = 10;
+
+productStock--;
+console.log (productStock);
+
+// Comaprison
+// These operators compare alues and return a boolean (true or false)
+
+console.log (15 > 20); //greater than > (false)
+console.log (15 < 20) //less than < (true)
+console.log (15 >= 15) //greater than or equal to > (true)
+console.log (15 <= 15) //less than or equal to > (true)
+
+console.log (15 == 15) // equal to (single = is used for assigning values)
+console.log (15 === "15") //strictly equal (does take into account value type)
+
+console.log (15 != 20) //NOT equal to
+
+// typeof operator (tells you what value type your variable has)
+
+const myNum = 100
+const myString = "hello there"
+const myBool = true
+
+console.log (typeof myNum) //we learn this is a number value
