@@ -66,9 +66,9 @@ let premiumMember = false;
 // Premium members always get a discount.
 
 if ((referal && firstShop) || premiumMember) {
-    console.log ("You get a discount!")
+  console.log("You get a discount!");
 } else {
-    console.log ("No discount, consider becoming a premium member!")
+  console.log("No discount, consider becoming a premium member!");
 }
 
 // Ternary (its a container of 3 expressions)
@@ -84,26 +84,26 @@ let isMember = false;
 // }
 
 let deliveryCost = isMember ? "50 kr" : "100 kr"; //left is ALWAYS true, right is ALWAYS false
-console.log ("Delivery:", deliveryCost);
+console.log("Delivery:", deliveryCost);
 
 // Switch Statement
 
 //A switch statement checks a calue against multiple cases
 
-let fruit = "banana"
+let fruit = "banana";
 
 switch (fruit) {
-    case "apple": 
-    console.log ("Apples are delicious!")
-    break
-case "banana":
-    console.log ("Bananas are a great source of potassium!");
-    break
-    case "orange":
-        console.log ("Oranges are full of vitamin C!")
-        break
-        default:
-            console.log ("Unknown fruit detected!")
+  case "apple":
+    console.log("Apples are delicious!");
+    break;
+  case "banana":
+    console.log("Bananas are a great source of potassium!");
+    break;
+  case "orange":
+    console.log("Oranges are full of vitamin C!");
+    break;
+  default:
+    console.log("Unknown fruit detected!");
 }
 
 //Use if/ else if for: complex or varied conditions
@@ -111,13 +111,12 @@ case "banana":
 
 // Truthy and Falsey
 
-let value = []
+let value = [];
 
 if (value) {
-    console.log ("The value is true!")
-
+  console.log("The value is true!");
 } else {
-    console.log ("The value is false!")
+  console.log("The value is false!");
 }
 //True
 //A string with value came back true
@@ -133,3 +132,29 @@ if (value) {
 //Null
 //Undefined
 //NaN (not a number)
+
+//Template String
+
+const firstName = "Ola";
+const lastName = "Nordmann";
+const city = "Oslo";
+const country = "Norway";
+
+//You can do this, but its a headache.
+console.log(
+  "Welcome!" +
+    " " +
+    firstName +
+    " " +
+    lastName +
+    " " +
+    "from" +
+    " " +
+    city +
+    " " +
+    country,
+);
+
+//shift `
+//This is more effienct. Btw, mark a word, alt + 7 to put the word in curly bracket.
+console.log (`Welcome! ${firstName} ${lastName} from ${city} ${country} to my site!`)

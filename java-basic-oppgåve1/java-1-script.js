@@ -49,7 +49,7 @@ console.log (handlelisteArray[1]); //1= Agurk
 console.log (handlelisteArray[2]); //2 = Tortilla
 
 /******************************************************************************
-OPPGAVE 3
+OPPGAVE 3 FERDIG
 
 Prøv ut noen av operatorene vi så på i forrige forelesning:
 - Matematiske operatorer: +, -, /, *
@@ -60,6 +60,34 @@ Skriv noen eksempler der du tester disse operatorene.
 
 // Skriv koden for oppgave 3 her
 
+const num1 = 1;
+const num2 = 5;
+const num3 = 10;
+
+console.log (1, 5, 10)
+
+//Her brukar eg kun variablene
+console.log (num1 + num2); //Pluss
+console.log (num3 - num1); //Minus
+console.log (num3 * num3); //Gonging
+console.log (num3 / num2); //Deling
+console.log (num1 % num3); //Modulus
+
+//Her prøver eg ut num1-3 og andre tall
+console.log (num1 + 80); //Pluss
+console.log (30 - num3); //Minus
+console.log (num3 * 50); //Gonging
+console.log (89 / num2); //Deling
+console.log (67 % num3); //Modulus
+
+
+//Lager namn og leggjer dei saman. Bruker også shift + ` teknikken vi lærte i dagens leksjon, det var meir efficient enn å bruke "_" om og om igjen.
+const firstName = "John";
+console.log (firstName);
+const lastName = "Halo";
+console.log (lastName);
+const fullName = (`${firstName} ${lastName}`);
+console.log (fullName);
 
 
 /******************************************************************************
@@ -83,16 +111,29 @@ Prøv å endre verdiene på variablene for å sikre at IF/ELSE-setningen din
 håndterer alle tilfeller korrekt.
 ******************************************************************************/
 
-let userName = "";
-let userAge = 18;
-let userIsLoggedIn = false;
-let userIsBlocked = false;
-let goToPage = "";
-
 // Skriv koden for oppgave 4 her
 
+//få hjelp med denne oppgåva på ons/tors, er litt usikker om dette er rett
+let userName = " ";
+let userAge = 18;
+let userIsLoggedIn = true;
+let userIsBlocked = false;
+let goToPage = "/home";
+
+//Om personen har skrevet inn brukernamn, er 18 eller eldre og er pålogga, så går alt greit.
+if (userName === " " && userAge >= 18 && userIsLoggedIn) {
+    console.log ("Velkommmen tilbake!");
+    //Om dei ikkje har skrevet inn brukarnamn, er under 18 og ikkje pålogga, så vert dei blokkert.
+} else if (userName === "" && userAge <= 0 && userIsBlocked) {
+    console.log ("Du er blokkert frå å besøke nettsida")
+}
+//om det er noko anna, så får dei feilmelding
+else {
+    console.log ("Det har skjedd ein uventa feil. Vennligst prøv igjen seinare.");
+}
+
 /******************************************************************************
-OPPGAVE 5
+OPPGAVE 5 FERDIG
 
 Lag en variabel kalt userTitle og sett innholdet til å være:
 - "Mr." hvis userMale er true, eller
@@ -106,6 +147,10 @@ Prøv å endre userMale til både true og false og bruk console.log for å sjekk
 at betingelsen din fungerer som den skal.
 ******************************************************************************/
 
+// Skriv koden for oppgave 5 her
+
 const userMale = false;
 
-// Skriv koden for oppgave 5 her
+let userTitle = userMale ? "Mr." : "Mrs.";
+console.log ("User:", userTitle);
+
