@@ -1,0 +1,130 @@
+/* CSS Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global CSS */
+
+body {
+  background-color: whitesmoke;
+  color: midnightblue;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+  color: navy;
+  font-size: 2.5rem;
+}
+
+.intro {
+  margin-bottom: 3rem;
+  color: dimgray;
+  font-size: 1.1rem;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.description {
+  max-width: 700px;
+  margin-bottom: 1.25rem;
+  color: dimgray;
+}
+
+code {
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+  background-color: lightgray;
+  color: navy;
+}
+
+/* Shared Grid Styles  */
+
+.example-grid {
+  min-height: 220px;
+  padding: 1rem;
+  border: 2px solid darkgray;
+  border-radius: 10px;
+  background-color: gainsboro;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70px;
+  border: 2px solid cornflowerblue;
+  border-radius: 8px;
+  background-color: lightblue;
+  color: midnightblue;
+  font-weight: bold;
+}
+
+/* dispaly:grid */
+
+.grid1 {
+    display: grid;
+}
+
+/* grid-template columns /grid-template rows */
+
+.grid2 {
+    display: grid;
+    /* grid-template-columns: 1fr 300px 2fr;
+    grid-template-rows: 1fr 2fr 1fr; */
+    /* grid-template-columns:  repeat (4, 100px); */
+    grid-template:1fr 2fr 1fr / 1fr 300px 2fr;
+
+/* we dont aløways need to set grid.teokate-rows. new rows will be created if we have enough elements inside our grid */
+
+/* If we want our rows to be fidfferent sizes, thats when we would use grid-template.rows. */
+
+/* shorthand for gird-template-columns + grid-template-rows */
+}
+
+/* grid area */
+.grid3 {
+    /* below is a shorthand for columns + rows + areas */
+    display: grid;
+    grid-template: 
+    "header header" 80px
+    "sidebar content" 200px
+    "footer footer" 60px
+    / 1fr 3fr;
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: lightcyan;
+}
+
+.content {
+    grid-area: content;
+    background-color: lightcyan;
+}
+
+.footer {
+    grid-area: footer;
+}

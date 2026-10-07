@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grid.style.css">
+    <title>Grids</title>
+</head>
+<body>
+    <main>
+        <h1> Grids</h1>
+        <p class="intro">
+            CSS Grid is used to arrange elemtents into rows and columns.
+        </p>
+
+        <section>
+            <h2>Display</h2>
+
+            <p class="description"> Adding <code>display: grid</code> turns an element into a grid container. Its children becomes the grid items.</p>
+
+            <div class="example-grid grid1">
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+<div class="box">4</div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Grid Columns and Rows</h2>
+
+            <p class="description"> Use <code>grid-template-columns</code> and <code>grid-template-rows</code> to control the number of columns and rows in our grid.</p>
+        
+            <div class="example-grid grid2">
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+<div class="box">4</div>
+<div class="box">5</div>
+<div class="box">6</div>
+<div class="box">7</div>
+<div class="box">8</div>
+<div class="box">9</div>
+
+            </div>
+        
+        </section>
+
+        <section>
+            <h2>Grid Template Areas</h2>
+            <p class="description">Named areas let you describe your layout visually and assign elements to those areas with <code>
+                grid-area
+            </code></p>
+
+            <div class="example-grid grid3">
+<div class="box header">header</div>
+<div class="box sidebar">sidebar</div>
+<div class="box content">content</div>
+<div class="box footer">footer</div>
+
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>
