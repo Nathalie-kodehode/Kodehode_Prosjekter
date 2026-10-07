@@ -91,7 +91,7 @@ console.log (fullName);
 
 
 /******************************************************************************
-OPPGAVE 4
+OPPGAVE 4 FERDIG
 
 Skriv en IF/ELSE-betingelse som sjekker følgende:
 1. At userName ikke er tom ("").
@@ -113,7 +113,6 @@ håndterer alle tilfeller korrekt.
 
 // Skriv koden for oppgave 4 her
 
-//få hjelp med denne oppgåva på ons/tors, er litt usikker om dette er rett
 let userName = " ";
 let userAge = 18;
 let userIsLoggedIn = true;
@@ -150,7 +149,7 @@ at betingelsen din fungerer som den skal.
 // Skriv koden for oppgave 5 her
 
 const userMale = false;
-
+//venstre er alltid sann, og høgre er alltid falsk. Derfor skal eg få opp "Mrs" på console log om dette er rett.
 let userTitle = userMale ? "Mr." : "Mrs.";
 console.log ("User:", userTitle);
 
