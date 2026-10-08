@@ -13,13 +13,14 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 20px;
+    gap: 10px;
     border: 2px solid blue;
 }
 
 .name-job {
     display: flex;
     flex-direction: column;
-    border: 2px solid red;
+    gap: 5px;
+    border: 2px solid rgb(15, 184, 184);
 
 }
