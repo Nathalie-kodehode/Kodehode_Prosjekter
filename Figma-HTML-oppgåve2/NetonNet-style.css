@@ -23,6 +23,8 @@
   box-sizing: border-box;
 }
 
+
+
 /* Font Styling */
 
 h1 {
@@ -321,4 +323,8 @@ h2 {
   height: 10px;
   display: flex;
   background-color: var(--graytext-color);
+}
+
+footer {
+  border: 2px solid red;
 }

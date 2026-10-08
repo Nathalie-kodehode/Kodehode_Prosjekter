@@ -158,3 +158,47 @@ console.log(
 //shift `
 //This is more effienct. Btw, mark a word, alt + 7 to put the word in curly bracket.
 console.log (`Welcome! ${firstName} ${lastName} from ${city} ${country} to my site!`)
+
+// Lesson 3: Recap of JS Basics
+
+// Section 1: Variables, Data Types and Operators
+
+// Scenario: An online store managing products.
+
+const storeName = "Tech Haven"; // string
+const productName = "Wireless Earbuds"; // string
+let productPrice = 900; // number
+let productQuantity = 4; // number
+const isInStock = true; // boolean
+const productTags = ["audio", "wireless", "accessory"]; // array
+let discount;
+
+console.log(productTags);
+console.log(productTags[1]);
+console.log(discount);
+
+// Arithmetic operations
+let totalValue = productPrice * productQuantity; // multiplication
+console.log(totalValue);
+
+// Compound assignment (changing value)
+productPrice = productPrice + 50; // ❌
+productPrice += 50; //  ✅
+productPrice -= 200; //  ✅
+console.log(productPrice);
+
+// Increment and Decrement operators
+// Sell 1 product
+productQuantity -= 1; // ❌
+productQuantity--; //  ✅
+productQuantity++;
+
+console.log(productQuantity);
+
+// Checking the change to the totalValue after chaning price / quantity
+totalValue = productPrice * productQuantity;
+console.log(totalValue);
+
+totalValue += 20;
+
+
