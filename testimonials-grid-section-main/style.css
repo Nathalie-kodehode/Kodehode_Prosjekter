@@ -1,26 +1,147 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+  --primary-purple-1-color: #eee5ff;
+  --primary-purple-2-color: #c4a2f6;
+  --primary-purple-3-color: #7541c8;
+
+  --neutral-white-color: #ffffff;
+  --neutral-gray-1-color: #e7eaee;
+  --neutral-gray-2-color: #cfcfcf;
+  --neutral-gray-3-color: #676d7e;
+  --neutral-gray-4-color: #48556a;
+  --neutral-darkblue-color: #19212e;
+  --neutral-black-color: #121212;
 }
 
+/* Font Styling */
+
+h3 {
+  font-family: "Barlow Semi Condensed";
+  font-weight: 500;
+  font-size: 17px;
+}
+
+p {
+  font-family: "Barlow Semi Condensed";
+  font-weight: light;
+  font-size: 14px;
+}
+
+h2 {
+  font-family: "Barlow Semi Condensed";
+  font-size: 30px;
+  font-weight: 600;
+}
+
+quote {
+  font-family: "Barlow Semi Condensed";
+  font-weight: light;
+  font-size: 18px;
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: auto;
+  height: auto;
+  background-color: var(--neutral-gray-1-color);
+  border: 2px solid red;
+}
+
+/* Container & Box Styling */
 .container {
-    border: 2px solid red;
+  display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ grid-template-rows: 1fr 1fr 1fr;
+  margin: 30px;
+  gap: 20px;
 }
 
 .box {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 10px;
-    border: 2px solid blue;
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+  flex-direction: column;
+  margin: 0px;
+  padding: 40px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  border-radius: 15px;
+  box-shadow: var(--neutral-gray-2-color) 10px 10px;
+}
+
+/* Personal Box Styling */
+
+.daniel {
+  background-color: var(--primary-purple-3-color);
+  color: var(--neutral-white-color);
+}
+
+.jonathan {
+  background-color: var(--neutral-gray-4-color);
+  color: var(--neutral-white-color);
+}
+
+.patrick {
+  background-color: var(--neutral-darkblue-color);
+  color: var(--neutral-gray-1-color);
+}
+
+.kira {
+  background-color: var(--neutral-white-color);
+  color: var(--neutral-darkblue-color);
+}
+
+.jeanette {
+  background-color: var(--neutral-white-color);
+  color: var(--neutral-darkblue-color);
+}
+
+/* Styling for Image, Name & Occupation */
+
+.icon-text {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
 }
 
 .name-job {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    border: 2px solid rgb(15, 184, 184);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
 
+/* Image Styling */
+
+.img-daniel {
+  height: 50px;
+  width: 50px;
+  border-radius: 30px;
+  border: 3px solid var(--primary-purple-2-color);
+}
+
+.img-jonathan {
+  height: 50px;
+  width: 50px;
+  border-radius: 30px;
+  border: 3px solid var(--neutral-gray-1-color);
+}
+
+.img-kira-jeanette {
+  height: 50px;
+  width: 50px;
+  border-radius: 30px;
+  border: 3px solid var(--neutral-white-color);
+}
+
+.img-patrick {
+  height: 50px;
+  width: 50px;
+  border-radius: 30px;
+  border: 3px solid var(--primary-purple-3-color);
 }
