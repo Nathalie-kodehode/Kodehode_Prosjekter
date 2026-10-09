@@ -51,10 +51,29 @@ h2 {
   color: var(--price-color);
 }
 
+h3 {
+   font-family: Arial, Helvetica, sans-serif;
+  color: var(--blacktext-color);
+  font-weight: bold;
+}
+
 .h3-black {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--blacktext-color);
   font-weight: lighter;
+}
+
+.h3-white {
+   font-family: Arial, Helvetica, sans-serif;
+  color: var(--whitetext-color);
+  font-weight: lighter;
+}
+
+.h3-red {
+    font-family: Arial, Helvetica, sans-serif;
+  color: var(--price-color);
+  font-weight: bolder;
+  font-size: 20px;
 }
 
 .h4-black {
@@ -327,17 +346,16 @@ h2 {
 
 footer {
   width: auto;
-  border: 2px solid red;
-  margin-left: 370px;
-  margin-right: 370px;
+  margin-left: 250px;
+  margin-right: 250px;
 }
 
 .footer-titles {
-  margin: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .vis-alle {
@@ -346,4 +364,94 @@ footer {
   gap: 20px;
 }
 
+.product-container {
+  display: flex;
+justify-content: space-between;
+align-items: center;
+ border: 2px solid red;
+
+}
+
+.product-card {
+  margin-left: 0px;
+  margin-top: 10px;
+  margin-right: 10px;
+margin-bottom: 10px;
+  background-color: var(--tertiary-color);
+display: flex;
+width: 290px;
+height: auto;
+padding-bottom: 1px;
+flex-direction: column;
+align-items: flex-start;
+ border: 2px solid red;
+
+}
+
+.product-img {
+  background-image: image-set(url(NetonNet-images/amongus2.png));
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 200px;
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+justify-content: space-between;
+}
+
+.ukens-kupp {
+  background-color: var(--price-color);
+  color: var(--whitetext-color);
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+}
+
+.info-box {
+  height: auto;
+  background-color: var(--whitetext-color);
+  border: 2px solid var(--graytext-color);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+}
+
+.text-list {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--graytext-color);
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.price-stock {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+
+.old-price {
+text-decoration: line-through;
+}
 
