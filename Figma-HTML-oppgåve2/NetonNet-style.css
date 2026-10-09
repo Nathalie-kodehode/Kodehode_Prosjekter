@@ -326,5 +326,24 @@ h2 {
 }
 
 footer {
+  width: auto;
   border: 2px solid red;
+  margin-left: 370px;
+  margin-right: 370px;
 }
+
+.footer-titles {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vis-alle {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+
