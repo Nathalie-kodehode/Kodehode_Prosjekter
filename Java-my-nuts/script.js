@@ -94,7 +94,7 @@ console.log(multiply(100, 10));
 
 function calculator(num1, num2, operator) {
   switch (operator) {
-    //"in the case of THIS happening, run THIS code."
+    //"in the case of THIS, run THE FOLLOWING return code."
     case "+":
       return num1 + num2;
     case "-":
