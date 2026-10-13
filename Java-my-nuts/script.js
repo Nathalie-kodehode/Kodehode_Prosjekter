@@ -1,157 +1,181 @@
-//Functions in Jajascript
+// Methods
 
-//A fimncion is a block of code dsignerd to do one spedicid task. It lets you write code once and reuise it, keeping your program clean and organized. Hpwoever, the function wont do anything until you call it.
-// This is us establishing/creating sayHello
-function sayHello() {
-  console.log("Hello");
-}
+// A method in JavaScript is a built-in function that you use with a specific type of data, like strings, numbers or arrays. It lets you do something with that data—like change it, check it, copy or access part of it. Some methods alter the original piece of data, others don't alter the original!
 
-// Regular function and hoisting
+//Section 1.0
+//String Methods
 
-// This is how we call on the function sayHello
-sayHello();
+const text = "     Hello, JavaScript World World!   ";
+console.log(text);
+console.log(text.trim()); //trim removes white space from both ends
+//doesnt alter our original string.
 
-//We are allowed to call the function, before weved coded it because of hoisting. Hoisting places the function at the top (we dont see this happen)
+//converts string to CAPSLOCK
+console.log(text.toUpperCase());
+//converts string to lowercase
+console.log(text.toLowerCase());
+//returns starting index of the first instance of the passed in text
+console.log(text.indexOf("JavaScript"));
+//slice removes parts of the string, decided by the index numbers (5, 9). Srtating index is included end index is not included.
+console.log(text.slice(5, 10));
+//replace replaces X with Y in the (). But only the first instance.
+console.log(text.replace("World", "Universe"));
+//replace replaces all instances of the passed in word with the new one.
+console.log(text.replaceAll("World", "Galaxy"));
+//returns the unicode number of charater at passed in index. Capital H (at index 5) is unicode nr 72
+console.log(text.charCodeAt(5));
+//repeats the passed in text, decided by the number in the ()
+console.log(text.repeat(3));
+//counts the length of the string. the sentence above has 38 characters. Very useful, for arrays
+console.log(text.length);
 
-// Function call
-//Arrowfunctions HAS to be called below their origin points, otherwise they are treated as they do not exist.
+// Section 1.1
+//Converting a String into an Array
 
-// Arrow Function
+//splits everything up in the sentence
+console.log(text.split(""));
+//splits up sentence into spaces and words
+console.log(text.split(" "));
+//trim removes the empty spaces
+console.log(text.trim().split(" "));
+//the split removes the letter 0, so we get hell, havascript w, rid w, osv
+console.log(text.trim().split("o"));
 
-// Below is another way to making a function
-const arrowFunction = () => {
-  console.log("Hello from the arrow function");
-};
+//Section 1.2
+//Converting a String into a Number
 
-arrowFunction();
+let numberString = "123.45xyz";
+//converts a string into a number. returns NaN (not a number) if any part of the string is invalid.
+console.log(Number(numberString));
+//Converts a string into a whole number, ignores text and decimals.
+console.log(parseInt(numberString)); //int stands for integer
+//same as parseInt, but doesnt ignores decimals. But still ignores text.
+console.log(parseFloat(numberString));
 
-function messageOne() {
-  console.log(
-    "This function sends a message to the console. The function does not return any data.",
-  );
-}
+//Section 2.0
+//Array Methods
+//even though colors is a const we can use man y different methods to alter theelements insdeit he arra. we still cant rassign colors with =.
 
-messageOne();
+const colors = ["Red", "Green", "Blue"];
+//specifiy which color by number
+console.log(colors[0]);
+//3 elements
+console.log(colors.length);
+//push adds "Yellow" to the end of the array as a new element at the end, without having to manually adding it it ourself.
+colors.push("Yellow");
+console.log(colors);
+//Pop removes the last element of the array, like popping a balloon. But does affect the original array.
+colors.pop();
+console.log(colors);
+//unshift adds a new element at the start of the array
+colors.unshift("Purple");
+console.log(colors);
+//shift removes the first element of the array
+colors.shift();
+console.log(colors);
+//replaces elements in the array, alters the original array.
+colors.splice(0, 2, "Orange", "Pink");
+console.log(colors);
+//works like splice, but DOESNT alter the original
+const splicedColors = colors.toSpliced(1, 1, "Brown");
+console.log(splicedColors);
 
-// Return
-//info is created here, then we send it outside of the box
-function messageTwo() {
-  const data = 100;
-  return data;
-}
+const numbersArray = [3, 1, 4, 1, 5, 9, 5];
+const sortedNumbers = numbersArray.toSorted();
+//makes a copy of the array and sorts the elemts insdie
+console.log(sortedNumbers);
+console.log(numbersArray);
+//sorts the original array
+numbersArray.sort();
+console.log(numbersArray);
 
-console.log(messageTwo());
+const stringArray = ["hello", "this", "is", "an", "array", "of", "strings"];
+//sorts the strings alphabetically
+stringArray.sort();
+console.log(stringArray);
 
-//If we create a variable with data inseide a function, it is only scoped to that fcuntion, we cant use it outside the fuction.
+console.log(sortedNumbers[6]);
+//targets element at index 6
+console.log(sortedNumbers.at(6));
+//-number goes towards left, targets the last elemnt in the array
+console.log(sortedNumbers.at(-2));
+//makes a copy of the orignal array and reverses the order of the elements in the array
+const reversedArray = sortedNumbers.toReversed();
+console.log(reversedArray);
 
-//We can use the return keytword to send data back to/replace the function call. REMEMBER! It REPLACES the function call!!!
+//Section 2.1
+//Converting an array to a String
 
-//Only ONE return at a time. As soon tas the reutn runs, we exit the function and no code below inside the function is read is read. Best to keep them at the bottom of the code.
+//combines the elements in an array, but without space. use "_" to ensure the elements have space between.
+console.log(colors);
+console.log(colors.join(" "));
 
-// Functions with Parameters
+//Section 3
+//Number Methods
 
-//Example 1: Hard Coded
-function add() {
-  return 6 + 7;
-}
+const myNum = 3.98493573097509359;
 
-console.log(add());
+console.log(myNum);
+//rounds up to the nearest number, and converted the number into a string
+console.log(myNum.toFixed(2));
+//returns our number in exponential notation if we have a big number, this can take less space on screen
+console.log(myNum.toExponential());
 
-// Example 2: soft coded dynamic
+//Section 3.1
+//Converting a Number into a String
+//turns number into string
+console.log(myNum.toString());
 
-// creating parameters
-function minus(num1, num2) {
-  // using parameters
-  return num1 - num2;
-}
-// parameters result (reusable)
-console.log(minus(10, 3));
-console.log(minus(50, 30));
+const rawString = "                 JavaScript is fun!          ";
+const processedString = rawString;
+//remove whitespace from front and back
+//replace "fun" with "aweseom"
+//make it uppercase
+console.log(rawString
+    .trim()
+    .replace("fun", "awesome")
+    .toUpperCase()
+);
 
-//a greeting function
-//parameter
-const greeter = (name, time) => {
-  return `Good ${time}, ${name}`;
-};
 
-//argument
-console.log(greeter("BITCH", "Morning"));
-console.log(greeter("Joe", "Evening"));
-console.log(greeter("Hoe", "Day"));
 
-//implicit return in arrowfunctions
+//convert from array to string
+//make the string lowercase
+const wordsArray = ["Hello", "worLD"]
 
-const multiply = (num1, num2) => {
-  return num1 * num2;
-};
+const cleanedArray = wordsArray.join(" ").toLowerCase();
+//if you get an error, you might be using the wrong method on the wrong array!
+console.log(cleanedArray);
 
-console.log(multiply(5, 10));
-console.log(multiply(100, 10));
+const exampleNum = 34544.0848434
 
-//If we're instantly returning data from an arrow function, we dont need the reutnr keyword or the {} (curly brackets). Its not necessary, but less code.
+const cleanedNum = exampleNum.toFixed(2).repeat(2);
 
-//Making a calculator using afunction and a switch condition
+//TOSTRING IS ALREADY BUILT INTO TOFIXED
+console.log(cleanedNum)
 
-function calculator(num1, num2, operator) {
-  switch (operator) {
-    //"in the case of THIS, run THE FOLLOWING return code."
-    case "+":
-      return num1 + num2;
-    case "-":
-      return num1 - num2;
-    case "*":
-      return num1 * num2;
-    case "/":
-      return num1 / num2;
-    default:
-      return "Error, invalid operator";
-  }
-}
+//Sidequest
 
-console.log(calculator(50, 5, "+"));
-console.log(calculator(50, 5, "-"));
-console.log(calculator(50, 5, "*"));
-console.log(calculator(50, 5, "/"));
+//Math with CAPITAL M FIRST
+//math.round rounds the passed in number to the nearest whole number/integer.
+console.log(Math.round(123.45));
+//math.ceil rounds it UP to the ceiling
+console.log(Math.ceil(123.45));
+//rounds down the passed in number to the nearest whole number
+console.log(Math.floor(123.45));
 
-//Updating a global varialbe using a function
-//Were making a game and we need to adjust the palyers health when they pick up heals or take damage.
+//Random number
 
-let hitPoints = 100;
+//Math.random gives us a random number between 0.000000 - 0.9999999
+console.log(Math.random());
+//random number between 0.0000 - 9.99999
+console.log(Math.random()*10);
 
-let maxHP = 200
+//rnadom num between 0 - 9
 
-//make a function. that changes the players health.
+console.log(Math.floor(Math.random()*11));
+console.log(Math.floor(Math.random()*11));
+console.log(Math.floor(Math.random()*11));
 
-function changeHP(direction, amount) {
-  //if the direction parameter is set to "uo", we run the code health += 50. (pseudocoding)
-  if (direction === "up") {
-    hitPoints += amount;
-    if (hitPoints > 200) {
-        hitPoints = maxHP;
-        }
-  } else if (direction === "down") {
-    //make the hp variable go down a certain amount
-    hitPoints -= amount;
-  }
-  if (hitPoints <= 0) {
-    console.log ("You died!")
-    hitPoints = 100
-}
-}
-
-changeHP("up", 20); //picked up small health pack
-console.log(hitPoints);
-changeHP("down", 100); //fell down a cliff
-console.log(hitPoints);
-changeHP("up", 500); //huge healthpack
-console.log(hitPoints);
-changeHP ("down", 2000) //TERRITORIAL ROTBART, LEVEL 80 UNIQUE MONSTER
-console.log(hitPoints);
-
-//does health go up or down decided when we cal lthe function?
-//it wont always be 50 up or down
-//if health is grater than 200, health is 200.
-
-//max hp is 200
-//if the health gets to 0, sonsole log (you died) and set thge health to 100 and start the next game.
-
+//random numb between 1- 10
+console.log(Math.floor(Math.random()*10 + 1));
