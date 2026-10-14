@@ -1,0 +1,76 @@
+body {
+    margin: 40px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    font-family: 'Arial';
+    font-weight: bold;
+    color: black;
+}
+
+h3 {
+    font-family: 'Arial';
+    font-weight: lighter;
+    
+}
+
+p {
+    font-family: 'Arial';
+    font-size: 16px;
+    
+}
+
+section {
+    padding: 40px;
+    margin: 30px 0;
+    border-radius: 15px;
+    box-shadow: 3px 3px #c1baef;
+    background-color: white;
+}
+
+div {
+    background-color: #c1baef;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+ul {
+    font-family: 'Arial';
+    font-size: 1.1rem;
+    padding: 15px;
+    font-weight: bold;
+    background-color: #c1baef;
+    
+   
+   
+}
+
+button {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 20px;
+    box-shadow: 3px 3px #c1baef;
+     text-align: center;
+}
+
+.liste {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    
+}
+
+.container {
+    display: flex;
+    background-color: #ebe8f9;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.kul-tekst {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
