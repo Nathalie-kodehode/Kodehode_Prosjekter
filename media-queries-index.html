@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Media Query Playground</title>
+    <link rel="stylesheet" href="media-queries.style.css" />
+  </head>
+
+  <body>
+    <h1>CSS Media Query</h1>
+
+    <p class="intro">
+      We can use CSS Media Queries to change our CSS when we resize the browser,
+      rotate a device, enable Dark/Light Mode, turn on Reduce Motion, or open
+      Print Preview.
+    </p>
+
+    <div class="container">
+      <div class="demo screen">
+        <h2>Screen Size</h2>
+
+        <p>
+          Uses the width of the browser window to change styles. Commonly used
+          for responsive layouts across desktop, tablet and mobile devices.
+        </p>
+      </div>
+
+      <div class="demo orientation">
+        <h2>Orientation</h2>
+
+        <p>
+          Detects whether the available space is taller or wider. Useful when
+          adapting layouts for devices being rotated.
+        </p>
+      </div>
+
+      <div class="demo dark">
+        <h2>Dark Mode</h2>
+
+        <p>
+          Detects whether the user prefers a dark colour theme. Websites can
+          adjust colours automatically.
+        </p>
+      </div>
+
+      <div class="demo motion">
+        <h2>Reduced Motion</h2>
+
+        <p>
+          Detects when a user has requested fewer animations. This improves
+          accessibility for people who experience discomfort from motion
+          effects.
+        </p>
+
+        <div class="circle"></div>
+      </div>
+
+      <div class="demo print">
+        <h2>Print</h2>
+
+        <p>
+          Applies styles when the page is printed. Useful for removing
+          unnecessary elements and creating print-friendly pages.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
