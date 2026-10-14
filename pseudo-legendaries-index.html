@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pseudo-legendaries-style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Classes and Pseudo Elements</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>CSS Pseudo Classes and Pseudo Elements</h1>
+
+    <p class="intro">
+      Pseudo-classes and pseudo-elements allow CSS to style elements based on
+      their state or style specific parts of an element.
+    </p>
+
+    <!-- ======================================
+     PSEUDO CLASSES
+====================================== -->
+
+    <h1>Pseudo Classes</h1>
+
+    <p>
+      A pseudo-class uses a single colon (<strong>:</strong>). It styles an
+      element when it is in a particular state.
+    </p>
+
+    <section>
+      <h2>:hover</h2>
+
+      <p>
+        Applies styles when the mouse pointer is over an element. Commonly used
+        for buttons and links.
+      </p>
+
+      <button class="hover-button">Hover over me</button>
+    </section>
+
+    <section>
+      <h2>:focus</h2>
+
+      <p>
+        Applies styles when an element is selected. Important for keyboard users
+        and accessibility.
+      </p>
+
+      <input class="focus-input" placeholder="Click here" />
+    </section>
+
+    <section>
+      <h2>:active</h2>
+
+      <p>Applies styles while an element is being clicked.</p>
+
+      <button class="active-button">Click me</button>
+    </section>
+
+    <section>
+      <h2>:first-child and :last-child</h2>
+
+      <p>Selects elements based on their position inside a parent.</p>
+
+      <ul class="child-example">
+        <li>First item</li>
+        <li>Middle item</li>
+        <li>Last item</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>:nth-child()</h2>
+
+      <p>Allows selecting specific children using a number or pattern.</p>
+
+      <div class="numbers">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>:checked</h2>
+
+      <p>Selects form controls that have been selected.</p>
+
+      <label>
+        <input type="checkbox" />
+
+        Accept terms
+      </label>
+    </section>
+
+    <section>
+      <h2>:not()</h2>
+
+      <p>Selects everything except the element inside the brackets.</p>
+
+    <section>
+      <h2>:not()</h2>
+
+      <p>Selects everything except the element inside the brackets.</p>
+
+      <div class="not-example">
+        <p>Normal paragraph</p>
+        <p class="ignore">Ignored paragraph</p>
+        <p>Normal paragraph</p>
+      </div>
+    </section>
+
+    <!-- ======================================
+     PSEUDO ELEMENTS
+====================================== -->
+
+    <h1>Pseudo Elements</h1>
+
+    <p>
+      A pseudo-element uses two colons (<strong>::</strong>). It styles a
+      specific part of an element or creates additional content with CSS.
+    </p>
+
+    <section>
+      <h2>::before</h2>
+
+      <p>Inserts generated content before an element.</p>
+
+      <p class="before-example">Important message</p>
+    </section>
+
+    <section class="relative">
+      <h2>::after</h2>
+
+      <p>Inserts generated content after an element.</p>
+
+      <p class="after-example">Complete</p>
+    </section>
+
+    <section>
+      <h2>::first-letter</h2>
+
+      <p>
+        Styles the first letter of a piece of text. Often used in articles and
+        magazines.
+      </p>
+
+      <p class="first-letter-example">
+        This paragraph has a special first letter.
+      </p>
+    </section>
+
+    <section>
+      <h2>::first-line</h2>
+
+      <p>Styles the first line of text.</p>
+
+      <p class="first-line-example">
+        This paragraph demonstrates how the first line can be styled. Resize the
+        browser window to see how the first line changes.
+      </p>
+    </section>
+
+    <section>
+      <h2>::selection</h2>
+
+      <p>Styles text when the user highlights it.</p>
+
+      <p class="selection-example">Highlight this text with your mouse.</p>
+    </section>
+</body>
+</html>

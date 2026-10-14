@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 40px;
+    background-color: #f4f4f4;
+    color: #333
+}
+
+.intro {
+    font-size: 1.2rem;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 10px;
+}
+
+button, input {
+    padding: 12px;
+    font-size: 18px;
+}
+
+/* Pseudo Classes */
+
+/* :hover */
+.hover-button:hover {
+    background-color: tomato;
+    color: white;
+}
+
+/* :focus */
+.focus-input:focus {
+    outline: 3px solid steelblue;
+}
+
+/* :active */
+.active-button:active {
+    transform: scale(0.9);
+}
+
+/* :first-child and :last-child */
+.child-example li:first-child {
+    color: green;
+}
+
+.child-example li:last-child {
+    color: red;
+}
+
+/* :nth-child() */
+
+.numbers {
+    display: flex;
+    gap: 10px;
+
+}
+
+.numbers div {
+    background-color: lightgrey;
+    padding: 20px;
+}
+
+.numbers div:nth-child(odd) {
+    background-color: steelblue;
+    color: white;
+}
+
+.numbers div:nth-child(3n + 1) {
+    background-color: red;
+    color: white;
+}
+
+section:nth-child(even) {
+    background-color: rgb(242, 227, 242);
+    color: rgb(26, 23, 23);
+}
+
+/* :checked */
+input:checked {
+    accent-color: green;
+}
+
+/* :not() */
+.not-example p:not(.ignore) {
+    background-color: lightgreen;
+}
+
+/* Pseudo elements */
+
+/* ::before */
+.before-example::before {
+    content: "⚠_"
+}
+
+/* ::after */
+/* copy joes code for this part on github */
+.after-example::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: black;
+  width: 100%;
+}
+
+.after-example::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-50%);
+    height: 3px;
+    background-color: black;
+width: 100%;
+}
+
+/* ::first-letter */
+.first-letter-example::first-letter {
+    font-size: 3rem;
+color: tomato;
+font-weight: bold;
+}
+
+/* ::first-line */
+.first-line-example:first-line {
+    font-weight: bold;
+    color: steelblue;
+}
+
+/* ::selection */
+.selection-example::selection {
+    background-color: black;
+    color: white;
+}
