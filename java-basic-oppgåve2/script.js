@@ -29,7 +29,7 @@ funksjonen)
 
 
 /******************************************************************************
-2.
+2. FERDIG
 
 Lag følgende funksjon:
 
@@ -39,8 +39,10 @@ i STORE BOKSTAVER med et utropstegn på slutten.
 Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!"
 
 ******************************************************************************/
-
 // Skriv koden for oppgave 2 her
+
+const kulTekst = "Dette er kult!"
+console.log (kulTekst.toUpperCase());
 
 /******************************************************************************
 3.
@@ -63,8 +65,9 @@ Funksjonen skal returnere:
 Hvis ingen timeverdi mottas, skal funksjonen returnere en feilmelding.
 
 ******************************************************************************/
-
 // Skriv koden for oppgave 3 her
+
+
 
 /******************************************************************************
 4.
