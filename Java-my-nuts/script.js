@@ -1,181 +1,146 @@
-// Methods
+//Functions and Methods RECAP
 
-// A method in JavaScript is a built-in function that you use with a specific type of data, like strings, numbers or arrays. It lets you do something with that data—like change it, check it, copy or access part of it. Some methods alter the original piece of data, others don't alter the original!
+//Check if an array includes an item. (function, array, ternary, methods)
 
-//Section 1.0
-//String Methods
+// Our shipping list
+const shoppingList = ["milk", "bread", "cheese", "pasta"];
+const gamesList = [
+  "Mario Kart",
+  "Hello Kitty Island Adventure",
+  "Control Resonant",
+  "Counter Strike",
+  "Pang",
+  "Animal Crossing",
+  "Dragon Quest 11",
+  "Call of Duty",
+];
 
-const text = "     Hello, JavaScript World World!   ";
-console.log(text);
-console.log(text.trim()); //trim removes white space from both ends
-//doesnt alter our original string.
+// the function checks if there is an item inside our array
+function checkItem(item, array) {
+  if (array.includes(item)) {
+    // remember to use template string to make this bs easier to type in
+    return `The array includes ${item}`;
+  } else {
+    return `${item} was not in the array`;
+  }
+}
+//various results
+console.log(checkItem("milk", shoppingList));
+console.log(checkItem("pasta", shoppingList));
+console.log(checkItem("cheese", shoppingList));
+console.log(checkItem("hamburger", shoppingList));
+console.log(checkItem("Dragon Quest 11", gamesList));
 
-//converts string to CAPSLOCK
-console.log(text.toUpperCase());
-//converts string to lowercase
-console.log(text.toLowerCase());
-//returns starting index of the first instance of the passed in text
-console.log(text.indexOf("JavaScript"));
-//slice removes parts of the string, decided by the index numbers (5, 9). Srtating index is included end index is not included.
-console.log(text.slice(5, 10));
-//replace replaces X with Y in the (). But only the first instance.
-console.log(text.replace("World", "Universe"));
-//replace replaces all instances of the passed in word with the new one.
-console.log(text.replaceAll("World", "Galaxy"));
-//returns the unicode number of charater at passed in index. Capital H (at index 5) is unicode nr 72
-console.log(text.charCodeAt(5));
-//repeats the passed in text, decided by the number in the ()
-console.log(text.repeat(3));
-//counts the length of the string. the sentence above has 38 characters. Very useful, for arrays
-console.log(text.length);
+//convert a sentence into kebab case (function, methods)
 
-// Section 1.1
-//Converting a String into an Array
+function toKebabCase(rawString) {
+  // the order of the commands below ARE VERY IMPORTANT! KEEP THIS IN MIND
+  const kebabbedString = rawString.trim().toLowerCase().replaceAll(" ", "-");
 
-//splits everything up in the sentence
-console.log(text.split(""));
-//splits up sentence into spaces and words
-console.log(text.split(" "));
-//trim removes the empty spaces
-console.log(text.trim().split(" "));
-//the split removes the letter 0, so we get hell, havascript w, rid w, osv
-console.log(text.trim().split("o"));
+  return kebabbedString;
+}
 
-//Section 1.2
-//Converting a String into a Number
+const mySentence = "     Hello World From JavaScript    ";
+// "hello-world-from-javascript"
 
-let numberString = "123.45xyz";
-//converts a string into a number. returns NaN (not a number) if any part of the string is invalid.
-console.log(Number(numberString));
-//Converts a string into a whole number, ignores text and decimals.
-console.log(parseInt(numberString)); //int stands for integer
-//same as parseInt, but doesnt ignores decimals. But still ignores text.
-console.log(parseFloat(numberString));
+console.log(toKebabCase(mySentence));
+console.log(toKebabCase("stroking my PEANITS"));
 
-//Section 2.0
-//Array Methods
-//even though colors is a const we can use man y different methods to alter theelements insdeit he arra. we still cant rassign colors with =.
+// Mkae a funtion to check if a word is apalindrome
 
-const colors = ["Red", "Green", "Blue"];
-//specifiy which color by number
-console.log(colors[0]);
-//3 elements
-console.log(colors.length);
-//push adds "Yellow" to the end of the array as a new element at the end, without having to manually adding it it ourself.
-colors.push("Yellow");
-console.log(colors);
-//Pop removes the last element of the array, like popping a balloon. But does affect the original array.
-colors.pop();
-console.log(colors);
-//unshift adds a new element at the start of the array
-colors.unshift("Purple");
-console.log(colors);
-//shift removes the first element of the array
-colors.shift();
-console.log(colors);
-//replaces elements in the array, alters the original array.
-colors.splice(0, 2, "Orange", "Pink");
-console.log(colors);
-//works like splice, but DOESNT alter the original
-const splicedColors = colors.toSpliced(1, 1, "Brown");
-console.log(splicedColors);
+function checkPalindrome(word) {
+  //DO NOT FORGET THE FUCKING BRACKETS
+  if (word.toLowerCase() === word.toLowerCase().split("").reverse().join(""))
+    return `${word} is a palindrome`;
+  else {
+    return `${word} is NOT a palindrome`;
+  }
+}
 
-const numbersArray = [3, 1, 4, 1, 5, 9, 5];
-const sortedNumbers = numbersArray.toSorted();
-//makes a copy of the array and sorts the elemts insdie
-console.log(sortedNumbers);
-console.log(numbersArray);
-//sorts the original array
-numbersArray.sort();
-console.log(numbersArray);
+console.log(checkPalindrome("racecar"));
+console.log(checkPalindrome("Bingus"));
+console.log(checkPalindrome("ho-oh"));
 
-const stringArray = ["hello", "this", "is", "an", "array", "of", "strings"];
-//sorts the strings alphabetically
-stringArray.sort();
-console.log(stringArray);
+//we cannot use .reverse() on a string, array only.
+// instead concert string to array, reverse it and then convert back to string.
 
-console.log(sortedNumbers[6]);
-//targets element at index 6
-console.log(sortedNumbers.at(6));
-//-number goes towards left, targets the last elemnt in the array
-console.log(sortedNumbers.at(-2));
-//makes a copy of the orignal array and reverses the order of the elements in the array
-const reversedArray = sortedNumbers.toReversed();
-console.log(reversedArray);
+//split to array, reverse then join back to string
+console.log("banana".split("").reverse().join(""));
 
-//Section 2.1
-//Converting an array to a String
-
-//combines the elements in an array, but without space. use "_" to ensure the elements have space between.
-console.log(colors);
-console.log(colors.join(" "));
-
-//Section 3
-//Number Methods
-
-const myNum = 3.98493573097509359;
-
-console.log(myNum);
-//rounds up to the nearest number, and converted the number into a string
-console.log(myNum.toFixed(2));
-//returns our number in exponential notation if we have a big number, this can take less space on screen
-console.log(myNum.toExponential());
-
-//Section 3.1
-//Converting a Number into a String
-//turns number into string
-console.log(myNum.toString());
-
-const rawString = "                 JavaScript is fun!          ";
-const processedString = rawString;
-//remove whitespace from front and back
-//replace "fun" with "aweseom"
-//make it uppercase
-console.log(rawString
-    .trim()
-    .replace("fun", "awesome")
-    .toUpperCase()
-);
-
-
-
-//convert from array to string
-//make the string lowercase
-const wordsArray = ["Hello", "worLD"]
-
-const cleanedArray = wordsArray.join(" ").toLowerCase();
-//if you get an error, you might be using the wrong method on the wrong array!
-console.log(cleanedArray);
-
-const exampleNum = 34544.0848434
-
-const cleanedNum = exampleNum.toFixed(2).repeat(2);
-
-//TOSTRING IS ALREADY BUILT INTO TOFIXED
-console.log(cleanedNum)
-
-//Sidequest
-
-//Math with CAPITAL M FIRST
-//math.round rounds the passed in number to the nearest whole number/integer.
-console.log(Math.round(123.45));
-//math.ceil rounds it UP to the ceiling
-console.log(Math.ceil(123.45));
-//rounds down the passed in number to the nearest whole number
-console.log(Math.floor(123.45));
-
-//Random number
-
-//Math.random gives us a random number between 0.000000 - 0.9999999
+//Math.random()
+//0.0 - 0.999
 console.log(Math.random());
-//random number between 0.0000 - 9.99999
-console.log(Math.random()*10);
 
-//rnadom num between 0 - 9
+console.log(Math.random() * 10);
 
-console.log(Math.floor(Math.random()*11));
-console.log(Math.floor(Math.random()*11));
-console.log(Math.floor(Math.random()*11));
+console.log(Math.floor(Math.random() * 10));
 
-//random numb between 1- 10
-console.log(Math.floor(Math.random()*10 + 1));
+console.log(Math.floor(Math.random() * 10) + 1);
+
+const pokemon = [
+  "pikachu",
+  "diglett",
+  "electrode",
+  "machop",
+  "magikarp",
+  "mew",
+  "blastoise",
+  "vaporeon",
+  "psyduck",
+  "meowth",
+  "alakazam",
+];
+
+//first mon, starts at 0
+console.log(pokemon);
+
+const randomIndex = Math.floor(Math.random() * pokemon.length);
+console.log(randomIndex);
+
+console.log(pokemon[randomIndex]);
+
+//make a rock paper scissors game
+
+const rockPaperScissors = (player1, player2) => {
+  switch (player1 + player2) {
+    //player 2 wins
+    case "rock" + "paper":
+    case "paper" + "scissors":
+    case "scissors" + "rock":
+      return "player 2 wins";
+      //player 1 wins
+    case "paper" + "rock":
+    case "scissors" + "paper":
+    case "rock" + "scissors":
+      return "player 1 wins";
+      //a draw
+          case "rock" + "rock":
+    case "paper" + "paper":
+    case "scissors" + "scissors":
+      return "It's a tie";
+      default:
+        return "Error"
+  }
+};
+
+console.log(rockPaperScissors("rock", "paper"));
+console.log(rockPaperScissors("scissors", "paper"));
+console.log(rockPaperScissors("rock", "rock"));
+
+const answerArray = ["rock", "paper", "scissors"]
+
+const ranIndex = Math.floor(Math.random() * 3)
+const ranIndex2 = Math.floor(Math.random() * 3)
+console.log(ranIndex)
+console.log(ranIndex2)
+
+const aiAnswer = answerArray[ranIndex]
+const aiAnswer2 = answerArray[ranIndex2]
+console.log(aiAnswer)
+
+console.log(rockPaperScissors(aiAnswer, aiAnswer2));
+
+
+
+//the computers answer will be randomized
+
