@@ -6,8 +6,13 @@ body {
 
 h1 {
     font-family: 'Arial';
-    font-weight: bold;
+    font-weight: bolder;
     color: black;
+}
+
+h2 {
+    font-family: 'Arial';
+    margin-top: 30px;
 }
 
 h3 {
@@ -42,9 +47,6 @@ ul {
     padding: 15px;
     font-weight: bold;
     background-color: #c1baef;
-    
-   
-   
 }
 
 button {
@@ -59,7 +61,6 @@ button {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    
 }
 
 .container {
@@ -74,3 +75,15 @@ button {
     justify-content: center;
     align-items: center;
 }
+
+h2::before {
+       content:"";
+    position: absolute;
+    bottom: 10;
+    left: 10;
+    height: 3px;
+    background-color: black;
+width: 95%;
+margin-top: -15px;
+}
+
