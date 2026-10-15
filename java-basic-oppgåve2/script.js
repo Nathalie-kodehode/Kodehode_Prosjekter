@@ -24,10 +24,6 @@ funksjonen)
 
 
 
-
-
-
-
 /******************************************************************************
 2. FERDIG
 
@@ -104,11 +100,12 @@ Eksempel 2: " Det er vanskelig å bruke metoder " skal returnere "Det er gøy å
 Eksempel 3: "   vanskelig        " skal returnere "gøy".
 
 ******************************************************************************/
-
 // Skriv koden for oppgave 5 her
 
+
+
 /******************************************************************************
-6.
+6. FERDIG
 
 Fullfør følgende steg for å manipulere "items"-arrayet. Hvert steg skal
 fullføres ved å bruke passende array-metoder.
@@ -129,64 +126,17 @@ Steg 4: Kombiner alle elementene i arrayen til en enkelt string ved å bruke " |
 Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder bokstaven "e".
 
 ******************************************************************************/
-
 // Skriv koden for oppgave 6 her
 
+console.log(items)
 
+items.shift()
+console.log(items)
 
+const newItems = items.toSpliced(2, 1, "Linjal")
+console.log(newItems)
 
+newItems.splice(0,2, "Markeringspenn", "Markeringspenn")
+console.log(newItems)
 
-
-/******************************************************************************
-7.
-
-EKSTRA UTFORDRING #1:
-
-Dette er ikke obligatorisk, kun for de som vil ha en ekstra utfordring.
-
-Lag følgende funksjon:
-
-Funksjonen skal ta inn 2 parametere, en array og en string.
-
-Sjekk om arrayen inneholder stringen. Hvis den gjør det, fjern elementet
-fra arrayet og returner den oppdaterte arrayen.
-
-Hvis arrayet ikke inneholder stringen, legg stringen til på slutten
-av arrayet og returner det oppdaterte arrayet.
-
-Eksempel 1: (["Rød", "Grønn"], "Blå") --> ["Rød", "Grønn", "Blå"]
-Eksempel 2: (["Rød", "Grønn", "Blå"], "Grønn") --> ["Rød", "Blå"]
-Eksempel 3: (["En", "To", "Tre"], "Fire") --> ["En", "To", "Tre", "Fire"]
-Eksempel 4: (["En", "To", "Tre"], "To") --> ["En", "Tre"]
-
-******************************************************************************/
-
-// Skriv koden for oppgave 7 her
-
-/******************************************************************************
-8.
-
-EKSTRA UTFORDRING #2:
-
-Dette er ikke obligatorisk, kun for de som vil ha en ekstra utfordring.
-
-Lag følgende funksjon:
-
-Funksjonen skal ta inn ett parameter.
-
-Hvis parameteret er en string:
-Returner stringen med "😎" lagt til i starten og slutten.
-
-Hvis parameteret er et tall:
-Doble verdien, konverter den til en string, og returner den med "😎" lagt til i
-starten og slutten.
-
-Hvis parameteret er en boolean:
-Returner "😎Ja😎" hvis parameteret er true, eller "😎Slapp av😎" hvis parameteret er false.
-
-Hvis parameteret er en annen datatype:
-Returner "😎Kun primitive verdier😎".
-
-******************************************************************************/
-
-// Skriv koden for oppgave 8 her
+console.log(items.join("|"));
