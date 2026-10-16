@@ -22,14 +22,15 @@ funksjonen)
 ******************************************************************************/
 // Skriv koden for oppgave 1 her
 const parTall = ["0", "2", "4", "6", "8"];
-const oddeTall = ["1", "3", "5", "7", "9"]
+const oddeTall = ["1", "3", "5", "7", "9"];
 
-function checkNumber (myNumber, oddeTall, parTall) {
-if (myNumber.includes(oddeTall)) {
-    return `${myNumber} er eit oddetall`
-} else (myNumber.includes(parTall)); {
-    return `${myNumber} er eit partall`
-}
+function checkNumber(myNumber, oddeTall, parTall) {
+  if (myNumber.includes(oddeTall)) {
+    return `${myNumber} er eit oddetall`;
+  } else myNumber.includes(parTall);
+  {
+    return `${myNumber} er eit partall`;
+  }
 }
 
 console.log(checkNumber("5"));
@@ -47,11 +48,11 @@ Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!"
 ******************************************************************************/
 // Skriv koden for oppgave 2 her
 
-const kulTekst = "Dette er kult!"
-console.log (kulTekst.toUpperCase());
+const kulTekst = "Dette er kult!";
+console.log(kulTekst.toUpperCase());
 
 /******************************************************************************
-3.
+3.FERDIG
 
 Lag følgende funksjon:
 
@@ -72,8 +73,29 @@ Hvis ingen timeverdi mottas, skal funksjonen returnere en feilmelding.
 
 ******************************************************************************/
 // Skriv koden for oppgave 3 her
+const tid = 3;
+const namn = "Frode";
 
+function greetName(tid, namn) {
+  //Mellom klokka 0 og 5
+  if (tid <= 0) {
+    return `God Natt ${namn}`;
+  }
+  //Mellom klokka 6 og 11
+  else if (tid <= 10) {
+    return `God Morgen ${namn}`;
+    //Mellom klokka 12 og 17
+  } else if (tid <= 17) {
+    return `God Dag, ${namn}`;
+    //Mellom klokka 18 og 23
+  } else if (tid <= 23) {
+    return `God Kveld, ${namn}`;
+  } else (tid <= 24); {
+    return `Ugyldig Tid`
+  }
+}
 
+console.log(greetName(tid, namn));
 
 /******************************************************************************
 4.FERDIG
@@ -91,17 +113,17 @@ Eksempel 2: ["En", "To", "Tre", "Fire", "Fem", "Seks"] skal returnere
 ******************************************************************************/
 // Skriv koden for oppgave 4 her
 
-const colorArray = ["Rød", "Grønn", "Blå", "Gul"]
+const colorArray = ["Rød", "Grønn", "Blå", "Gul"];
 console.log(colorArray);
 const newColor = colorArray;
 
-const numArray = ["En", "To", "Tre", "Fire", "Fem", "Seks"]
+const numArray = ["En", "To", "Tre", "Fire", "Fem", "Seks"];
 console.log(numArray);
 const newNum = numArray;
 
 newColor.shift();
 newColor.pop();
-console.log(newColor)
+console.log(newColor);
 
 newNum.shift();
 newNum.pop();
@@ -127,15 +149,15 @@ Eksempel 3: "   vanskelig        " skal returnere "gøy".
 ******************************************************************************/
 // Skriv koden for oppgave 5 her
 
-const mySentence = "    Javascript er vanskeleg    "
+const mySentence = "    Javascript er vanskeleg    ";
 const fixedSentence = mySentence;
 
-console.log(fixedSentence.trim().replace("vanskeleg", "gøy"))
+console.log(fixedSentence.trim().replace("vanskeleg", "gøy"));
 
-const myMethods = "  Det er vanskeleg å bruke metoder   "
+const myMethods = "  Det er vanskeleg å bruke metoder   ";
 const fixedMethods = myMethods;
 
-console.log(fixedMethods.trim().replace("vanskeleg", "GØY"))
+console.log(fixedMethods.trim().replace("vanskeleg", "GØY"));
 
 /******************************************************************************
 6. FERDIG
@@ -161,15 +183,15 @@ Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder
 ******************************************************************************/
 // Skriv koden for oppgave 6 her
 
-console.log(items)
+console.log(items);
 
-items.shift()
-console.log(items)
+items.shift();
+console.log(items);
 
-const newItems = items.toSpliced(2, 1, "Linjal")
-console.log(newItems)
+const newItems = items.toSpliced(2, 1, "Linjal");
+console.log(newItems);
 
-newItems.splice(0,2, "Markeringspenn", "Markeringspenn")
-console.log(newItems)
+newItems.splice(0, 2, "Markeringspenn", "Markeringspenn");
+console.log(newItems);
 
 console.log(items.join("|"));
