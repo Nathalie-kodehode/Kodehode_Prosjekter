@@ -21,8 +21,18 @@ funksjonen)
 
 ******************************************************************************/
 // Skriv koden for oppgave 1 her
+const parTall = ["0", "2", "4", "6", "8"];
+const oddeTall = ["1", "3", "5", "7", "9"]
 
+function checkNumber (myNumber, oddeTall, parTall) {
+if (myNumber.includes(oddeTall)) {
+    return `${myNumber} er eit oddetall`
+} else (myNumber.includes(parTall)); {
+    return `${myNumber} er eit partall`
+}
+}
 
+console.log(checkNumber("5"));
 
 /******************************************************************************
 2. FERDIG
@@ -66,7 +76,7 @@ Hvis ingen timeverdi mottas, skal funksjonen returnere en feilmelding.
 
 
 /******************************************************************************
-4.
+4.FERDIG
 
 Lag følgende funksjon:
 
@@ -79,11 +89,26 @@ Eksempel 2: ["En", "To", "Tre", "Fire", "Fem", "Seks"] skal returnere
 ["To", "Tre", "Fire", "Fem"].
 
 ******************************************************************************/
-
 // Skriv koden for oppgave 4 her
 
+const colorArray = ["Rød", "Grønn", "Blå", "Gul"]
+console.log(colorArray);
+const newColor = colorArray;
+
+const numArray = ["En", "To", "Tre", "Fire", "Fem", "Seks"]
+console.log(numArray);
+const newNum = numArray;
+
+newColor.shift();
+newColor.pop();
+console.log(newColor)
+
+newNum.shift();
+newNum.pop();
+console.log(newNum);
+
 /******************************************************************************
-5.
+5. FERDIG
 
 Lag følgende funksjon:
 
@@ -102,7 +127,15 @@ Eksempel 3: "   vanskelig        " skal returnere "gøy".
 ******************************************************************************/
 // Skriv koden for oppgave 5 her
 
+const mySentence = "    Javascript er vanskeleg    "
+const fixedSentence = mySentence;
 
+console.log(fixedSentence.trim().replace("vanskeleg", "gøy"))
+
+const myMethods = "  Det er vanskeleg å bruke metoder   "
+const fixedMethods = myMethods;
+
+console.log(fixedMethods.trim().replace("vanskeleg", "GØY"))
 
 /******************************************************************************
 6. FERDIG
