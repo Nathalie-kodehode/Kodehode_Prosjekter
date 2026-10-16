@@ -21,19 +21,19 @@ funksjonen)
 
 ******************************************************************************/
 // Skriv koden for oppgave 1 her
-const parTall = ["0", "2", "4", "6", "8"];
-const oddeTall = ["1", "3", "5", "7", "9"];
+const oddeTall = [1, 3, 5, 7, 9];
+const parTall = [0, 2, 4, 6, 8];
+
 
 function checkNumber(myNumber, oddeTall, parTall) {
-  if (myNumber.includes(oddeTall)) {
+  if (myNumber === oddeTall) {
     return `${myNumber} er eit oddetall`;
-  } else myNumber.includes(parTall);
-  {
+  } else (myNumber === parTall); {
     return `${myNumber} er eit partall`;
   }
 }
 
-console.log(checkNumber("5"));
+console.log(checkNumber(5));
 
 /******************************************************************************
 2. FERDIG
@@ -90,8 +90,9 @@ function greetName(tid, namn) {
     //Mellom klokka 18 og 23
   } else if (tid <= 23) {
     return `God Kveld, ${namn}`;
-  } else (tid <= 24); {
-    return `Ugyldig Tid`
+  } else tid <= 24;
+  {
+    return `Ugyldig Tid`;
   }
 }
 
