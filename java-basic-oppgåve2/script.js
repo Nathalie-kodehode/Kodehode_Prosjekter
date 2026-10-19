@@ -21,19 +21,21 @@ funksjonen)
 
 ******************************************************************************/
 // Skriv koden for oppgave 1 her
-const oddeTall = [1, 3, 5, 7, 9];
-const parTall = [0, 2, 4, 6, 8];
 
-
-function checkNumber(myNumber, oddeTall, parTall) {
-  if (myNumber === oddeTall) {
-    return `${myNumber} er eit oddetall`;
-  } else (myNumber === parTall); {
-    return `${myNumber} er eit partall`;
+function checkOddEven(checkNum) {
+  //modulo deler talet på 2 og sjekker om talet er oddetall eller partall
+  if (checkNum % 2 === 0) {
+    //talet er delt på 2 og restetalet ender opp på 0 (sant).
+    return `${checkNum} er eit partall!`;
+  } else {
+    //talet er delt på 2, men restetalet ender ikkje på 0 (usant).
+    return `${checkNum} er eit oddetall!`;
   }
 }
-
-console.log(checkNumber(5));
+//console log for oddetall
+console.log(checkOddEven(3));
+//console log for partall
+console.log(checkOddEven(8));
 
 /******************************************************************************
 2. FERDIG
@@ -90,6 +92,7 @@ function greetName(tid, namn) {
     //Mellom klokka 18 og 23
   } else if (tid <= 23) {
     return `God Kveld, ${namn}`;
+    //Klokka er vel over 24
   } else tid <= 24;
   {
     return `Ugyldig Tid`;
