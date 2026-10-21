@@ -1,0 +1,137 @@
+/* -------------------- */
+/* General              */
+/* -------------------- */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  margin: 50px auto;
+}
+
+.box {
+  margin: 20px 0;
+  width: 200px;
+  height: 100px;
+  background-color: rgb(205, 217, 255);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  margin: 20px 0;
+}
+
+/* Transition property-duration */
+.transition-basic {
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+.transition-basic:hover {
+    background-color: blueviolet;
+}
+
+/* Transition timing-function */
+
+.timing {
+   transition-property: width;
+    transition-duration: 2s;
+}
+
+.timing-function-container:hover .timing {
+    width: 500px;
+}
+
+.ease-in {
+    transition-timing-function: ease-in;
+}
+
+.ease-out {
+    transition-timing-function: ease-out;
+}
+
+.ease {
+    transition-timing-function: ease;
+}
+
+.linear {
+    transition-timing-function: linear;
+}
+
+.cubic-bezier {
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Transition-delay */
+.transition-delay {
+    transition-property: background-color color;
+    transition-duration: 2s;
+    transition-delay: 2s;
+}
+
+.transition-delay:hover {
+    background-color: blue;
+    color: white;
+}
+
+/* Transition-shorthand */
+
+.transition-shorthand {
+    /* the regular way */
+    /* transition-property: background-color;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1s; */
+
+    /* the shortcut (shorthand) */
+    /* property, duration , timing-function, delay*/
+    transition: background-color 2s ease-in-out 1s;
+}
+
+.transition-shorthand:hover {
+    background-color: tomato;
+}
+
+/* Transform */
+.transform-translate {
+    transition: transform 2s;
+}
+
+.transform-translate:hover {
+    /* RIGHT/LEFT */
+    transform: translateX(500px);
+    /* DOWN/UP */
+    transform: translateY(200px);
+}
+
+.transform-scale {
+    transition: transform 0.4s ;
+}
+
+.transform-scale:hover {
+    transform: scale(1.2);
+}
+
+.transform-rotate {
+    transition: transform 1s;
+
+}
+
+.transform-rotate:hover {
+    transform: rotate(360deg);
+}
+
+.transform-skew {
+    transition: transform 1s;
+}
+
+.transform-skew:hover {
+    transform: skew(30deg);
+}
+
