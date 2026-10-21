@@ -11,6 +11,18 @@ h1 {
   color: black;
 }
 
+h1::before {
+  content: "";
+  position: absolute;
+  bottom: 10;
+  left: 10;
+  height: 3px;
+  background-color: black;
+  width: 95%;
+  margin-top: -15px;
+
+}
+
 h2 {
   font-family: "Arial";
   margin-top: 30px;
@@ -64,15 +76,25 @@ div {
 }
 
 ul {
+  text-decoration-color: white;
+  text-decoration: none;
+  text-decoration-line: none;
+}
+
+li {
   font-family: "Arial";
   font-size: 1.1rem;
   padding: 15px;
   font-weight: bold;
   background-color: #546ce1;
   border-radius: 10px;
+     text-decoration: none;
+  text-decoration-line: none;
+  list-style: none;
 }
 
-ul::before {
+
+li::before {
   content: "Du er:";
   display: flex;
   height: 25px;
@@ -81,12 +103,16 @@ ul::before {
   border-radius: 15px;
   background-color: #273371;
   color: white;
+   text-decoration: none;
+   text-decoration-line: none;
 }
 
-ul::after {
+li::after {
   display: flex;
   justify-content: center;
   content: "🌟";
+   text-decoration: none;
+   text-decoration-line: none;
 }
 
 ul::after {
@@ -96,13 +122,15 @@ ul::after {
   justify-content: center;
   align-items: center;
   border-radius: 15px;
+   text-decoration: none;
+   text-decoration-line: none;
 }
 
-ul:nth-child(odd) {
+li:nth-child(odd) {
   background-color: rgb(7, 172, 172);
 }
 
-ul:nth-child(3) {
+li:nth-child(3) {
   background-color: rgb(207, 85, 33);
 }
 
@@ -119,6 +147,7 @@ button {
 button:hover {
   background-color: rgb(76, 76, 212);
   color: white;
+  transform: scale(1.1);
 }
 
 button:active {
@@ -137,6 +166,14 @@ a {
   display: flex;
   flex-direction: row;
   gap: 20px;
+   text-decoration: none;
+}
+
+.ul-liste {
+  display: flex;
+  gap: 20px;
+   text-decoration: none;
+
 }
 
 .kul-tekst {
