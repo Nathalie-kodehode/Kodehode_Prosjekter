@@ -135,3 +135,180 @@ h2 {
     transform: skew(30deg);
 }
 
+.animation-from-to {
+    animation-name: move;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 2s;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+to {
+    transform: translateX(200px);
+}
+}
+
+.animation-percent {
+    animation-name: move-percent;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes move-percent {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(200px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animation-iteration {
+    animation-name: color-change;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+}
+
+@keyframes color-change {
+    0% {
+        background-color: red;
+    }
+
+    50% {
+        background-color: green;
+    }
+    100% {
+        background-color: blue;
+    }
+}
+
+.animation-shorthand {
+    /* name, duration, timing-function, delay, iteration-count, direction */
+    animation: size 3s ease 1s infinite alternate;
+}
+/* cannot do 2 transforms at the same time, must be put in the same transform */
+/* remember these commands so i can make EVIL buttons later */
+@keyframes size {
+    0% {
+        transform: scale(0) rotate(0deg);
+        background-color: tomato;
+
+    }
+    33% {
+        transform: scale(1.2) rotate(90deg);
+        background-color: green;
+    }
+
+    66% {
+        transform: scale(0.5) rotate(30deg);
+        background-color: purple;
+    }
+
+    100% {
+        transform: scale(1) rotate(20deg);
+        background-color: pink;
+    }
+}
+
+/* Transition Underline */
+
+nav {
+  background-color: #0d6efd;
+  height: 60px;
+  width: fit-content;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #9fe3ec;
+}
+
+nav a:after {
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #4db5e7;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* 3D flipcard */
+
+.flip-card {
+  width: 9rem;
+  height: 9rem;
+  perspective: 50rem;
+}
+
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* need the preserve to change from front side to back side */
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease;
+}
+
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card .front,
+.flip-card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* need this to hide the back until the flip is done */
+  backface-visibility: hidden;
+  border-radius: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+}
+
+.front {
+  background: blue;
+}
+.back {
+  background: red;
+  transform: rotateY(180deg);
+}
+
