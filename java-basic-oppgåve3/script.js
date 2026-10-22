@@ -174,46 +174,4 @@ function doubleSwap(string, charA, charB) {
 	// Skriv koden for oppgave 4 her
 }
 
-/******************************************************************************
-5.
-
-EKSTRA UTFORDRING:
-
-(Løsning av denne oppgaven er ikke obligatorisk, kun for de som vil ha en ekstra utfordring)
-
-Lag en funksjon kalt `helloChecker` som tar inn en string som parameter.
-
-Skriv kode som sjekker alle ordene i stringen for å finne ut om noen av dem
-matcher ordet for "hei" på noen av disse språkene:
-
-- hello (engelsk)
-- ciao (italiensk)
-- salut (fransk)
-- hallo (tysk)
-- hola (spansk)
-- czesc (polsk)
-
-Hvis noen av ordene i stringen matcher et av disse, skal funksjonen returnere:
-"HELLO oppdaget på (navn på språket)."
-
-Hvis ingen av ordene i strengen matcher, skal funksjonen returnere:
-"Ingen HELLO oppdaget."
-
-PS: Sørg for at funksjonen er case-insensitive; både "Hello" og "hello" skal oppdages.
-
-Jeg har lagt til noen testvariabler for å sjekke funksjonen din.
-
-******************************************************************************/
-
-const greetings = [
-  "Hello, how are you today?",
-  "Diciamo ciao prima di andare!",
-  "Salut, ça va bien?",
-  "Kannst du mich hören? Hallo!",
-  "Hva er regex?",
-  "Nos saludamos con un alegre hola.",
-  "Ona pomachała i powiedziała cześć z uśmiechem.",
-  "Good afternoon gentlemen!"
-];
-
-// Skriv koden for oppgave 5 her
+/******************************************************************************/
