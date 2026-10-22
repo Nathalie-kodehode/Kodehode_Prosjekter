@@ -53,12 +53,10 @@ Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!"
 
 const kulLiten = "Dette er kult!";
 function kulStor (kulLiten) {
-console.log(kulStor(kulLiten.toUpperCase()));
- 
- 
+  return 
 }
 
-kulStor();
+console.log(kulStor(kulLiten.toUpperCase()));
 
 
 /******************************************************************************
