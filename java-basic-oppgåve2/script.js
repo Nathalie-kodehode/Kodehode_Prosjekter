@@ -51,12 +51,15 @@ Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!"
 // Skriv koden for oppgave 2 her
 //make function, then call
 
-const kulLiten = "Dette er kult!";
-function kulStor (kulLiten) {
-  return 
+const kulLiten = "Dette er kult";
+console.log(kulLiten);
+
+function nyTekst (kulLiten) {
+const kulStor = kulLiten.toUpperCase().push("!");
+  return kulStor;
 }
 
-console.log(kulStor(kulLiten.toUpperCase()));
+
 
 
 /******************************************************************************
@@ -106,8 +109,6 @@ function greetName(tid, namn) {
 }
 
 console.log(greetName(tid, namn));
-console.log(greetName(3, "john"));
-console.log(greetName(16, "Nathalie"));
 
 /******************************************************************************
 4.FERDIG
@@ -140,33 +141,10 @@ function trimArray(arr){
   return arr;
 }
 
-const myArr = ["Toyota", "Opel", "Lexus", "Ford", "Audi", "BMW", "Volvo"];
-const endretArr = trimArray(myArr);
-console.log(endretArr);
-console.log(trimArray(endretArr));
-
 console.log(trimArray(colorArray));
 console.log(trimArray(numArray));
 
 
-function Add(num = 1, num2 = 10, num3 = 100){
-/*  console.log(num);
-  console.log(num2);
-  console.log(num3);
-*/
-   let sum = num + num2 + num3;
-  return sum;
-}
-
-console.log(Add());
-console.log(Add(5));
-console.log(Add(5,6));
-console.log(Add(5,6,7));
-
-console.log(1+10+100);
-console.log(5+10+100);
-console.log(5+6+100);
-console.log(5+6+7);
 
 
 
