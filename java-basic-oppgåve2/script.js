@@ -10,7 +10,7 @@ Legg til kommentarer i koden din som kort forklarer hva den gjør.
 ******************************************************************************/
 
 /******************************************************************************
-1.
+1. FERDIG FIXED
 
 Lag følgende funksjon:
 
@@ -51,16 +51,15 @@ Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!"
 // Skriv koden for oppgave 2 her
 //make function, then call
 
-const kulTekst = "Dette er kult!";
-function newTekst (kulTekst) {
-  kulTekst.toUpperCase();
-
+const kulLiten = "Dette er kult!";
+function kulStor (kulLiten) {
+console.log(kulStor(kulLiten.toUpperCase()));
+ 
+ 
 }
 
+kulStor();
 
-
-
-console.log(newTekst(kulTekst));
 
 /******************************************************************************
 3.FERDIG
@@ -229,7 +228,7 @@ return minSetning;
 }
 
 /******************************************************************************
-6. FERDIG
+6. FERDIG FIXED
 
 Fullfør følgende steg for å manipulere "items"-arrayet. Hvert steg skal
 fullføres ved å bruke passende array-metoder.
