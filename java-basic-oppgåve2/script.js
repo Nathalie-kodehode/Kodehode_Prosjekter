@@ -38,7 +38,7 @@ console.log(checkOddEven(3));
 console.log(checkOddEven(8));
 
 /******************************************************************************
-2. FERDIG
+2. FERDIG FIXED
 
 Lag følgende funksjon:
 
@@ -55,8 +55,8 @@ const kulLiten = "Dette er kult.";
 console.log(kulLiten);
 
 function nyTekst (kulStor) {
-kulStor.toUpperCase();
-kulStor.replace(".", "!");
+kulStor = kulStor.toUpperCase();
+kulStor = kulStor.replace(".", "!");
   return kulStor;
 }
 console.log(nyTekst(kulLiten));
@@ -146,7 +146,7 @@ console.log(trimArray(colorArray));
 console.log(trimArray(numArray));
 
 /******************************************************************************
-5. FERDIG
+5. FERDIG FIXED
 
 Lag følgende funksjon:
 
@@ -165,22 +165,38 @@ Eksempel 3: "   vanskelig        " skal returnere "gøy".
 ******************************************************************************/
 // Skriv koden for oppgave 5 her
 
-const myStr = "Hei";
-const myStr2 = "på";
-const myStr3 = "deg";
+//Eg har valgt å skrive koden på alle 3 eksempler for min eigen læring. 
+//Eg lærer godt frå repetetisjon, så når eg gjer dette då sitter det betre i hovudet.
 
-console.log("Frode sier: " + myStr+" "+myStr2+" "+myStr3 + " din gamle sjokolade!"); // Konkatinering (Concatination). slår sammen flere strings.
-console.log(`Frode sier: ${myStr} ${myStr2} ${myStr3} din gamle sjokolade!`); //Setter inn verdier inn i stringen du har.
-
-const minSetning = "    Javascript er vanskeleg    ";
-console.log(minSetning);
-
+//Eksempel 1
+const minSetning1 = "    Javascript er vanskeleg    ";
 
 function fixedSetning (nySetning) {
-nySetning.trim().replace("vanskeleg", "gøy");
+nySetning = nySetning.trim();
+nySetning = nySetning.replace("vanskeleg", "gøy");
 return nySetning;
 }
-console.log(fixedSetning(minSetning));
+console.log(fixedSetning(minSetning1));
+
+//Eksempel 2
+const minSetning2 = " Det er vanskeleg å bruke metoder ";
+
+function fixedSetning2 (nySetning2) {
+nySetning2 = nySetning2.trim();
+nySetning2 = nySetning2.replace("vanskeleg", "gøy");
+return nySetning2;
+}
+console.log(fixedSetning2(minSetning2));
+
+//Eksempel 3
+const minSetning3 = "   vanskeleg        ";
+
+function fixedSetning3 (nySetning3) {
+  nySetning3 = nySetning3.trim();
+  nySetning3 = nySetning3.replace("vanskeleg", "gøy");
+  return nySetning3;
+}
+console.log(fixedSetning3(minSetning3));
 
 /******************************************************************************
 6. FERDIG FIXED
