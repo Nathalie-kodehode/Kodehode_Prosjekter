@@ -1,143 +1,205 @@
-//Objects
+//loop & objects recap
 
-//Section 1: What is an Object?
-//An ovject is a datatype that stores related data in key value pairs.
+//llooping through arrays
 
-const person = {
-  name: "Alice",
-  age: 28,
-  job: "designer",
-};
+const fruits = ["Apple", "Banana", "Mango", "Grapes", "Pear"];
 
-console.log(person); //logs entire object
-console.log(person.job); //logs a specific value stored in a key - dot notation
-console.log(person["name"]); //logs a specific values stored in a key - bracket notation
-
-// Dot vs bracket:
-// - Use dot when you know the key name at code time: person.name
-// - Use brackets when the key is dynamic or not a valid identifier: person[key]
-
-//Section 2: Creating, Modifying and Deleting
-
-person.country = "Norway"; //creates a new key value pair
-person.age = 29;
-
-delete person.job; //deletes the key completely
-
-console.log(person);
-
-//Section 3: Looping through an Object using a "for in loop"
-
-const user = {
-  name: "Joe",
-  age: 38,
-  location: "Stavenger",
-  hobbies: "gaming",
-};
-
-for (let key in user) {
-  console.log(key); //logs the current loops key
-  console.log(user[key]); //logs the current key's value
+//for loop - grans us access to starting index, when we end, how we increment.
+//i = increment
+for (let i = 0; i < fruits.length; i++) {
+console.log(fruits[i]);
 }
 
-//Section 4: Nested objects and arrays
-
-const userData = {
-  firstName: "Olav",
-  lastName: "Hansen",
-  age: 31,
-  isMember: true,
-  hobbies: ["Golf", "Hiking", "Cinema"],
-  address: {
-    streetName: "Solskinnsgaten",
-    streetNumber: 38,
-    postCode: 4050,
-  },
-};
-
-console.log(userData.firstName);
-console.log(userData.hobbies[1]);
-console.log(userData.address.postCode);
-
-// Section 5: Array of Objects // Object Array
-
-const products = [
-  { productName: "Shirt", productId: 5, stock: 32 },
-  { productName: "Pants", productId: 6, stock: 5 },
-  { productName: "Socks", productId: 10, stock: 22 },
-];
-
-//what type of loop? / for of loop becuase were looping over an array
-
-//product.ProductName is product.productID ID 5 and product.stock 32 in stock
-
-for (let product of products) {
-  console.log(`${product.productName} is product ID ${product.productId} and has ${product.stock} in stock.`,
-  );
+//for of loop - loops over arrays, gives us access to a variable which stores a different element of the array each loop. The loop will start at the beginning of the array and go through all elements, then stop.
+//logs one item inside the array at a time, ends when it reaches end of array.
+for (let fruit of fruits) {
+console.log(fruit)
 }
 
-//We're gonna need a bigger array
+//section 2: looping with conditions
 
-const people = [
+const numbers = [12, 5 , 8, 130, 44, 3, 22];
+
+for (let number of numbers) {
+        //if the current number being looped over is less than 10, skip it.
+ if (number < 10) {
+continue;
+ }
+    //if the current number being looped is over 100, stop the loop.
+ if (number >= 100) {
+    break;
+ }
+ 
+console.log(number);
+}
+
+//While loop - sets a condition to run the loop, MAKE SURE EVENTUALLY IT WILL BE FALSE! Otherwise we gen an infinite loop :(
+
+const ranNum = Math.floor(Math.random() * 10) + 1
+let guess= 0
+
+while (guess !== ranNum) {
+    guess++
+    console.log(`Guessing: ${guess}`)
+    if (guess === ranNum) {
+        console.log (`Correct! The number was: ${ranNum}`);
+    }
+}
+
+//Basic Object Review
+
+const movie = {
+  title: "The Matrix",
+  stars: [
+    "keanu reeves",
+    "laurence fishburne",
+    "carrie-ann moss",
+    "hugo weaving",
+  ],
+  runtime: "2h16m",
+  year: 1999,
+};
+
+console.log(movie);
+console.log(movie.title);
+console.log(movie.stars[3]);
+
+//change runtime to 2h30min"
+movie.runtime = "2h30min"; //change value in a a key
+console.log(movie);
+
+movie.year = 2000; //change the value in a key
+console.log(movie);
+
+movie.rating = 5; //create a new value-pair key
+console.log(movie);
+
+//delete a key value pair
+delete movie.runtime;
+console.log(movie);
+
+
+//Section 5 - Looping through an object using for in loop / dynmaic keys
+for (let key in movie) {
+console.log(key); //current key were looping over
+console.log(movie[key]); //current key's value
+}
+
+//Section 6: Array of objects
+
+const fruits2 = [
   {
-    name: "Thomas",
-    isMember: true,
-    age: 23,
-    hobbies: ["cycling", "football", "pool"],
+    name: "Apple",
+    color: "Red",
+    calories: 52,
+    pricePerKg: 3.5,
+    countryOfOrigin: "USA",
   },
   {
-    name: "Susan",
-    isMember: false,
-    age: 26,
-    hobbies: ["jogging", "travelling", "dancing"],
+    name: "Banana",
+    color: "Yellow",
+    calories: 89,
+    pricePerKg: 1.2,
+    countryOfOrigin: "Ecuador",
   },
   {
-    name: "Monica",
-    isMember: false,
-    age: 21,
-    hobbies: ["skateboarding", "guitar", "concerts"],
+    name: "Orange",
+    color: "Orange",
+    calories: 47,
+    pricePerKg: 2.8,
+    countryOfOrigin: "Spain",
   },
   {
-    name: "Avery",
-    isMember: true,
-    age: 28,
-    hobbies: ["coding", "games", "memes"],
+    name: "Strawberry",
+    color: "Red",
+    calories: 32,
+    pricePerKg: 6.0,
+    countryOfOrigin: "Mexico",
   },
   {
-    name: "Phillip",
-    isMember: true,
-    age: 24,
-    hobbies: ["boxing", "wrestling", "mma"],
+    name: "Mango",
+    color: "Orange",
+    calories: 60,
+    pricePerKg: 4.0,
+    countryOfOrigin: "India",
   },
   {
-    name: "Otto",
-    isMember: true,
-    age: 36,
-    hobbies: ["movies", "cinema", "music"],
+    name: "Grapes",
+    color: "Green",
+    calories: 69,
+    pricePerKg: 2.5,
+    countryOfOrigin: "Italy",
   },
   {
-    name: "Annabelle",
-    isMember: false,
-    age: 30,
-    hobbies: ["makeup", "fashion", "shopping"],
-  },
-  {
-    name: "Cathy",
-    isMember: false,
-    age: 18,
-    hobbies: ["design", "drawing", "css"],
+    name: "Pineapple",
+    color: "Brown",
+    calories: 50,
+    pricePerKg: 3.0,
+    countryOfOrigin: "Costa Rica",
   },
 ];
 
-//We want to console log: Name is age, membership and first interest
+//Describe each fruit using a loop
 
-for (let person of people) {
-  //how do we target only the name of the person?
+//PINEAPPLE is a BROWN fruit from COSTA RICA.
+for (let fruit of fruits2) {
+    console.log(`${fruit.name} is a ${fruit.color} fruit from ${fruit.countryOfOrigin}`);
+}
+
+// --------------------------------------
+// Section 7: Find the Cheapest Fruit
+// --------------------------------------
+
+let cheapest = null;
+let lowestPrice = Infinity;
+
+for (let fruit of fruits) {
+  if (fruit.pricePerKg < lowestPrice) {
+    lowestPrice = fruit.pricePerKg;
+    cheapest = fruit.name;
+  }
+}
+
 console.log(
-    //here we can make a random hobby
-    `${person.name} is ${person.age} years old, ${person.isMember ? "is" : "is not"} a member and enjoys ${person.hobbies[Math.floor(Math.random() * person.hobbies.length)]} `
+  `The cheapest fruit is ${cheapest}, costing ${lowestPrice} kr. per kg.`,
 );
+
+// --------------------------------------
+// Section 8: Adding and Removing Properties in a Loop
+// --------------------------------------
+
+// Add a "good" property to every fruit
+for (let fruit of fruits2) {
+  fruit.good = true;
 }
 
+console.log(fruits2); // now all have "good: true"
 
+// Remove the "good" property
+for (let fruit of fruits2) {
+  delete fruit.good;
+}
 
+console.log(fruits2); // back to original
+
+// --------------------------------------
+// Section 9: Object in Function
+// --------------------------------------
+
+function describeFruit(fruit) {
+  return `${fruit.name} contains ${fruit.calories} calories per 100g and costs ${fruit.pricePerKg} kr. per kg.`;
+}
+
+console.log(describeFruit(fruits2[0]));
+
+// --------------------------------------
+// Section 10: Summary
+// --------------------------------------
+
+// ✅ Use loops to repeat tasks or go through arrays and objects.
+// ✅ for...of is great for typical arrays;
+// ✅ for...in is used for object keys.
+// ✅ Objects store data in key-value pairs.
+// ✅ Arrays can contain multiple objects. (Object arrays)
+// ✅ Loops can combine with logic, conditions, and functions.
+// ✅ You can add, modify, or delete properties dynamically.
