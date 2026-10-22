@@ -51,19 +51,20 @@ Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!"
 // Skriv koden for oppgave 2 her
 //make function, then call
 
-const kulLiten = "Dette er kult";
+const kulLiten = "Dette er kult.";
 console.log(kulLiten);
 
-function nyTekst (kulLiten) {
-const kulStor = kulLiten.toUpperCase().push("!");
+function nyTekst (kulStor) {
+kulStor.toUpperCase();
+kulStor.replace(".", "!");
   return kulStor;
 }
-
+console.log(nyTekst(kulLiten));
 
 
 
 /******************************************************************************
-3.FERDIG
+3.FERDIG FIXED
 
 Lag følgende funksjon:
 
@@ -111,7 +112,7 @@ function greetName(tid, namn) {
 console.log(greetName(tid, namn));
 
 /******************************************************************************
-4.FERDIG
+4.FERDIG FIXED
 
 Lag følgende funksjon:
 
@@ -144,29 +145,6 @@ function trimArray(arr){
 console.log(trimArray(colorArray));
 console.log(trimArray(numArray));
 
-
-
-
-
-/*
-console.log(Add(2, 3));
-console.log(Add(5, 8));
-console.log(Add(1, 7));
-console.log(Add(2, 1));
-console.log(Add(4, -2));
-console.log(Add(-5, 19));
-console.log(Add(0, -3));
-*/
-/*
-newColor.shift();
-newColor.pop();
-console.log(newColor);
-
-newNum.shift();
-newNum.pop();
-console.log(newNum);
-*/
-
 /******************************************************************************
 5. FERDIG
 
@@ -195,13 +173,14 @@ console.log("Frode sier: " + myStr+" "+myStr2+" "+myStr3 + " din gamle sjokolade
 console.log(`Frode sier: ${myStr} ${myStr2} ${myStr3} din gamle sjokolade!`); //Setter inn verdier inn i stringen du har.
 
 const minSetning = "    Javascript er vanskeleg    ";
+console.log(minSetning);
 
 
-function fixedSetning (minSetning) {
-minSetning.trim().replace("vanskeleg", "gøy");
-
-return minSetning;
+function fixedSetning (nySetning) {
+nySetning.trim().replace("vanskeleg", "gøy");
+return nySetning;
 }
+console.log(fixedSetning(minSetning));
 
 /******************************************************************************
 6. FERDIG FIXED
