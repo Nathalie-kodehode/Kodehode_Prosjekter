@@ -13,10 +13,23 @@
 
 /* Font Styling */
 h1 {
+    font-family: 'Creepster';
+    font-weight: lighter;
     color: var(--text-white-color);
-    display: flex;
-    justify-content: center;
-    font-size: 50px;
+    font-size: 100px;
+}
+
+h2 {
+font-family: 'Shadows into Light Two';
+font-weight: bolder;
+font-size: 36px;
+
+}
+
+h3 {
+    font-family: 'Shadows into Light Two';
+font-weight: 600;
+font-size: 26px;
 }
 
 /* General Styling */
@@ -26,57 +39,144 @@ h1 {
     box-sizing: border-box;
 }
 
-header {
-     background-color: var(--text-black-color);
+body {
+    background-color: var(--text-black-color);
+    width: auto;
+    height: auto;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid red;
 }
 
-body {
-    background-color: var(--secondary-color);
+header {
+     width: stretch;
+     display: flex;
+     justify-content: center;
+      align-items: center;
+   border: 2px solid red;
 }
 
 footer {
-    background-color: var(--text-black-color);
+    width: stretch;
+       display: flex;
+     justify-content: center;
+      align-items: center;
+    border: 2px solid red;
 }
 
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    margin: 10px;
+    background-color: var(--neutral-color1);
+}
+
+.big {
+    width: 200px;
+    height: 60px;;
+}
+
+.big:hover {
+    background-color: var(--text-black-color);
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
 
 /* Container & Box Styling */
 .container {
 background-color: var(--tertiary-color);
 padding: 20px;
+width: 1200px;
 margin: 30px;
+     display: flex;
+      align-items: center;
+    justify-content: center;
+    border: 2px solid red;
 }
 
 .box {
     padding: 10px;
+    width: auto;
     margin: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 2px solid blue;
 }
 
 /* Header Content Styling */
 .header {
+    margin: 0;
+    padding: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    width: stretch;
 }
 
 .buttons-top {
+ width: stretch;
 display: flex;
-gap: 20px;
-justify-content: center;
+justify-content: space-between;
 align-items: center;
 flex-direction: row;
 }
 
 /* Main Content Styling */
+.main-0 {
+    border-radius: 10px;
+}
+
+.main-1 {
+    height: 600px;
+     border-radius: 10px;
+}
+
+.main-2 {
+ border-radius: 10px;
+}
+
+.jumpscare {
+    height: 30px;
+    width: 30px;
+        animation-name: jumpscare;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 4s;
+}
+
+@keyframes jumpscare {
+0% {
+    transform: scale(0);
+}
+50% {
+    transform: scale(30);
+}
+100% {
+    transform:scale(0)}
+}
 
 /* Footer Content Styling */
 
-.buttons-bottom {
+.footer {
+      margin: 0;
+    padding: 10px;
+    width: stretch;
     display: flex;
-gap: 20px;
-justify-content: center;
+    justify-content: space-between;
+    flex-direction: column; 
+}
+
+.buttons-bottom {
+      width: stretch;
+    display: flex;
+justify-content: space-between;
 align-items: center;
 flex-direction: row;
 }
