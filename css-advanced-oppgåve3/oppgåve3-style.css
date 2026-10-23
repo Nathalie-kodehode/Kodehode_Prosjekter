@@ -1,0 +1,82 @@
+/* Color Styling */
+:root {
+    --primary-color: #F09D51;
+    --secondary-color: #313638;
+    --tertiary-color:  #F06543;
+
+    --neutral-color1: #E8E9EB;
+    --neutral-color2: #E0DFD5;
+
+    --text-white-color: #ffffff ;
+    --text-black-color: #000000;
+}
+
+/* Font Styling */
+h1 {
+    color: var(--text-white-color);
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+
+/* General Styling */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+     background-color: var(--text-black-color);
+}
+
+body {
+    background-color: var(--secondary-color);
+}
+
+footer {
+    background-color: var(--text-black-color);
+}
+
+
+/* Container & Box Styling */
+.container {
+background-color: var(--tertiary-color);
+padding: 20px;
+margin: 30px;
+}
+
+.box {
+    padding: 10px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header Content Styling */
+.header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.buttons-top {
+display: flex;
+gap: 20px;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+}
+
+/* Main Content Styling */
+
+/* Footer Content Styling */
+
+.buttons-bottom {
+    display: flex;
+gap: 20px;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+}
