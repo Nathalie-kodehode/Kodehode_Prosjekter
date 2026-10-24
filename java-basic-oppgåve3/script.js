@@ -8,7 +8,7 @@
 Bruk en vanlig 'for-løkke' til å iterere gjennom `people`-arrayet og utfør følgende:
 
 - Hvis objektets `name`-verdi er "Otto", skal ingen av endringene nedenfor gjøres 
-  på det objektet (hint: bruk `continue`-nøkkelordet).
+  på det objektet (hint: bruk `continue`-nøkkelordet). OK
 
 - Lag en ny nøkkel på hvert person-objekt i arrayet kalt "city" og sett verdien
   til en random by fra `cities`-arrayen.
@@ -86,16 +86,21 @@ const people = [
 		hobbies: ["design", "drawing", "css"]
 	}
 ];
+
 let combinedAge = 0;
 
-
+for (let name of people) {
+	if (name === "Otto") {
+		continue
+	}
+}
 
 // Skriv koden for oppgave 1 her
 
 let averageAge = 0;
 
 /******************************************************************************
-2.
+2. DONE
 
 Lag følgende funksjon:
 
@@ -115,7 +120,20 @@ diceRoller(5, 20) skal returnere et array med 5 tilfeldige tall fra 1-20.
 ******************************************************************************/
 // Skriv koden for oppgave 2 her
 
+//vår d20 terning
+function diceRollers (diceroll, sides) {
+	//arrayen under skal då vise resultata
+const diceArray = [];
 
+//loopen som setning (huskjeregel)
+// : "Let (i)t be 0, Loop while (i)t's weak, Add 1 per finished loop"
+for (let i = 0; i < diceroll; i++) {
+const randomNum = Math.floor(Math.random() *  sides) + 1
+diceArray.push(randomNum)
+}
+return diceArray;
+}
+console.log(diceRollers(5, 20));
 
 /******************************************************************************
 3.
