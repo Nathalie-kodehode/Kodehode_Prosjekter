@@ -201,22 +201,22 @@ to {
 /* remember these commands so i can make EVIL buttons later */
 @keyframes size {
     0% {
-        transform: scale(0) rotate(0deg);
+        transform: scale(0) translateZ(20px);
         background-color: tomato;
 
     }
     33% {
-        transform: scale(1.2) rotate(90deg);
+        transform: scale(1.2) rotate(10deg);
         background-color: green;
     }
 
     66% {
-        transform: scale(0.5) rotate(30deg);
+        transform: scale(0.5) rotate(-200deg);
         background-color: purple;
     }
 
     100% {
-        transform: scale(1) rotate(20deg);
+        transform: scale(1) rotate(0deg);
         background-color: pink;
     }
 }

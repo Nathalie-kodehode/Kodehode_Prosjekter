@@ -1,187 +1,254 @@
 /* Color Styling */
 :root {
-    --primary-color: #F09D51;
-    --secondary-color: #313638;
-    --tertiary-color:  #F06543;
+  --primary-color: #f09d51;
+  --secondary-color: #313638;
+  --tertiary-color: #f06543;
+  --quaternary-color: #78158b;
 
-    --neutral-color1: #E8E9EB;
-    --neutral-color2: #E0DFD5;
+  --neutral-color1: #e8e9eb;
+  --neutral-color2: #e0dfd5;
 
-    --text-white-color: #ffffff ;
-    --text-black-color: #000000;
+  --text-white-color: #ffffff;
+  --text-black-color: #000000;
 }
 
 /* Font Styling */
 h1 {
-    font-family: 'Creepster';
-    font-weight: lighter;
-    color: var(--text-white-color);
-    font-size: 100px;
+  font-family: "Creepster";
+  font-weight: lighter;
+  font-size: 100px;
 }
 
 h2 {
-font-family: 'Shadows into Light Two';
-font-weight: bolder;
-font-size: 36px;
-
+  font-family: "Shadows into Light Two";
+  font-weight: bolder;
+  font-size: 36px;
 }
 
 h3 {
-    font-family: 'Shadows into Light Two';
-font-weight: 600;
-font-size: 26px;
+  font-family: "Shadows into Light Two";
+  font-weight: 600;
+  font-size: 26px;
 }
 
 /* General Styling */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--text-black-color);
-    width: auto;
-    height: auto;
-   display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: 2px solid red;
+  background-color: var(--text-black-color);
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 header {
-     width: stretch;
-     display: flex;
-     justify-content: center;
-      align-items: center;
-   border: 2px solid red;
+  width: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
-    width: stretch;
-       display: flex;
-     justify-content: center;
-      align-items: center;
-    border: 2px solid red;
+  width: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Button Styling */
+
 button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 50px;
-    border-radius: 20px;
-    margin: 10px;
-    background-color: var(--neutral-color1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: 50px;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: var(--neutral-color1);
+}
+
+.small {
+  background-color: var(--quaternary-color);
+  color: var(--neutral-color2);
+}
+
+.small:hover {
+  background-color: var(--text-white-color);
+  color: var(--tertiary-color);
+  transform: scale(1.2);
+  transition: transform 1s;
+  box-shadow: var(--secondary-color) 5px 5px 5px;
 }
 
 .big {
-    width: 200px;
-    height: 60px;;
+  background-color: var(--text-black-color);
+  color: var(--text-white-color);
+  margin: 15px;
+  width: 500px;
+  height: 65px;
+  text-decoration: none;
+  text-decoration-line: none;
+  list-style: none;
+}
+
+.big-2 {
+  text-decoration: none;
+  text-decoration-line: none;
+  list-style: none;
+  color: var(--neutral-color2);
+}
+
+.big-2:hover {
+  color: var(--primary-color);
 }
 
 .big:hover {
+  animation-name: bigbutton;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes bigbutton {
+  0% {
+    transform: scale(1);
     background-color: var(--text-black-color);
-    color: var(--primary-color);
+  }
+  50% {
+    transform: scale(1.2);
+    background-color: var(--text-black-color);
+  }
+
+  66% {
     transform: scale(1.1);
+    background-color: var(--text-black-color);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: var(--text-black-color);
+  }
 }
 
 /* Container & Box Styling */
 .container {
-background-color: var(--tertiary-color);
-padding: 20px;
-width: 1200px;
-margin: 30px;
-     display: flex;
-      align-items: center;
-    justify-content: center;
-    border: 2px solid red;
+  background-color: var(--tertiary-color);
+  padding: 20px;
+  width: 1200px;
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .box {
-    padding: 10px;
-    width: auto;
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid blue;
+  padding: 10px;
+  width: auto;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Header Content Styling */
 .header {
-    margin: 0;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: stretch;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: stretch;
 }
 
 .buttons-top {
- width: stretch;
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-direction: row;
+  width: 1600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 }
 
 /* Main Content Styling */
+.halloween-text {
+  animation-name: halloween;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes halloween {
+  0% {
+    transform: scale(1) rotate(-1deg) translateX(-50px);
+    color: var(--text-black-color);
+  }
+  50% {
+    transform: scale(0.9) rotate(2deg) translateX(100px);
+    color: var(--quaternary-color);
+  }
+  100% {
+    transform: scale(1) rotate(-1deg) translateX(-50px);
+    color: var(--text-black-color);
+  }
+}
+
 .main-0 {
-    border-radius: 10px;
-    animation-name: halloween;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-delay: 1s;
+  border-radius: 10px;
 }
 
 .main-1 {
-    height: 600px;
-     border-radius: 10px;
+  height: 600px;
+  border-radius: 10px;
 }
 
 .main-2 {
- border-radius: 10px;
+  border-radius: 10px;
 }
 
+/* It starts of small on the webpage, then it catches the user offguard with a spooky jumpscare. It plays once per refresh. */
 .jumpscare {
-    height: 30px;
-    width: 30px;
-        animation-name: jumpscare;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 4s;
+  height: 30px;
+  width: 30px;
+  animation-name: jumpscare;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 10;
+  animation-delay: 3s;
 }
 
 @keyframes jumpscare {
-0% {
+  0% {
     transform: scale(0);
-}
-50% {
+  }
+  50% {
     transform: scale(20);
-}
-100% {
-    transform:scale(0)}
+  }
+  100% {
+    transform: scale(0);
+  }
 }
 
 /* Footer Content Styling */
 
 .footer {
-      margin: 0;
-    padding: 10px;
-    width: stretch;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column; 
+  margin: 0;
+  padding: 20px;
+  width: stretch;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .buttons-bottom {
-      width: stretch;
-    display: flex;
-justify-content: space-between;
-align-items: center;
-flex-direction: row;
+  width: 1600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 }
