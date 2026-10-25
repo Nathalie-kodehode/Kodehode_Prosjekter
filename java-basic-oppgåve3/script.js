@@ -208,7 +208,7 @@ function tidyMessage(words) {
 console.log(tidyMessage(messyText));
 
 /******************************************************************************
-4.
+4. DONE
 
 Fullfør funksjonen nedenfor for å oppnå følgende:
 
@@ -234,6 +234,28 @@ skal returnere "whao is ohe ptino tf ohis?"
 
 function doubleSwap(string, charA, charB) {
 	// Skriv koden for oppgave 4 her
+	let resultat = "";
+
+	for (let char of string) {
+		if (char === charA) {
+			resultat += charB;
+		} else if (char === charB) {
+			resultat += charA;
+		} else {
+			resultat += char;
+		}
+	}
+	return resultat;
 }
+
+// "thsi si a itrsng"
+console.log(doubleSwap("this is a string", "i", "s"));
+
+// "maybe another approach is necessary"
+console.log(doubleSwap("m#ybe #nother #ppro#ch is necess#ry", "#", "a"));
+
+// "whao is ohe ptino tf ohis?"
+console.log(doubleSwap("what is the point of this?", "o", "t"));
+
 
 /******************************************************************************/
