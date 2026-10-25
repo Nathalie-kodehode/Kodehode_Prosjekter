@@ -3,7 +3,7 @@
 !LES OPPGAVETEKSTEN NØYE!
 ------------------------------------
 
-1.
+1. DONE
 
 Bruk en vanlig 'for-løkke' til å iterere gjennom `people`-arrayet og utfør følgende:
 
@@ -11,10 +11,10 @@ Bruk en vanlig 'for-løkke' til å iterere gjennom `people`-arrayet og utfør f�
   på det objektet (hint: bruk `continue`-nøkkelordet). OK
 
 - Lag en ny nøkkel på hvert person-objekt i arrayet kalt "city" og sett verdien
-  til en random by fra `cities`-arrayen.
+  til en random by fra `cities`-arrayen. OK
 
 - Lag en ny nøkkel på hvert person-objekt kalt "title" og sett den til "Mr." for
-  menn og "Ms." for kvinner.
+  menn og "Ms." for kvinner. OK
 	
 - Øk alderen med 2.
 
@@ -89,15 +89,42 @@ const people = [
 
 let combinedAge = 0;
 
-for (let name of people) {
-	if (name === "Otto") {
-		continue
-	}
-}
-
 // Skriv koden for oppgave 1 her
 
-let averageAge = 0;
+//Hopp over Otto
+for (let i = 0; i < people.length; i++) {
+ if (people[i].name === "Otto") {
+	continue;
+ }
+//Random by
+const tilfeldigBy = Math.floor(Math.random() * cities.length);
+people[i].city = cities[tilfeldigBy];
+
+//Er det Mr eller Mrs?
+if (people[i].male === true) {
+	people[i].title = "Mr.";
+} else {
+	people[i].title = "Ms.";
+}
+ //Å nei, eg har blitt 2 år eldre!
+ people[i].age += 2;
+
+ //no skal alle kode, dermed basta
+ people[i].hobbies.unshift("coding");
+
+ //Kor gamle er alle til saman?
+ combinedAge += people[i].age;
+
+}
+
+//No må vi finne ut gjennomsnittsalderen (og runde av slik at det er lettare å lese)
+const averageAge = Math.floor(combinedAge / 7);
+
+//Resultata (trommevirvel takk)
+console.log(people);
+console.log(`Til saman er alle: ${combinedAge} år gammel!`);
+console.log(`Gjennomsnittsalderen er: ${averageAge} år!`)
+
 
 /******************************************************************************
 2. DONE
@@ -136,7 +163,7 @@ return diceArray;
 console.log(diceRollers(5, 20));
 
 /******************************************************************************
-3.
+3. DONE
 
 Lag følgende funksjon:
 
@@ -161,7 +188,24 @@ skal returnere:
 ******************************************************************************/
 // Skriv koden for oppgave 3 her
 
+//Skriver litt notater her for min eigen del, dont mind me. Dette er den rotete arrayen
+const messyText = ["thIS", "teXt  ", " nEeds ", "to", "BE", "cleANED   ", " Up"];
 
+//Funksonen tidyMessage har ein parameter kalt words. Eg skal sende kvar object i arrayen dit for å fikse dei.
+//i for of loopen kaller vi kvar object i arrayen for "word". Lettare å huskje "word of words"
+function tidyMessage(words) {
+	let tidyWords = [];
+	for (let word of words) {
+		//Eg ber loopen gjere følgende endringer per ord i arrayen:
+		//legg dei redigerte orda i ny gruppering/liste(tidyWords), fjern mellomrom i starten og slutten, fjern komma, gjere alt til småbokstaver
+		tidyWords.push(word.trim().toLowerCase());
+	}
+	//når eg kaller på funksjonen, vil eg at den skal kombinere dei redigerte orda til ein ny array (som vert då TidyMessage)
+	//må også leggje til mellomrom, ellers vert alt til 1 ord.
+	return tidyWords.join(" ");
+}
+//send messyText arrayen til tidyMessage funksjonen, fiks den og vis resultatet til meg i consol loggen.
+console.log(tidyMessage(messyText));
 
 /******************************************************************************
 4.
