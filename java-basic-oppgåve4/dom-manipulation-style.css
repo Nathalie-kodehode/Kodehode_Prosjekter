@@ -1,65 +1,104 @@
 /* Global Styling */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Color Styling */
 :root {
-    --primary-color: ;
-    --secondary-color: ;
-    --tertiary-color: ;
+  --primary-color: ;
+  --secondary-color: ;
+  --tertiary-color: ;
 
-    --neutral-color1: ;
-    --neutral-color2: ;
+  --neutral-color1: ;
+  --neutral-color2: ;
 
-    --default-white-color: #ffffff ;
-    --default-black-color: #000000 ;
+  --default-white-color: #ffffff;
+  --default-black-color: #000000;
 }
 
 body {
-    display: flex;
-   flex-direction: column;
- 
+  display: flex;
+  flex-direction: column;
+}
+
+/* Font Styling */
+
+h1 {
+    font-family: 'Gorditas';
+    font-size: 46px;
+}
+
+h2 {
+    font-family: 'Sniglet';
+    font-weight: lighter;
+    font-size: 36px;
+}
+
+h3 {
+    font-family: 'Sniglet';
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+h4 {
+    font-family: 'Gorditas';
+    font-weight: lighter;
+    font-size: 24px;
 }
 
 .overskrifter {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 5px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 10px;
+  padding: 10px;
+  border: 3px solid red;
 }
 
 .hund {
   display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
 }
 
-
 .hundebilde {
-    height: 30%;
-    width: 30%;
-    border-radius: 300px;
-    border: 5px solid red;
+  height: 30%;
+  width: 30%;
+  border-radius: 300px;
+  border: 5px solid red;
 }
 
 .container {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
- border: 5px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border: 3px solid red;
+}
+
+button {
+    height: fit-content;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 20px;
 }
 
 .button {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
- border: 5px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border: 3px solid red;
 }
