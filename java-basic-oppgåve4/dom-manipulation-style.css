@@ -5,3 +5,61 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Color Styling */
+:root {
+    --primary-color: ;
+    --secondary-color: ;
+    --tertiary-color: ;
+
+    --neutral-color1: ;
+    --neutral-color2: ;
+
+    --default-white-color: #ffffff ;
+    --default-black-color: #000000 ;
+}
+
+body {
+    display: flex;
+   flex-direction: column;
+ 
+}
+
+.overskrifter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid red;
+}
+
+.hund {
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+
+.hundebilde {
+    height: 30%;
+    width: 30%;
+    border-radius: 300px;
+    border: 5px solid red;
+}
+
+.container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+ border: 5px solid red;
+}
+
+.button {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+ border: 5px solid red;
+}
