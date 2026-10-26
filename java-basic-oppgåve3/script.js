@@ -148,7 +148,7 @@ diceRoller(5, 20) skal returnere et array med 5 tilfeldige tall fra 1-20.
 // Skriv koden for oppgave 2 her
 
 //vår d20 terning
-function diceRollers (diceroll, sides) {
+function diceRollers (diceroll, sides = 6) {
 	//arrayen under skal då vise resultata
 const diceArray = [];
 
@@ -160,6 +160,7 @@ diceArray.push(randomNum)
 }
 return diceArray;
 }
+console.log(diceRollers(4));
 console.log(diceRollers(5, 20));
 
 /******************************************************************************
