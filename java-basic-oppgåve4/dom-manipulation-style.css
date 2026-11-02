@@ -13,8 +13,10 @@
   --tertiary-color: #fe4747;
 
   --neutral-color1: #cc5803;
-  --neutral-color2: #5a3a08;
+  /* DarkMode */
+  --neutral-color2: #452f20;
 
+  /* Defaults */
   --default-white-color: #ffffff;
   --default-black-color: #000000;
 }
@@ -24,33 +26,34 @@ body {
   flex-direction: column;
 }
 
-.body-background {
-  background-color: var(--primary-color);
-}
-
 /* Font Styling */
 
 h1 {
-    font-family: 'Gorditas';
-    font-size: 46px;
+  font-family: "Gorditas";
+  font-size: 46px;
 }
 
 h2 {
-    font-family: 'Sniglet';
-    font-weight: lighter;
-    font-size: 38px;
+  font-family: "Sniglet";
+  font-weight: lighter;
+  font-size: 38px;
 }
 
 h3 {
-    font-family: 'Sniglet';
-    font-weight: lighter;
-    font-size: 36px;
+  font-family: "Sniglet";
+  font-weight: lighter;
+  font-size: 36px;
 }
 
 h4 {
-    font-family: 'Gorditas';
-    font-weight: lighter;
-    font-size: 26px;
+  font-family: "Gorditas";
+  font-weight: lighter;
+  font-size: 26px;
+}
+
+.dark-button {
+  font-family: "Sniglet";
+  font-size: 18px;
 }
 
 .overskrifter {
@@ -66,9 +69,9 @@ h4 {
 
 .hund {
   background-image: url(dommy-mommy-images/Åshild.jpg);
-    height: 400px;
+  height: 400px;
   width: 400px;
- background-size: contain;
+  background-size: contain;
   border-radius: 300px;
   display: flex;
   flex-direction: column;
@@ -100,9 +103,29 @@ h4 {
 }
 
 .my-button {
-    height: fit-content;
-    width: fit-content;
-    padding: 15px;
-    border-radius: 20px;
+  height: fit-content;
+  width: fit-content;
+  padding: 15px;
+  border-radius: 20px;
 }
 
+.togglebox {
+   margin: 10px;
+  padding: 10px;
+}
+
+.toggle-button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.body-background {
+  background-color: var(--neutral-color2);
+}
+
+.overskrifter {
+  color: var(--default-white-color);
+}
