@@ -8,12 +8,12 @@
 
 /* Color Styling */
 :root {
-  --primary-color: ;
-  --secondary-color: ;
-  --tertiary-color: ;
+  --primary-color: #ffc362;
+  --secondary-color: #2c95a5;
+  --tertiary-color: #fe4747;
 
-  --neutral-color1: ;
-  --neutral-color2: ;
+  --neutral-color1: #cc5803;
+  --neutral-color2: #5a3a08;
 
   --default-white-color: #ffffff;
   --default-black-color: #000000;
@@ -22,6 +22,10 @@
 body {
   display: flex;
   flex-direction: column;
+}
+
+.body-background {
+  background-color: var(--primary-color);
 }
 
 /* Font Styling */
@@ -34,19 +38,19 @@ h1 {
 h2 {
     font-family: 'Sniglet';
     font-weight: lighter;
-    font-size: 36px;
+    font-size: 38px;
 }
 
 h3 {
     font-family: 'Sniglet';
     font-weight: lighter;
-    font-size: 30px;
+    font-size: 36px;
 }
 
 h4 {
     font-family: 'Gorditas';
     font-weight: lighter;
-    font-size: 24px;
+    font-size: 26px;
 }
 
 .overskrifter {
@@ -72,7 +76,7 @@ h4 {
   align-items: center;
   margin: 10px;
   padding: 10px;
-  border: 5px solid red;
+  border: 5px solid var(--neutral-color1);
 }
 
 .container {
