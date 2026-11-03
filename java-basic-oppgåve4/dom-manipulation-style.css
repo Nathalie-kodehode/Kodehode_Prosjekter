@@ -14,7 +14,7 @@
 
   --neutral-color1: #cc5803;
   /* DarkMode */
-  --neutral-color2: #452f20;
+  --neutral-color2: #60391f;
 
   /* Defaults */
   --default-white-color: #ffffff;
@@ -64,13 +64,9 @@ h4 {
   gap: 15px;
   margin: 10px;
   padding: 10px;
-  border: 3px solid red;
 }
 
 .hund {
-  background-image: url(dommy-mommy-images/Åshild.jpg);
-  height: 400px;
-  width: 400px;
   background-size: contain;
   border-radius: 300px;
   display: flex;
@@ -79,7 +75,26 @@ h4 {
   align-items: center;
   margin: 10px;
   padding: 10px;
-  border: 5px solid var(--neutral-color1);
+}
+
+#hundebilde {
+  background-size: contain;
+  background-color: var(--primary-color);
+  border-radius: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+  padding: 8px;
+  border: 8px solid var(--neutral-color1);
+}
+
+#hundenamn {
+  font-family: "Sniglet";
+  font-weight: lighter;
+  font-size: 36px;
+  color: var(--tertiary-color);
 }
 
 .container {
@@ -89,7 +104,8 @@ h4 {
   align-items: center;
   margin: 10px;
   padding: 10px;
-  border: 3px solid red;
+  gap: 10px;
+  height: fit-content;
 }
 
 .buttonbox {
@@ -103,6 +119,8 @@ h4 {
 }
 
 .my-button {
+  background-color: var(--secondary-color);
+  color: var(--default-white-color);
   height: fit-content;
   width: fit-content;
   padding: 15px;
