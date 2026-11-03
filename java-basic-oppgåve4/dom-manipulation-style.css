@@ -12,7 +12,7 @@
   --secondary-color: #2c95a5;
   --tertiary-color: #fe4747;
 
-  --neutral-color1: #cc5803;
+  --neutral-color1: #e57b17;
   /* DarkMode */
   --neutral-color2: #60391f;
 
@@ -26,17 +26,23 @@ body {
   flex-direction: column;
 }
 
+.body-background {
+  background-color: var(--neutral-color2);
+}
+
 /* Font Styling */
 
 h1 {
   font-family: "Gorditas";
   font-size: 46px;
+  text-shadow: 2px 2px 2px var(--default-black-color);
 }
 
 h2 {
   font-family: "Sniglet";
   font-weight: lighter;
   font-size: 38px;
+  text-shadow: 1px 1px 1px var(--default-black-color);
 }
 
 h3 {
@@ -110,6 +116,7 @@ h4 {
   font-weight: lighter;
   font-size: 36px;
   color: var(--tertiary-color);
+  text-shadow: 1px 1px 1px var(--default-black-color);
 }
 
 /* Button for changing dog name and pic */
@@ -158,12 +165,29 @@ h4 {
   transition: all 0.5s ease;
 }
 
+/* Hover Styling for the Buttons */
+
 .toggle-button:hover,
 .my-button:hover {
-  background-color: var(--default-black-color);
-  color: var(--default-white-color);
+  background-color: var(--neutral-color1);
+  color: var(--neutral-color2);
 }
 
-.body-background {
-  background-color: var(--neutral-color2);
+.my-button:active,
+.toggle-button:active {
+  animation-name: buttonpress;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes buttonpress {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
