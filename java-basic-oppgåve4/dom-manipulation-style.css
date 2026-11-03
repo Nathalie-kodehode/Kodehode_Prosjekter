@@ -56,6 +56,8 @@ h4 {
   font-size: 18px;
 }
 
+/* Overskrifter Styling */
+
 .overskrifter {
   display: flex;
   flex-direction: column;
@@ -64,6 +66,19 @@ h4 {
   gap: 15px;
   margin: 10px;
   padding: 10px;
+}
+
+/* Hund Styling */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  gap: 10px;
+  height: fit-content;
 }
 
 .hund {
@@ -97,16 +112,7 @@ h4 {
   color: var(--tertiary-color);
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  padding: 10px;
-  gap: 10px;
-  height: fit-content;
-}
+/* Button for changing dog name and pic */
 
 .buttonbox {
   display: flex;
@@ -115,35 +121,49 @@ h4 {
   align-items: center;
   margin: 10px;
   padding: 10px;
-  border: 3px solid red;
 }
 
 .my-button {
+  font-family: "Gorditas";
+  font-weight: lighter;
+  font-size: 24px;
   background-color: var(--secondary-color);
   color: var(--default-white-color);
   height: fit-content;
   width: fit-content;
   padding: 15px;
   border-radius: 20px;
+
+  cursor: pointer;
+  transition: all 0.5s ease;
 }
 
+/* Togglebutton for background */
+
 .togglebox {
-   margin: 10px;
+  margin: 10px;
   padding: 10px;
 }
 
 .toggle-button {
+  background-color: var(--secondary-color);
+  color: var(--default-white-color);
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 15px;
   border-radius: 20px;
+
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.toggle-button:hover,
+.my-button:hover {
+  background-color: var(--default-black-color);
+  color: var(--default-white-color);
 }
 
 .body-background {
   background-color: var(--neutral-color2);
-}
-
-.overskrifter {
-  color: var(--default-white-color);
 }

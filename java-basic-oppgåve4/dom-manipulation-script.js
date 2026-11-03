@@ -15,7 +15,7 @@ headingMinor.style.color = "#e57b17";
 
 const dogName = document.querySelector("h3");
 console.log(dogName);
-dogName.textContent = ""
+dogName.textContent = "???"
 
 dogName.style.color = "#fe4747";
 
@@ -30,6 +30,8 @@ dogName.style.color = "#fe4747";
 //Box Contents
 
 //Buttons
+
+
 
 //Generate Dog and Name Button
 
