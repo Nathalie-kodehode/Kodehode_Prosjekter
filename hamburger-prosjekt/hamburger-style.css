@@ -6,15 +6,51 @@
 }
 
 /* Colors */
+:root {
+--primary-color: ;
+--secondary-color: ;
+--tertiary-color: ;
+
+--background-color: ;
+
+--neutral-black-color: ;
+--neutral-white-color: ;
+}
 
 /* Font */
 
-/* Sections & Divs */
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Box Sizing */
+
+/* Find out how to make this accessible sizing on mobile */
+body {
+    height: fit-content;
+      width: stretch;
+      border: 2px solid red;
+}
 
 header {
     height: fit-content;
         border: 2px solid red;
+}
 
+main {
+    display: flex;
+         flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        border: 2px solid red;
 }
 
 section {
@@ -22,11 +58,13 @@ section {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    margin: 10px;
+    padding: 20px;
+    margin: 20px;
      border: 2px solid red;
 
 }
+
+/* Buttons */
 
 button {
     display: flex;
@@ -35,7 +73,7 @@ button {
     margin: 10px;
     padding: 10px;
     height: 50px;
-    width: 150px;
+    width: 200px;
     border-radius: 20px;
 }
 
@@ -54,4 +92,19 @@ button {
 
 /* Hamburger */
 
-/* Buttons */
+
+
+/* Hero */
+
+.hero-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: stretch;
+    height: 720px;
+    margin: 10px;
+    padding: 20px;
+    gap: 10px;
+     border: 2px solid red;
+}
