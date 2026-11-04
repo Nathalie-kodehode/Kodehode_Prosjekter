@@ -20,8 +20,25 @@ header {
 section {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+     border: 2px solid red;
 
 }
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    height: 50px;
+    width: 150px;
+    border-radius: 20px;
+}
+
 
 .head-buttons {
     height: fit-content;
@@ -33,9 +50,6 @@ section {
     padding: 10px;
     margin: 10px;
      border: 2px solid red;
- 
-
-
 }
 
 /* Hamburger */
