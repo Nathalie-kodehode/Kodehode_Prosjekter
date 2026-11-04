@@ -11,6 +11,33 @@
 
 /* Sections & Divs */
 
+header {
+    height: fit-content;
+        border: 2px solid red;
+
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.head-buttons {
+    height: fit-content;
+    width: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+     border: 2px solid red;
+ 
+
+
+}
+
 /* Hamburger */
 
 /* Buttons */
