@@ -1,287 +1,276 @@
 /* CSS Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Colors */
 :root {
---primary-color: #dd3218;
---secondary-color: #8b0000;
---tertiary-color: #8C3B09;
+  --primary-color: #dd3218;
+  --secondary-color: #8b0000;
+  --tertiary-color: #8c3b09;
 
---background-color: #075540;
+  --background-color: #075540;
 
---neutral-black-color: #000000;
---neutral-white-color: #ffffff;
+  --neutral-black-color: #000000;
+  --neutral-white-color: #ffffff;
 }
 
 /* Font */
 
 h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-        text-shadow: 2px 6px 6px var(--primary-color);
-
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 2px 6px 6px var(--primary-color);
 }
 
 h2 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-        text-shadow: 2px 4px 4px var(--primary-color);
-
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 2px 4px 4px var(--primary-color);
 }
 
 h3 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* Box Sizing */
 
 body {
-    background-color: var(--neutral-black-color);
-    height: fit-content;
-      width: stretch;
+  background-color: var(--neutral-black-color);
+  height: fit-content;
+  width: stretch;
 }
 
 header {
-    height: fit-content;
+  height: fit-content;
 }
 
 main {
-    display: flex;
-         flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 section {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    margin: 20px;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
 }
 
 /* Buttons */
 
 button {
-    display: flex;
-    background-color: var(--neutral-white-color);
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 10px;
-    margin: 10px;
-    padding: 10px;
-    height: 50px;
-    width: 220px;
-    border-radius: 20px;
+  display: flex;
+  cursor: pointer;
+  background-color: var(--neutral-white-color);
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  margin: 10px;
+  padding: 10px;
+  height: 50px;
+  width: 220px;
+  border-radius: 20px;
 }
 
 button:hover {
-    box-shadow: 2px 4px 4px var(--neutral-black-color);
-    color: var(--primary-color);
+  box-shadow: 2px 4px 4px var(--neutral-black-color);
+  color: var(--primary-color);
 }
-
 
 /* It's using this Hex code: #8C3B09 */
 button:hover img {
-    filter: brightness(0) saturate(100%)
-            invert(23%) sepia(100%)
-            saturate(747%) hue-rotate(-10deg)
-            brightness(98%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(23%) sepia(100%) saturate(747%)
+    hue-rotate(-10deg) brightness(98%) contrast(101%);
 }
 
-
 .head-buttons {
-    height: fit-content;
-    width: stretch;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    margin: 10px;
-    background-color: var(--background-color);
-    border-radius: 10px;
+  height: fit-content;
+  width: stretch;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin: 15px;
+  background-color: var(--background-color);
+  border-radius: 10px;
 }
 
 /* Hamburger */
 
 .menu-container {
-    position: relative;
+  position: relative;
 }
 
 li {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16px;
-    list-style: none;
-    padding: 12px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  list-style: none;
+  padding: 12px;
 }
 
 .burger-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 220px;
-    background-color: var(--neutral-white-color);
-    border: 2px solid var(--tertiary-color);
-    border-radius: 10px;
-    padding: 10px;
-    z-index: 100;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background-color: var(--neutral-white-color);
+  border: 2px solid var(--tertiary-color);
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 100;
+
+  /* Animation for opening and closing */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
 }
 
+/* Animation for opening and closing */
 .burger-menu.active {
-    display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 /* Normal links */
 .burger-menu a:link,
 .burger-menu a:visited {
-    color: var(--neutral-black-color);
-    text-decoration: none;
+  color: var(--neutral-black-color);
+  text-decoration: none;
 }
 
 /* Hover over links */
 .burger-menu a:hover {
-    color: var(--primary-color);
-    font-weight: bold;
+  color: var(--primary-color);
+  font-weight: bold;
 }
 
 /* While clicking */
 .burger-menu a:active {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 @media screen and (max-width: 768px) {
+  .burger-menu {
+    min-width: 200px;
+    /* VM stands for Viewport Width */
+    max-width: 90vw;
+  }
 
-    .burger-menu {
-        min-width: 200px;
-        max-width: 90vw;
-    }
+  .burger-menu li {
+    padding: 12px 8px;
+  }
 
-    .burger-menu li {
-        padding: 12px 8px;
-    }
-
-    .burger-menu a {
-        font-size: 14px;
-    }
-
+  .burger-menu a {
+    font-size: 14px;
+  }
 }
 
 /* Hero */
 
 .hero-image {
-    background-image: url(/hamburger-prosjekt/hamburger-images/hero-burger.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 99%;
-    min-height: 500px;
-    height: 780px;
-    margin: 10px;
-    padding: 20px;
-    gap: 10px;
+  background-image: url(/hamburger-prosjekt/hamburger-images/hero-burger.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 99%;
+  min-height: 500px;
+  height: 780px;
+  margin: 10px;
+  padding: 20px;
+  gap: 10px;
 }
 
 @media screen and (max-width: 768px) {
+  .hero-image {
+    min-height: 350px;
+    padding: 15px;
+  }
 
-    .hero-image {
-        min-height: 350px;
-        padding: 15px;
-    }
+  .hero-image h1 {
+    font-size: 36px !important;
+    text-align: center;
+  }
 
-    .hero-image h1 {
-        font-size: 36px !important;
-        text-align: center;
-    }
-
-    .hero-image h2 {
-        font-size: 20px !important;
-        text-align: center;
-    }
-
+  .hero-image h2 {
+    font-size: 20px !important;
+    text-align: center;
+  }
 }
 
 /* MOBILE SIZE */
 
 @media screen and (max-width: 768px) {
+  /* Navbar */
+  .head-buttons {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 5px;
+    margin: 5px;
+  }
 
-    /* Navbar */
-    .head-buttons {
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 5px;
-        padding: 5px;
-        margin: 5px;
-    }
+  /* Buttons */
+  button {
+    width: auto;
+    max-width: 100%;
+    height: 45px;
+    padding: 8px;
+    margin: 5px;
+    gap: 5px;
+  }
 
-    /* Buttons */
-    button {
-        width: auto;
-        max-width: 100%;
-        height: 45px;
-        padding: 8px;
-        margin: 5px;
-        gap: 5px;
-    }
+  button img {
+    width: 20px;
+    height: 20px;
+  }
 
-    button img {
-        width: 20px;
-        height: 20px;
-    }
+  button h3 {
+    font-size: 12px;
+  }
 
-    button h3 {
-        font-size: 12px;
-    }
+  /* Dropdown */
+  .burger-menu {
+    min-width: 200px;
+    /* VM stands for Viewport Width */
+    max-width: 90vw;
+  }
 
-    /* Dropdown */
-    .burger-menu {
-        min-width: 200px;
-        /* VM stands for Viewport Width */
-        max-width: 90vw; 
-    }
+  .burger-menu li {
+    padding: 12px 8px;
+  }
 
-    .burger-menu li {
-        padding: 12px 8px;
-    }
+  .burger-menu a {
+    font-size: 14px;
+  }
 
-    .burger-menu a {
-        font-size: 14px;
-    }
+  /* Hero */
+  .hero-image {
+    width: 100%;
+    min-height: 350px;
+    padding: 15px;
+  }
 
-    /* Hero */
-    .hero-image {
-        width: 100%;
-        min-height: 350px;
-        padding: 15px;
-    }
+  .hero-image h1 {
+    font-size: 36px !important;
+    text-align: center;
+  }
 
-    .hero-image h1 {
-        font-size: 36px !important;
-        text-align: center;
-    }
-
-    .hero-image h2 {
-        font-size: 20px !important;
-        text-align: center;
-    }
-
+  .hero-image h2 {
+    font-size: 20px !important;
+    text-align: center;
+  }
 }
-
-/* ADD THE FOLLOWING */
-/* COLOR PALETTE - DONE */
-/* FONT FAMILY + SHADOW BOXING FOR H1 AND H2 */
-/* STYLE THE LIST - DONE */
-/* STYLE THE BUTTONS - DONE */
-/* ADD SMOOTH TRANSITION TO THE LIST AND BUTTONS */
-/* MOBILE RESPONSIVENESS - DONE */
