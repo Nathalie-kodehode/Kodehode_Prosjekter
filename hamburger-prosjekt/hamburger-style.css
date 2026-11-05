@@ -7,24 +7,28 @@
 
 /* Colors */
 :root {
---primary-color: ;
---secondary-color: ;
---tertiary-color: ;
+--primary-color: #dd3218;
+--secondary-color: #8b0000;
+--tertiary-color: #8C3B09;
 
---background-color: ;
+--background-color: #075540;
 
---neutral-black-color: ;
---neutral-white-color: ;
+--neutral-black-color: #000000;
+--neutral-white-color: #ffffff;
 }
 
 /* Font */
 
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-shadow: 2px 6px 6px var(--primary-color);
+
 }
 
 h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-shadow: 2px 4px 4px var(--primary-color);
+
 }
 
 h3 {
@@ -33,16 +37,14 @@ h3 {
 
 /* Box Sizing */
 
-/* Find out how to make this accessible sizing on mobile */
 body {
+    background-color: var(--neutral-black-color);
     height: fit-content;
       width: stretch;
-      border: 2px solid red;
 }
 
 header {
     height: fit-content;
-        border: 2px solid red;
 }
 
 main {
@@ -50,7 +52,6 @@ main {
          flex-direction: column;
     justify-content: center;
     align-items: center;
-        border: 2px solid red;
 }
 
 section {
@@ -60,7 +61,6 @@ section {
     align-items: center;
     padding: 20px;
     margin: 20px;
-     border: 2px solid red;
 
 }
 
@@ -68,14 +68,30 @@ section {
 
 button {
     display: flex;
+    background-color: var(--neutral-white-color);
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     gap: 10px;
     margin: 10px;
     padding: 10px;
     height: 50px;
-    width: 200px;
+    width: 220px;
     border-radius: 20px;
+}
+
+button:hover {
+    box-shadow: 2px 4px 4px var(--neutral-black-color);
+    color: var(--primary-color);
+}
+
+
+/* It's using this Hex code: #8C3B09 */
+button:hover img {
+    filter: brightness(0) saturate(100%)
+            invert(23%) sepia(100%)
+            saturate(747%) hue-rotate(-10deg)
+            brightness(98%) contrast(101%);
 }
 
 
@@ -88,24 +104,184 @@ button {
     align-items: center;
     padding: 10px;
     margin: 10px;
-     border: 2px solid red;
+    background-color: var(--background-color);
+    border-radius: 10px;
 }
 
 /* Hamburger */
 
+.menu-container {
+    position: relative;
+}
 
+li {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    list-style: none;
+    padding: 12px;
+}
+
+.burger-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background-color: var(--neutral-white-color);
+    border: 2px solid var(--tertiary-color);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 100;
+}
+
+.burger-menu.active {
+    display: block;
+}
+
+/* Normal links */
+.burger-menu a:link,
+.burger-menu a:visited {
+    color: var(--neutral-black-color);
+    text-decoration: none;
+}
+
+/* Hover over links */
+.burger-menu a:hover {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* While clicking */
+.burger-menu a:active {
+    color: var(--secondary-color);
+}
+
+@media screen and (max-width: 768px) {
+
+    .burger-menu {
+        min-width: 200px;
+        max-width: 90vw;
+    }
+
+    .burger-menu li {
+        padding: 12px 8px;
+    }
+
+    .burger-menu a {
+        font-size: 14px;
+    }
+
+}
 
 /* Hero */
 
 .hero-image {
+    background-image: url(/hamburger-prosjekt/hamburger-images/hero-burger.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    width: stretch;
-    height: 720px;
+    width: 99%;
+    min-height: 500px;
+    height: 780px;
     margin: 10px;
     padding: 20px;
     gap: 10px;
-     border: 2px solid red;
 }
+
+@media screen and (max-width: 768px) {
+
+    .hero-image {
+        min-height: 350px;
+        padding: 15px;
+    }
+
+    .hero-image h1 {
+        font-size: 36px !important;
+        text-align: center;
+    }
+
+    .hero-image h2 {
+        font-size: 20px !important;
+        text-align: center;
+    }
+
+}
+
+/* MOBILE SIZE */
+
+@media screen and (max-width: 768px) {
+
+    /* Navbar */
+    .head-buttons {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 5px;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    /* Buttons */
+    button {
+        width: auto;
+        max-width: 100%;
+        height: 45px;
+        padding: 8px;
+        margin: 5px;
+        gap: 5px;
+    }
+
+    button img {
+        width: 20px;
+        height: 20px;
+    }
+
+    button h3 {
+        font-size: 12px;
+    }
+
+    /* Dropdown */
+    .burger-menu {
+        min-width: 200px;
+        /* VM stands for Viewport Width */
+        max-width: 90vw; 
+    }
+
+    .burger-menu li {
+        padding: 12px 8px;
+    }
+
+    .burger-menu a {
+        font-size: 14px;
+    }
+
+    /* Hero */
+    .hero-image {
+        width: 100%;
+        min-height: 350px;
+        padding: 15px;
+    }
+
+    .hero-image h1 {
+        font-size: 36px !important;
+        text-align: center;
+    }
+
+    .hero-image h2 {
+        font-size: 20px !important;
+        text-align: center;
+    }
+
+}
+
+/* ADD THE FOLLOWING */
+/* COLOR PALETTE - DONE */
+/* FONT FAMILY + SHADOW BOXING FOR H1 AND H2 */
+/* STYLE THE LIST - DONE */
+/* STYLE THE BUTTONS - DONE */
+/* ADD SMOOTH TRANSITION TO THE LIST AND BUTTONS */
+/* MOBILE RESPONSIVENESS - DONE */

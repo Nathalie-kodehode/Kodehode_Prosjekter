@@ -12,15 +12,28 @@
     <header>
       <div class="head-buttons" id="head-buttons">
         <!-- Hamburger Menu -->
-        <button class="menu-button" id="menu-button">
-          <img src="hamburger-images/hamburger.svg" alt="hamburger meny" />
+         <div class="menu-container" id="menu-container">
+        <button class="menu-button" id="menu-button" aria-expanded="false"
+aria-controls="burger-menu">
+          <img src="hamburger-images/hamburger.svg" alt="hamburger meny"/>
           <h3>Burger Menu</h3>
-<!-- NOTE TO SELF; How do we add the UL/LIs here? -->
-
-        </button>
+           </button>
+<!-- The Menu Items -->
+  <ul class="burger-menu" id="burger-menu">
+    <li><a href="#burger-1">Greasy Rat Burger</a></li>
+    <li><a href="#burger-2">Grandma's Ashes Burger</a></li>
+    <li><a href="#burger-3">Poison Cheeseburger</a></li>
+    <li><a href="#burger-4">Triple Poison Cheeseburger XXL</a></li>
+    <li><a href="#burger-5">Reaper's 100 Jalapeno Burger</a></li>
+    <li><a href="#burger-6">Explosive Diarrea Burger</a></li>
+    <li><a href="#burger-7">Moldy Surprise Fishburger</a></li>
+    <li><a href="#burger-8">Human Meat Burger (we promise it's good)</a></li>
+  </ul>
+  </div>
+       
         <!-- The 4 Other Buttons -->
         <button>
-          <img src="hamburger-images/profile.svg" alt="profile icon" />
+          <img src="hamburger-images/profile.svg" alt="profile icon"/>
           <h3>My Account</h3>
         </button>
         <button>
