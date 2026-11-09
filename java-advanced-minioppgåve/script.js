@@ -30,7 +30,6 @@ console.log(productCategories)
 
 // Bruk en eller flere array metoder for å hente ut alle produkt navnene innendfor kategori "electronics". DONE
 //FILTER()
-
 //Her går metoden gjennom lista:
 //"Filtrer products-lista"
 //"Gå gjennom kvar category i products"
@@ -44,6 +43,7 @@ console.log(electronicProducts)
 
 
 // Bruk en array metode for å finne den totale kostnaden av alle produktene. Hint: Du skal bare returne et heltall.
+
 
 
 // Regler for oppgaven
