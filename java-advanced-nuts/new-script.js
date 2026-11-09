@@ -19,7 +19,6 @@ add(2, 2, logger); //resultatet ble 2
 //lowkey føler at vi har allereie gått gjennom dette med han Joe????
 //bergensern er litt yap king
 //logger høyrast ut som ein slur som ikkje har blitt funnet opp ennå
-//lowkey jævla distraherande at riley og marius sitter her og jobber med lekser når eg prøver å følgje med på lecture
 
 //Namngitte vs anonyme callback funskjoner
 //same konseptet, sende inn i funsjon som vi kan bruke seinare. har funksjonen namn eller ikkje?
