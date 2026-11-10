@@ -11,8 +11,10 @@ const products = [
   ];
 console.log(products);
 
-//Bruk en array metode for å hente ut kun produkter som koster mindre enn 200. Hint: Det kan være ingen produketer, og det kan være en eller flere produkter som matcher dette kriteria.
-
+//Bruk en array metode for å hente ut kun produkter som koster mindre enn 200. Hint: Det kan være ingen produketer, og det kan være en eller flere produkter som matcher dette kriteria. DONE
+//FILTER()
+const belowPrice = products.filter(product => product.price < 200);
+console.log(belowPrice);
 
 // Bruk en array metode for å hente kun produktnavnene for rask oversikt. DONE
 //MAP()
@@ -39,12 +41,17 @@ const electronicProducts = products.filter(products => products.category === "el
 //i consolelog får eg kun fram 3 av produktene i arrayet. Desse har alle kategorien "electronics"
 console.log(electronicProducts)
 
-// Bruk en array metode for å finne ut hvis noen av produktene koster 1000 eller mer. Hint: Du skal ikke liste ut produktene, bare returne true dersom et eller flere produkter koster 1000 eller mer, eller false dersom ingen produkter koster 1000 eller mer.
+// Bruk en array metode for å finne ut hvis noen av produktene koster 1000 eller mer. Hint: Du skal ikke liste ut produktene, bare returne true dersom et eller flere produkter koster 1000 eller mer, eller false dersom ingen produkter koster 1000 eller mer. DONE
+//SOME()
+//"costsMore = gå gjennom kvart produkt i arrayen, send TRUE dersom 1 eller fleire produkter koster 1000 eller meir"
+const costsMore = products.some(product => product.price <= 1000);
+console.log(costsMore); //Han skriver TRUE
 
-
-// Bruk en array metode for å finne den totale kostnaden av alle produktene. Hint: Du skal bare returne et heltall.
-
-
+// Bruk en array metode for å finne den totale kostnaden av alle produktene. Hint: Du skal bare returne et heltall. DONE
+//REDUCE()
+//"totalSum = legg saman alle prisene i arrayet"
+const totalSum = products.reduce((total, product) => total + product.price, 0); //Viktig å ta med 0 ellers får du berre garbled string tekst
+console.log(totalSum); //2850 vert svaret
 
 // Regler for oppgaven
 // Lever lenke til din github repository som inneholder koden.
