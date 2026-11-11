@@ -1,65 +1,64 @@
 /* Colors */
 :root {
-    --primary-color: #ffcc14;
-    --secondary-color: ;
+  --primary-color: #ffcc14;
+  --secondary-color: ;
 
-    --death-color: #c60303;
+  --death-color: #c60303;
 
-    --default-black-color: #000000;
-    --default-white-color: #ffffff;
+  --default-black-color: #000000;
+  --default-white-color: #ffffff;
 }
 
 /* CSS Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
 }
 
 h2 {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
 }
 
 header {
-    width: 1400px;
-    height: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    background-color: beige;
-border: 2px solid red;
+  width: 1400px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: beige;
+  border: 2px solid red;
 }
 
 .game-area {
-    height: 700px;
-    width: 1400px;
-    background-color: aliceblue;
-    border: 2px solid red;
+  height: 700px;
+  width: 1400px;
+  background-color: aliceblue;
+  border: 2px solid red;
 }
 
 .player {
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    top: 450px;
-       left: 820px;
-    background-color: #ffcc14;
-    border: 2px solid var(--default-black-color);
-    border-radius: 40px;
-    
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 450px;
+  left: 820px;
+  background-color: #ffcc14;
+  border: 2px solid var(--default-black-color);
+  border-radius: 40px;
 }
