@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.area {
+  height: 600px;
+  width: 1000px;
+  background-color: green;
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+.player {
+  height: 80px;
+  width: 80px;
+  background-color: red;
+  position: absolute;
+     left: 800px;
+    top: 350px;
+  border: 2px solid white;
+  border-radius: 50px;
+}
