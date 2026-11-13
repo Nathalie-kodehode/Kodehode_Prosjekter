@@ -8,6 +8,19 @@ h1 {
   font-family:
     "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
     Arial, sans-serif;
+  text-decoration: underline;
+}
+
+h2 {
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+}
+
+h3 {
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
 }
 
 body {
@@ -31,10 +44,12 @@ body {
 .player {
   height: 80px;
   width: 80px;
-  background-color: red;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6YmyAud14-xs5nKVilr2uikvtiKSJXfUD43haAGA4cQ&s=10);
+  background-position: center;
+  background-size: contain;
   position: absolute;
-     left: 800px;
-    top: 350px;
-  border: 2px solid white;
+  left: 800px;
+  top: 470px;
+  border: 3px solid white;
   border-radius: 50px;
 }
