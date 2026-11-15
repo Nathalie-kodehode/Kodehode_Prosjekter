@@ -34,6 +34,7 @@ body {
 }
 
 .area {
+  position: relative;
   height: 600px;
   width: 1000px;
   background-color: green;
@@ -48,8 +49,9 @@ body {
   background-position: center;
   background-size: contain;
   position: absolute;
-  left: 800px;
-  top: 470px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   border: 3px solid white;
   border-radius: 50px;
 }
