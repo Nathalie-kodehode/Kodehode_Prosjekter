@@ -40,7 +40,7 @@ const User = {
 
 if(localStorage.getItem("user")) {
     const previousUsers = JSON.parse(localStorage.getItem("user"))
-    previousUsers.array.forEach(e => {
+    previousUsers.forEach(e => {
         AllUsers.push(e)
     });
 }
