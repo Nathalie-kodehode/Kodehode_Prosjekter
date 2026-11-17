@@ -46,6 +46,7 @@ header {
 }
 
 .game-area {
+  position: relative;
   height: 700px;
   width: 1400px;
   background-color: aliceblue;
@@ -56,9 +57,11 @@ header {
   position: absolute;
   height: 30px;
   width: 30px;
-  top: 450px;
-  left: 820px;
+ left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   background-color: #ffcc14;
   border: 2px solid var(--default-black-color);
   border-radius: 40px;
 }
+
