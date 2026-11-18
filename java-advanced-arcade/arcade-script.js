@@ -1,5 +1,3 @@
-//Arcade JS
-
 //Fonts
 const headingOne = document.querySelector("h1");
 headingOne.textContent = "Picky Eater Simulator";
@@ -43,13 +41,29 @@ document.addEventListener("keydown", (e) => {
 
 //Get bigger, Get smaller
 
-//if player eats GOOD FOOD (collision), the player grows in size and food vanishes
+
 //GOOD FOOD array
+goodFood = [
+  "icecream.svg",
+  "muffin.svg",
+  "lollipop.svg",
+  "chocolate.svg",
+  "candy.svg"
+]
+
+//if player eats GOOD FOOD (collision), the player grows in size and food vanishes
+
+
+//BAD FOOD array
+badFood = [
+  "aubergine.svg",
+  "broccoli.svg",
+  "onion.svg",
+  "salad.svg",
+  "tomato.svg"
+]
 
 //if the player eats BAD FOOD (collision), the player shrinks in size and food vanishes
-//BAD FOOD array
 
-
-//Screen turns red when dying(?)
 
 //Resetting/Launching game
