@@ -1,11 +1,18 @@
-//DOM Manipulation
+//Arcade JS
 
+//Fonts
+const headingOne = document.querySelector("h1");
+headingOne.textContent = "Picky Eater Simulator";
+const headingTwo = document.querySelector("h2");
+headingTwo.textContent = "You are a picky eater who wants to get BIG. EAT the delicious sweets - AVOID the yucky veggies!";
 
+//Player, Area & Foods
+const myPlayer = document.querySelector("#player");
+const myArea = document.querySelector("#game-area");
+const goodFood = document.querySelector(".good-food");
+const badFood = document.querySelector(".bad-food");
 
 //Moving the Player
-const myPlayer = document.querySelector("#player");
-const myArea = document.querySelector("#game-area")
-
 document.addEventListener("keydown", (e) => {
   let x = myPlayer.offsetLeft;
   let y = myPlayer.offsetTop;
@@ -33,10 +40,12 @@ document.addEventListener("keydown", (e) => {
 
 //Collision
 
-//Get bigger, Get smaller
-//if player eats GOOD FOOD (collision), the player grows in size
-//if the player eats BAD FOOD (collision), the player shrinks in size
 
-//Screen turns red when dying
+//Get bigger, Get smaller
+//if player eats GOOD FOOD (collision), the player grows in size and food vanishes
+//if the player eats BAD FOOD (collision), the player shrinks in size and food vanishes
+
+
+//Screen turns red when dying(?)
 
 //Resetting/Launching game
