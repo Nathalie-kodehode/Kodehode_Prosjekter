@@ -9,17 +9,24 @@
 </head>
 <body>
     <main> 
+        <div id="headings">
     <h1>Welcome to the Bookworm Library
     </h1>
     <hr></hr>
     <h2>Explore our catalog today - it contains over 10,000 books!</h2>
+    </div>
     <form>
         <div class="book-search" id="book-search">
        <label for="text"> <h3>Enter bookID below</h3></label>
         <input type="text" id="book-input" placeholder="example: AC1339">
+        <div id="buttons">
         <button type="submit" id="submit-button">Find book</button>
+        <button id="add-book">Add book to Favourites</button>
+        <button id="remove-button">Remove book</button>
+        </div>
         </div>
         <div class="book-toggle" id="book-toggle"></div>
+        
     </form>
     </main>
 </body>
