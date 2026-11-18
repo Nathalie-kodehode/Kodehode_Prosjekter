@@ -55,13 +55,15 @@ header {
 
 .player {
   position: absolute;
-  height: 30px;
-  width: 30px;
+  height: 50px;
+  width: 50px;
  left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: #ffcc14;
-  border: 2px solid var(--default-black-color);
+  background-image: url(arcade-images/player.svg);
+  background-size: 130%;
+  background-position: center;
+  border: 2px solid var(--primary-color);
   border-radius: 40px;
 }
 

@@ -42,8 +42,12 @@ document.addEventListener("keydown", (e) => {
 
 
 //Get bigger, Get smaller
+
 //if player eats GOOD FOOD (collision), the player grows in size and food vanishes
+//GOOD FOOD array
+
 //if the player eats BAD FOOD (collision), the player shrinks in size and food vanishes
+//BAD FOOD array
 
 
 //Screen turns red when dying(?)
