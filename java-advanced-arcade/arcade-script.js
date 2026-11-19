@@ -56,7 +56,7 @@ function startGame() {
 
     // Start game
     gameRunning = true;
-
+    
     startButton.textContent = "New Round";
 }
 
