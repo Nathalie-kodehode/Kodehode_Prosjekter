@@ -2,13 +2,86 @@
 const headingOne = document.querySelector("h1");
 headingOne.textContent = "Picky Eater Simulator";
 const headingTwo = document.querySelector("h2");
-headingTwo.textContent = "You are a picky eater who wants to get BIG. EAT the delicious sweets - AVOID the yucky veggies!";
+headingTwo.textContent = "You are a picky eater who wants to get BIG & ROUND. EAT the delicious sweets - AVOID the yucky veggies!";
 
 //Player, Area & Foods
 const myPlayer = document.querySelector("#player");
 const myArea = document.querySelector("#game-area");
-const goodFood = document.querySelector(".good-food");
-const badFood = document.querySelector(".bad-food");
+const startButton = document.querySelector("#start-button");
+
+//GOOD FOOD array
+const goodFood = [
+  "icecream.svg",
+  "muffin.svg",
+  "lollipop.svg",
+  "chocolate.svg",
+  "candy.svg"
+]
+
+//BAD FOOD array
+const badFood = [
+  "aubergine.svg",
+  "broccoli.svg",
+  "onion.svg",
+  "salad.svg",
+  "tomato.svg"
+]
+
+// Default Player Size
+let playerSize = 50;
+let gameRunning = false;
+
+// Start / New Round
+startButton.addEventListener("click", startGame);
+
+function startGame() {
+
+    // Reset player size
+    playerSize = 50;
+
+    myPlayer.style.width = playerSize + "px";
+    myPlayer.style.height = playerSize + "px";
+
+    // Reset player position
+    myPlayer.style.left = "50%";
+    myPlayer.style.top = "50%";
+    myPlayer.style.transform = "translate(-50%, -50%)";
+
+    // Remove food when eaten
+    document.querySelectorAll(".food").forEach(food => food.remove());
+
+    // Create new food
+    createFood(goodFood, "good");
+    createFood(badFood, "bad");
+
+    // Start game
+    gameRunning = true;
+
+    startButton.textContent = "New Round";
+}
+
+// Create food items
+function createFood(foodArray, type) {
+
+    foodArray.forEach(food => {
+
+        const foodItem = document.createElement("div");
+
+        foodItem.classList.add("food", type);
+
+        foodItem.style.backgroundImage =
+            `url("arcade-images/${food}")`;
+
+        // Random position
+        const x = Math.random() * (myArea.clientWidth - 50);
+        const y = Math.random() * (myArea.clientHeight - 50);
+
+        foodItem.style.left = x + "px";
+        foodItem.style.top = y + "px";
+
+        myArea.appendChild(foodItem);
+    });
+}
 
 //Moving the Player
 document.addEventListener("keydown", (e) => {
@@ -28,42 +101,49 @@ document.addEventListener("keydown", (e) => {
     x += 25;
   }
 
-    //Gamearea boundaries (prevents player from breaking out of box)
+  //Gamearea boundaries (prevents player from breaking out of box)
   x = Math.max(0, Math.min(x, myArea.clientWidth - myPlayer.offsetWidth));
   y = Math.max(0, Math.min(y, myArea.clientHeight - myPlayer.offsetHeight));
 
+   myPlayer.style.transform = "none";
   myPlayer.style.left = x + "px";
   myPlayer.style.top = y + "px";
+
+  checkCollision();
 });
 
-//Collision
+// Collision detection
+function checkCollision() {
 
+    const foods = document.querySelectorAll(".food");
 
-//Get bigger, Get smaller
+    foods.forEach(food => {
 
+        const playerRect = myPlayer.getBoundingClientRect();
+        const foodRect = food.getBoundingClientRect();
 
-//GOOD FOOD array
-goodFood = [
-  "icecream.svg",
-  "muffin.svg",
-  "lollipop.svg",
-  "chocolate.svg",
-  "candy.svg"
-]
+        if (
+            playerRect.left < foodRect.right &&
+            playerRect.right > foodRect.left &&
+            playerRect.top < foodRect.bottom &&
+            playerRect.bottom > foodRect.top
+        ) {
 
-//if player eats GOOD FOOD (collision), the player grows in size and food vanishes
+            if (food.classList.contains("good")) {
+                playerSize += 15;
+            }
 
+            if (food.classList.contains("bad")) {
+                playerSize = Math.max(20, playerSize - 15);
+            }
 
-//BAD FOOD array
-badFood = [
-  "aubergine.svg",
-  "broccoli.svg",
-  "onion.svg",
-  "salad.svg",
-  "tomato.svg"
-]
+            // Update player size
+            myPlayer.style.width = playerSize + "px";
+            myPlayer.style.height = playerSize + "px";
 
-//if the player eats BAD FOOD (collision), the player shrinks in size and food vanishes
+            // Remove eaten food
+            food.remove();
+        }
+    });
+}
 
-
-//Resetting/Launching game

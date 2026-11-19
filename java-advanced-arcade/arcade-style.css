@@ -30,19 +30,20 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 20px;
 }
 
 header {
   width: 1400px;
-  height: 120px;
+  height: 170px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
   background-color: beige;
-  border: 2px solid red;
+  border: 2px solid #d4a817;
+  border-bottom: none;
 }
 
 .game-area {
@@ -50,7 +51,7 @@ header {
   height: 700px;
   width: 1400px;
   background-color: aliceblue;
-  border: 2px solid red;
+  border: 2px solid #6f7fbb;
 }
 
 .player {
@@ -64,6 +65,29 @@ header {
   background-size: 130%;
   background-position: center;
   border: 2px solid var(--primary-color);
-  border-radius: 40px;
+  border-radius: 80px;
 }
 
+#start-button {
+    padding: 12px 30px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+#start-button:hover {
+    background-color: orange;
+}
+
+.food {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
