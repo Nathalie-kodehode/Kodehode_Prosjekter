@@ -134,16 +134,49 @@ function checkCollision() {
             }
 
             if (food.classList.contains("bad")) {
-                playerSize = Math.max(20, playerSize - 15);
+                playerSize = Math.max(30, playerSize - 20);
             }
 
             // Update player size
             myPlayer.style.width = playerSize + "px";
             myPlayer.style.height = playerSize + "px";
 
-            // Remove eaten food
-            food.remove();
-        }
+          // Remove eaten food
+food.remove();
+
+// Spawn replacement food
+if (food.classList.contains("good")) {
+    spawnFood(goodFood, "good");
+}
+
+if (food.classList.contains("bad")) {
+    spawnFood(badFood, "bad");
+}
+        } 
+
     });
 }
 
+function spawnFood(foodArray, type) {
+
+    // Pick a random food image
+    const randomFood = foodArray[
+        Math.floor(Math.random() * foodArray.length)
+    ];
+
+    const foodItem = document.createElement("div");
+
+    foodItem.classList.add("food", type);
+
+    foodItem.style.backgroundImage =
+        `url("arcade-images/${randomFood}")`;
+
+    // Random position
+    const x = Math.random() * (myArea.clientWidth - 50);
+    const y = Math.random() * (myArea.clientHeight - 50);
+
+    foodItem.style.left = x + "px";
+    foodItem.style.top = y + "px";
+
+    myArea.appendChild(foodItem);
+}

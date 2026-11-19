@@ -65,7 +65,7 @@ header {
   background-size: 130%;
   background-position: center;
   border: 2px solid var(--primary-color);
-  border-radius: 80px;
+  border-radius: 500px;
 }
 
 #start-button {
