@@ -2,7 +2,8 @@
 const headingOne = document.querySelector("h1");
 headingOne.textContent = "Picky Eater Simulator";
 const headingTwo = document.querySelector("h2");
-headingTwo.textContent = "You are a picky eater who wants to get BIG & ROUND. EAT the delicious sweets - AVOID the yucky veggies!";
+headingTwo.textContent =
+  "You are a picky eater who wants to get BIG & ROUND. EAT the delicious sweets - AVOID the yucky veggies!";
 
 //Player, Area & Foods
 const myPlayer = document.querySelector("#player");
@@ -15,8 +16,8 @@ const goodFood = [
   "muffin.svg",
   "lollipop.svg",
   "chocolate.svg",
-  "candy.svg"
-]
+  "candy.svg",
+];
 
 //BAD FOOD array
 const badFood = [
@@ -24,8 +25,8 @@ const badFood = [
   "broccoli.svg",
   "onion.svg",
   "salad.svg",
-  "tomato.svg"
-]
+  "tomato.svg",
+];
 
 // Default Player Size
 let playerSize = 50;
@@ -35,52 +36,48 @@ let gameRunning = false;
 startButton.addEventListener("click", startGame);
 
 function startGame() {
+  // Reset player size
+  playerSize = 50;
 
-    // Reset player size
-    playerSize = 50;
+  myPlayer.style.width = playerSize + "px";
+  myPlayer.style.height = playerSize + "px";
 
-    myPlayer.style.width = playerSize + "px";
-    myPlayer.style.height = playerSize + "px";
+  // Reset player position
+  myPlayer.style.left = "50%";
+  myPlayer.style.top = "50%";
+  myPlayer.style.transform = "translate(-50%, -50%)";
 
-    // Reset player position
-    myPlayer.style.left = "50%";
-    myPlayer.style.top = "50%";
-    myPlayer.style.transform = "translate(-50%, -50%)";
+  // Remove food when eaten
+  document.querySelectorAll(".food").forEach((food) => food.remove());
 
-    // Remove food when eaten
-    document.querySelectorAll(".food").forEach(food => food.remove());
+  // Create new food
+  createFood(goodFood, "good");
+  createFood(badFood, "bad");
 
-    // Create new food
-    createFood(goodFood, "good");
-    createFood(badFood, "bad");
+  // Start game
+  gameRunning = true;
 
-    // Start game
-    gameRunning = true;
-    
-    startButton.textContent = "New Round";
+  startButton.textContent = "New Round";
 }
 
-// Create food items
+// Create food items for the game
 function createFood(foodArray, type) {
+  foodArray.forEach((food) => {
+    const foodItem = document.createElement("div");
 
-    foodArray.forEach(food => {
+    foodItem.classList.add("food", type);
 
-        const foodItem = document.createElement("div");
+    foodItem.style.backgroundImage = `url("arcade-images/${food}")`;
 
-        foodItem.classList.add("food", type);
+    // Random position
+    const x = Math.random() * (myArea.clientWidth - 50);
+    const y = Math.random() * (myArea.clientHeight - 50);
 
-        foodItem.style.backgroundImage =
-            `url("arcade-images/${food}")`;
+    foodItem.style.left = x + "px";
+    foodItem.style.top = y + "px";
 
-        // Random position
-        const x = Math.random() * (myArea.clientWidth - 50);
-        const y = Math.random() * (myArea.clientHeight - 50);
-
-        foodItem.style.left = x + "px";
-        foodItem.style.top = y + "px";
-
-        myArea.appendChild(foodItem);
-    });
+    myArea.appendChild(foodItem);
+  });
 }
 
 //Moving the Player
@@ -105,78 +102,72 @@ document.addEventListener("keydown", (e) => {
   x = Math.max(0, Math.min(x, myArea.clientWidth - myPlayer.offsetWidth));
   y = Math.max(0, Math.min(y, myArea.clientHeight - myPlayer.offsetHeight));
 
-   myPlayer.style.transform = "none";
+  myPlayer.style.transform = "none";
   myPlayer.style.left = x + "px";
   myPlayer.style.top = y + "px";
 
   checkCollision();
 });
 
-// Collision detection
+// Collision detection (to check when the player eats food)
 function checkCollision() {
+  const foods = document.querySelectorAll(".food");
 
-    const foods = document.querySelectorAll(".food");
+  foods.forEach((food) => {
+    const playerRect = myPlayer.getBoundingClientRect();
+    const foodRect = food.getBoundingClientRect();
 
-    foods.forEach(food => {
+    if (
+      playerRect.left < foodRect.right &&
+      playerRect.right > foodRect.left &&
+      playerRect.top < foodRect.bottom &&
+      playerRect.bottom > foodRect.top
+    ) {
+      //the player's size increases by 15px if they eat good food
+      if (food.classList.contains("good")) {
+        playerSize += 15;
+      }
+      //the player's size decreases by 15px if they eat bad food
+      if (food.classList.contains("bad")) {
+        playerSize = Math.max(20, playerSize - 15);
+      }
 
-        const playerRect = myPlayer.getBoundingClientRect();
-        const foodRect = food.getBoundingClientRect();
+      // Update the player's size after eating food
+      myPlayer.style.width = playerSize + "px";
+      myPlayer.style.height = playerSize + "px";
 
-        if (
-            playerRect.left < foodRect.right &&
-            playerRect.right > foodRect.left &&
-            playerRect.top < foodRect.bottom &&
-            playerRect.bottom > foodRect.top
-        ) {
+      // Removes eaten food
+      food.remove();
 
-            if (food.classList.contains("good")) {
-                playerSize += 15;
-            }
+      // Spawn replacement food
+      if (food.classList.contains("good")) {
+        spawnFood(goodFood, "good");
+      }
 
-            if (food.classList.contains("bad")) {
-                playerSize = Math.max(30, playerSize - 20);
-            }
-
-            // Update player size
-            myPlayer.style.width = playerSize + "px";
-            myPlayer.style.height = playerSize + "px";
-
-          // Remove eaten food
-food.remove();
-
-// Spawn replacement food
-if (food.classList.contains("good")) {
-    spawnFood(goodFood, "good");
+      if (food.classList.contains("bad")) {
+        spawnFood(badFood, "bad");
+      }
+    }
+  });
 }
 
-if (food.classList.contains("bad")) {
-    spawnFood(badFood, "bad");
-}
-        } 
-
-    });
-}
-
+// After the player eats food, a new food spawns in a random location in the gamearea
 function spawnFood(foodArray, type) {
+  // Picks a random food from the food arrays
+  const randomFood = foodArray[Math.floor(Math.random() * foodArray.length)];
 
-    // Pick a random food image
-    const randomFood = foodArray[
-        Math.floor(Math.random() * foodArray.length)
-    ];
+  const foodItem = document.createElement("div");
 
-    const foodItem = document.createElement("div");
+  foodItem.classList.add("food", type);
 
-    foodItem.classList.add("food", type);
+  foodItem.style.backgroundImage = `url("arcade-images/${randomFood}")`;
 
-    foodItem.style.backgroundImage =
-        `url("arcade-images/${randomFood}")`;
+  //randomly selects the location for the newly spawned food
+  const x = Math.random() * (myArea.clientWidth - 50);
+  const y = Math.random() * (myArea.clientHeight - 50);
 
-    // Random position
-    const x = Math.random() * (myArea.clientWidth - 50);
-    const y = Math.random() * (myArea.clientHeight - 50);
+  foodItem.style.left = x + "px";
+  foodItem.style.top = y + "px";
 
-    foodItem.style.left = x + "px";
-    foodItem.style.top = y + "px";
-
-    myArea.appendChild(foodItem);
+  myArea.appendChild(foodItem);
 }

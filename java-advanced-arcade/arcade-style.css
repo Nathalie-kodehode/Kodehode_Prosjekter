@@ -1,9 +1,16 @@
 /* Colors */
 :root {
   --primary-color: #ffcc14;
-  --secondary-color: ;
+  --secondary-color: #ffa500;
 
-  --death-color: #c60303;
+  --header-background-color: #f5f5dc;
+  --header-border-color: #d4a817;
+
+  --game-background-color:#f0f8ff;
+  --game-border-color: #6f7fbb;
+
+  --font-color-1: #7834dd;
+  --font-color-2: #a539a5;
 
   --default-black-color: #000000;
   --default-white-color: #ffffff;
@@ -19,10 +26,12 @@
 h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
+  color: var(--font-color-1);
 }
 
 h2 {
   font-family: Arial, Helvetica, sans-serif;
+  color: var(--font-color-2);
 }
 
 body {
@@ -41,24 +50,28 @@ header {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  background-color: beige;
-  border: 2px solid #d4a817;
+  background-color: var(--header-background-color);
+  border: 2px solid var(--header-border-color);
   border-bottom: none;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .game-area {
   position: relative;
   height: 700px;
   width: 1400px;
-  background-color: aliceblue;
-  border: 2px solid #6f7fbb;
+  background-color: var(--game-background-color);
+  border: 2px solid var(--game-border-color);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .player {
   position: absolute;
   height: 50px;
   width: 50px;
- left: 50%;
+  left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   background-image: url(arcade-images/player.svg);
@@ -69,25 +82,25 @@ header {
 }
 
 #start-button {
-    padding: 12px 30px;
-    background-color: var(--primary-color);
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 8px;
+  padding: 12px 30px;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
 }
 
 #start-button:hover {
-    background-color: orange;
+  background-color: var(--secondary-color);
 }
 
 .food {
-    position: absolute;
-    width: 45px;
-    height: 45px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
