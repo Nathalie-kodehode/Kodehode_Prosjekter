@@ -65,3 +65,4 @@ console.log(`${title} by ${author}, genre: ${genre}, pages: ${pages}`);
 
 //Remove Book button (removes the book/hides it from the page)
 
+//screenshotta sander sin eksempel, sjekk skjermbilder
