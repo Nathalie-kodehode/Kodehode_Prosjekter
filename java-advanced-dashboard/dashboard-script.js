@@ -3,9 +3,7 @@
 //The idea is that when the user enters a certain BookID, the book assigned that ID will appear on the webpage
 //The books can then be added to favourites, or be removed. Both are buttons.
 
-//I dont really feel like we've learned enough to handle this kind of assignment, tbh
-//Most other assignments have been linked to lectures, this one feels out of place.
-//I dont really understand what kind of dashboard they want me to make
+
 
 //I used books that I've read personally just for fun lol
 const bookData = [
@@ -55,6 +53,9 @@ const bookData = [
     pages: "240",
   },
 ];
+
+const { title, author, genre, pages } = bookData;
+console.log(`${title} by ${author}, genre: ${genre}, pages: ${pages}`);
 
 //Find Book button (adds a certain book)
 
