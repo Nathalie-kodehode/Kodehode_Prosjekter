@@ -162,3 +162,10 @@ removeButton.addEventListener("click", function () {
 
   bookOutput.textContent = `${currentBook.title} has been removed from favourites!`;
 });
+
+
+//things todo
+//show id number when book displayed
+//style favourites list
+//style error codes
+//change layout?
