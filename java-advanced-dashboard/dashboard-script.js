@@ -123,7 +123,7 @@ addFavourite.addEventListener("click", function () {
   const alreadyFavourite = favourites.some(({ id }) => id === currentBook.id);
 
   if (alreadyFavourite) {
-    bookOutput.textContent = "Book is already a favourite!";
+    bookOutput.textContent = "This book is already a favourite!";
     return;
   }
 
@@ -155,7 +155,7 @@ const removeButton = document.querySelector("#remove-button");
 
 removeButton.addEventListener("click", function () {
   if (!currentBook) {
-    bookOutput.textContent = "Find a book first!";
+    bookOutput.textContent = "Please write the ID of the book you want to remove from Favourites";
     return;
   }
 
