@@ -136,26 +136,22 @@ addFavourite.addEventListener("click", function () {
 });
 
 //Sort books A-Z
-
 const sortButton = document.querySelector("#sort-button");
 
 sortButton.addEventListener("click", function () {
-    favourites.sort((a, b) => a.title.localeCompare(b.title));
+  favourites.sort((a, b) => a.title.localeCompare(b.title));
 
-    saveFavourites();
-    displayFavourites();
+  saveFavourites();
+  displayFavourites();
 });
-
-
-
-
 
 //Remove Book button (removes the book/hides it from the page)
 const removeButton = document.querySelector("#remove-button");
 
 removeButton.addEventListener("click", function () {
   if (!currentBook) {
-    bookOutput.textContent = "Please write the ID of the book you want to remove from Favourites";
+    bookOutput.textContent =
+      "Please write the ID of the book you want to remove from Favourites";
     return;
   }
 
