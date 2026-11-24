@@ -13,7 +13,7 @@
 //patch endre det som allereie er der
 /* 
 
-PUT OG PATCH
+PUT OG PATCH:
 {
 name: 'Sander'
 email: 'sander@jobloop.no'
@@ -49,10 +49,22 @@ HUSKEREGEL:
 
 */
 
-
+//DELETE:
 //delete sletter data
 //soft delete og hard delete 
 // soft delete (sletta men ikkje heilt, det som er sletta liggjer ein plass men kan ikkje brukast)
 //hard delete (sletter data fullstending, ingenting liggjer igjen)
 //soft delte legje noko i søppelbøtta, hard delete slette søppelbøtta
+
+// HTTP response status codes
+
+/*
+informational
+successful 
+redirection
+client error
+server error
+
+for eksempel 404 error code er relevant
+*/
 
