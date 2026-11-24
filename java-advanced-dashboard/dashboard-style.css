@@ -22,7 +22,7 @@ h3 {
 hr {
   background-color: black;
   border-color: black;
-  height: 2px;
+  height: 3px;
   width: 600px;
 }
 
@@ -68,7 +68,6 @@ button {
   justify-content: center;
   align-items: center;
   gap: 15px;
-  border: 2px solid red;
 }
 
 #buttons {
@@ -76,7 +75,6 @@ button {
   flex-direction: column;
   justify-content: center;
 align-items: flex-start;
- border: 2px solid red;
 }
 
 #remove-button {
@@ -96,5 +94,4 @@ align-items: flex-start;
   justify-content: center;
   align-items: flex-start;
   gap: 15px;
-   border: 2px solid red;
 }
