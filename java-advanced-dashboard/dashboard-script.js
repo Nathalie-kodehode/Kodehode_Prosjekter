@@ -166,7 +166,7 @@ removeButton.addEventListener("click", function () {
 
 //things todo
 //show id number when book displayed
-//style favourites list
+//style favourites list DONE
 //style error codes
 
-//id cheatsheet (so a user can add all books)
+//id cheatsheet (so a user can add all books) DONE
