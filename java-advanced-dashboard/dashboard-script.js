@@ -1,8 +1,13 @@
-//Data Dashboard
+//DASHBOARD
 
 //The idea is that when the user enters a certain BookID, the book assigned that ID will appear on the webpage
 //The books can then be added to favourites, or be removed. Both are buttons.
+//The books can also be sorted alphabetically via a button.
 
+//BookID: author's initials + the year the book was published
+//For example, the Agatha Christie book came out in 1939, so her book's BookID is ac1939
+
+// BOOK ARRAY
 //I used books that I've read personally just for fun lol
 const bookData = [
   //Agatha Christie
@@ -56,10 +61,17 @@ const bookData = [
   },
 ];
 
-//Find Book button (adds a certain book)
+//Find book button
 const form = document.querySelector("#book-form");
+//Book input (user types in the bookid)
 const bookInput = document.querySelector("#book-input");
+//Book output (displays various information on the page)
 const bookOutput = document.querySelector("#book-toggle");
+
+// Find a Book
+//The user types in the bookid
+//If done correctly, the book will be displayed
+//If done wrong, an error message will be displayed
 
 let currentBook = null;
 
@@ -67,24 +79,23 @@ form.addEventListener("submit", function (event) {
   event.preventDefault();
 
   const bookId = bookInput.value.trim().toLowerCase();
-
   currentBook = bookData.find(({ id }) => id === bookId);
-
   if (!currentBook) {
     bookOutput.textContent = "Book not found!";
     return;
   }
 
   const { title, author, year, genre, pages, id } = currentBook;
-
   bookOutput.textContent = `${title} by ${author} | Year: ${year} | Genre: ${genre} | Pages: ${pages} | BookID: ${id}`;
 });
 
-//Add Book to Faves button (assigns class favourites to book)
+//Saves a favourited book to localstorage
+//The favourites list is also displayed when a book has been assigned to it
 
 const addFavourite = document.querySelector("#add-book");
 const favouritesList = document.querySelector("#favourites-list");
 
+//When there are no books in the list, the fav list be empty
 let favourites = [];
 
 function saveFavourites() {
@@ -94,7 +105,7 @@ function saveFavourites() {
 function displayFavourites() {
   favouritesList.innerHTML = " ";
 
-  favourites.forEach(({ title, author, year, genre, pages, id}) => {
+  favourites.forEach(({ title, author, year, genre, pages, id }) => {
     const bookCard = document.createElement("div");
 
     bookCard.innerHTML = `
@@ -110,7 +121,8 @@ function displayFavourites() {
   });
 }
 
-// Load favourites from localStorage
+// Loading favourites from localStorage
+//The books in the fav lists are saved in localstorage
 const savedFavourites = localStorage.getItem("favourites");
 
 if (savedFavourites) {
@@ -118,9 +130,10 @@ if (savedFavourites) {
 }
 
 // Show favourites when page loads
+//The books in fav lists, if there are any, will still be displayed even during a page refresh.
 displayFavourites();
 
-// Add book to favourites
+// Add Book to Favourites List
 addFavourite.addEventListener("click", function () {
   if (!currentBook) {
     bookOutput.textContent = "Find a book first!";
@@ -135,7 +148,6 @@ addFavourite.addEventListener("click", function () {
   }
 
   favourites.push(currentBook);
-
   saveFavourites();
   displayFavourites();
 
@@ -143,22 +155,26 @@ addFavourite.addEventListener("click", function () {
 });
 
 //Sort books A-Z
+//The function looks at the favourites list, checks the items and them sorts them alphabetically
 const sortButton = document.querySelector("#sort-button");
 
 sortButton.addEventListener("click", function () {
   favourites.sort((a, b) => a.title.localeCompare(b.title));
-
   saveFavourites();
   displayFavourites();
 });
 
 //Remove Book button (removes the book/hides it from the page)
+//The user must write the BookID of the book they want to remove, and then press the Remove Book button again
+//This fully deletes the book from the favourites list
+//The user can reassign the book if they want
+//The user is not able to add multiple copies of the same book
 const removeButton = document.querySelector("#remove-button");
 
 removeButton.addEventListener("click", function () {
   if (!currentBook) {
     bookOutput.textContent =
-      "Please write the ID of the book you want to remove from Favourites";
+      "Write the ID of the book you want to remove, before pressing the button";
     return;
   }
 

@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+/* FONTS */
 h1 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: brown;
@@ -30,6 +31,8 @@ p {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+/* GLOBAL STYLING */
+
 body {
   background-color: antiquewhite;
   padding: 20px;
@@ -43,6 +46,8 @@ main {
   gap: 40px;
   margin: 50px;
 }
+
+/* FORM */
 
 form {
   display: flex;
@@ -85,6 +90,8 @@ button {
   align-items: flex-start;
 }
 
+/* FAVOURITES LIST */
+
 .fav-title {
   margin-top: 15px;
   text-decoration: underline;
@@ -97,6 +104,8 @@ button {
   gap: 20px;
   margin-top: 15px;
 }
+
+/* BUTTONS */
 
 button:hover {
   background-color: brown;
@@ -126,6 +135,18 @@ button:hover {
   gap: 15px;
 }
 
+/* ERROR/INFO MESSAGE */
+
+#book-toggle {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bolder;
+  font-size: 16px;
+  margin-top: 15px;
+  color: #d30101;
+}
+
+/* CHEATSHEET */
+
 .cheatsheet {
   display: flex;
   flex-direction: column;
@@ -137,12 +158,4 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 15px;
-}
-
-#book-toggle {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: bolder;
-  font-size: 16px;
-  margin-top: 15px;
-  color: #d30101;
 }
