@@ -1,0 +1,99 @@
+:root {
+  --primary-color: #464a56;
+  --secondary-color: #3448b7;
+  --border-color: #d41414;
+  --background-color: #2d2f37;
+
+  --type-grass-color: rgb(38, 163, 38);
+  --type-water-color: rgb(4, 96, 255);
+  --type-fire-color: #ff6f01;
+  --type-fairy-color: #f471f4;
+  --type-flying-color: #71a0f7;
+  --type-dark-color: #1e222c;
+
+  --default-white-color: #ffffff;
+  --default-black-color: #000000;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 32px;
+    font-weight: bolder;
+    color: var(--default-white-color);
+}
+
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: var(--default-white-color);
+}
+
+h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+h4 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 30px 100px;
+  gap: 60px;
+  border: 2px solid blue;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    width: stretch;
+    padding: 20px;
+      border: 2px solid red;
+}
+
+input {
+    background-color: var(--default-white-color);
+    border-radius: 5px;
+    padding: 10px;
+    width: 600px;
+    font-size: 18px;
+}
+
+#search-button {
+    background-color: var(--secondary-color);
+    color: var(--default-white-color);
+padding: 10px;
+border-radius: 5px;
+}
+
+#search-input {
+    display: flex;
+    gap: 20px;
+    border: 2px solid red;
+}
+
+
+
+#display-pokemon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+gap: 30px;
+    border: 2px solid red;
+}
+
+/* 3 starters */
+/* primarina WATER FAIRY */
+/* charizard FIRE FLYING */
+/* meowscarada GRASS DARK */
