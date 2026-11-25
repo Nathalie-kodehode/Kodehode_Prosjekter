@@ -26,23 +26,29 @@ hr {
   width: 600px;
 }
 
+p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 body {
   background-color: antiquewhite;
+  padding: 20px;
+ 
 }
 
 main {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
   margin: 50px;
+   border: 2px solid red;
 }
 
 form {
-  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid red;
 }
 
 input {
@@ -53,7 +59,7 @@ input {
 }
 
 button {
-  background-color: brown;
+  background-color: olive;
   color: white;
   border-radius: 10px;
   padding: 10px;
@@ -76,7 +82,11 @@ button {
   flex-direction: column;
   justify-content: center;
 align-items: flex-start;
- border: 2px solid red;
+}
+
+.fav-title {
+  margin-top: 15px;
+  text-decoration: underline;
 }
 
 #favourites-list {
@@ -84,8 +94,12 @@ align-items: flex-start;
   display: flex;
    flex-direction: column;
   gap: 20px;
-  border: 2px solid red;
+  margin-top: 15px;;
 
+}
+
+button:hover {
+  background-color: brown;
 }
 
 #remove-button {
@@ -109,5 +123,17 @@ align-items: flex-start;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  gap: 15px;
+}
+
+.cheatsheet {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ids {
+  display: flex;
+  flex-direction: column;
   gap: 15px;
 }

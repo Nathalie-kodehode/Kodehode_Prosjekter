@@ -8,28 +8,30 @@
     <title>Personal Data Dashboard</title>
 </head>
 <body>
-    <main> 
-        <div id="headings">
-    <h1>Welcome to the Bookworm Library
+    <header id="headings">
+  <h1>Welcome to the Bookworm Library
     </h1>
     <hr></hr>
     <h2>Explore our catalog today - it contains over 10,000 books!</h2>
-    </div>
+    </header>
+    <main> 
     <form id="book-form">
         <div class="book-search" id="book-search">
-       <label for="book-input"> <h3>Enter bookID below</h3></label>
+       <label for="book-input"> <h3>Enter bookID:</h3></label>
         <input type="text" id="book-input" placeholder="example: ac1939">
 
         <div id="buttons">
 
         <button type="submit" id="submit-button">Find book</button>
 
-        <button type="button" id="add-book">Add to Favourites</button>
+        <button type="button" class="fav-button" id="add-book">Add to Favourites</button>
         <button type="button" id="sort-button">
     Sort A-Z
 </button>
-
-        <h2>My Favourite Books</h2>
+<div class="fav-title">
+ <h2>My Favourite Books</h2>
+</div>
+       
 
 <div id="favourites-list"></div>
         <button type="button" id="remove-button">Remove book</button>
@@ -38,6 +40,17 @@
         <div class="book-toggle" id="book-toggle"></div>
         
     </form>
+    <section class="cheatsheet">
+<h3> BookIDs available (to try out):</h3>
+<div class="ids">
+<p>ac1939</p>
+<p>db2009</p>
+<p>hp1883</p>
+<p>ad1846</p>
+<p>uk2022</p>
+</div>
+
+    </section>
     </main>
 </body>
 </html>

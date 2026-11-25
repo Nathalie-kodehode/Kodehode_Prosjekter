@@ -70,9 +70,9 @@ form.addEventListener("submit", function (event) {
     return;
   }
 
-  const { title, author, genre, pages } = currentBook;
+  const { title, id, author, genre, pages } = currentBook;
 
-  bookOutput.textContent = `${title} by ${author} | Genre: ${genre} | Pages: ${pages}`;
+  bookOutput.textContent = `${title} by ${author}| BookdID: ${id} | Genre: ${genre} | Pages: ${pages}`;
 });
 
 //Add Book to Faves button (assigns class favourites to book)
@@ -168,4 +168,5 @@ removeButton.addEventListener("click", function () {
 //show id number when book displayed
 //style favourites list
 //style error codes
-//change layout?
+
+//id cheatsheet (so a user can add all books)
