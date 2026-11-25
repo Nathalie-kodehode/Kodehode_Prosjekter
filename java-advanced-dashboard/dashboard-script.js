@@ -10,6 +10,7 @@ const bookData = [
     id: "ac1939",
     title: "And Then There Were None",
     author: "Agatha Christie",
+    year: 1939,
     genre: "Mystery",
     pages: 250,
   },
@@ -19,6 +20,7 @@ const bookData = [
     id: "ad1846",
     title: "The Count of Monte Cristo",
     author: "Alexandre Dumas",
+    year: 1846,
     genre: "Adventure",
     pages: 1257,
   },
@@ -28,6 +30,7 @@ const bookData = [
     id: "hp1883",
     title: "The Merry Adventures of Robin Hood",
     author: "Howard Pyle",
+    year: 1883,
     genre: "Historical Fiction",
     pages: 129,
   },
@@ -37,6 +40,7 @@ const bookData = [
     id: "db2009",
     title: "The Lost Symbol",
     author: "Dan Brown",
+    year: 2009,
     genre: "Thriller",
     pages: 671,
   },
@@ -46,6 +50,7 @@ const bookData = [
     id: "uk2022",
     title: "Strange Pictures",
     author: "Uketsu",
+    year: 2022,
     genre: "Horror",
     pages: 240,
   },
@@ -70,9 +75,9 @@ form.addEventListener("submit", function (event) {
     return;
   }
 
-  const { title, id, author, genre, pages } = currentBook;
+  const { title, author, year, genre, pages, id } = currentBook;
 
-  bookOutput.textContent = `${title} by ${author}| BookdID: ${id} | Genre: ${genre} | Pages: ${pages}`;
+  bookOutput.textContent = `${title} by ${author} | Year: ${year} | Genre: ${genre} | Pages: ${pages} | BookID: ${id}`;
 });
 
 //Add Book to Faves button (assigns class favourites to book)
@@ -87,16 +92,18 @@ function saveFavourites() {
 }
 
 function displayFavourites() {
-  favouritesList.innerHTML = "";
+  favouritesList.innerHTML = " ";
 
-  favourites.forEach(({ title, author, genre, pages }) => {
+  favourites.forEach(({ title, author, year, genre, pages, id}) => {
     const bookCard = document.createElement("div");
 
     bookCard.innerHTML = `
             <h3>${title}</h3>
             <p>Author: ${author}</p>
+            <p>Year: ${year}</p>
             <p>Genre: ${genre}</p>
             <p>Pages: ${pages}</p>
+            <p>BookID: ${id}</p>
         `;
 
     favouritesList.appendChild(bookCard);
@@ -162,11 +169,3 @@ removeButton.addEventListener("click", function () {
 
   bookOutput.textContent = `${currentBook.title} has been removed from favourites!`;
 });
-
-
-//things todo
-//show id number when book displayed
-//style favourites list DONE
-//style error codes
-
-//id cheatsheet (so a user can add all books) DONE
