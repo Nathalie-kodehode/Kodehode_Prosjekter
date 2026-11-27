@@ -84,6 +84,7 @@ input {
   color: var(--default-white-color);
   padding: 10px;
   border-radius: 5px;
+  border-color: var(--border-color);
   box-shadow: 4px 4px var(--default-black-color);
 }
 
@@ -106,6 +107,7 @@ input {
   background-color: var(--secondary-color);
   color: var(--default-white-color);
   border-radius: 5px;
+   border-color: var(--border-color);
   font-family: Arial, Helvetica, sans-serif;
   padding: 8px;
   box-shadow: 4px 4px var(--default-black-color);
@@ -115,6 +117,7 @@ input {
   background-color: var(--secondary-color);
   color: var(--default-white-color);
   border-radius: 5px;
+   border-color: var(--border-color);
   font-family: Arial, Helvetica, sans-serif;
   padding: 8px;
   box-shadow: 4px 4px var(--default-black-color);
