@@ -1,3 +1,4 @@
+/* Colour Styling */
 :root {
   --primary-color: #464a56;
   --secondary-color: #3448b7;
@@ -15,30 +16,36 @@
   --default-black-color: #000000;
 }
 
+/* Font Styling */
 h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 32px;
-    font-weight: bolder;
-    color: var(--default-white-color);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 32px;
+  font-weight: bolder;
+  color: var(--default-white-color);
 }
 
 h2 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 25px;
-    color: var(--default-white-color);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 25px;
+  color: var(--default-white-color);
 }
 
 h3 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
 }
 
 h4 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 16px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  background-color: var(--primary-color);
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid var(--default-black-color);
+  color: var(--default-white-color);
 }
 
-
+/* Page Styling */
 body {
   display: flex;
   flex-direction: column;
@@ -51,49 +58,74 @@ body {
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 120px;
-    width: stretch;
-    padding: 20px;
-      border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: stretch;
+  padding: 20px;
+  border: 2px solid red;
 }
 
+/* Search Input & Search Button */
 input {
-    background-color: var(--default-white-color);
-    border-radius: 5px;
-    padding: 10px;
-    width: 600px;
-    font-size: 18px;
+  background-color: var(--default-white-color);
+  border-radius: 5px;
+  padding: 10px;
+  height: stretch;
+  width: 600px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #search-button {
-    background-color: var(--secondary-color);
-    color: var(--default-white-color);
-padding: 10px;
-border-radius: 5px;
+  background-color: var(--secondary-color);
+  color: var(--default-white-color);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 4px 4px var(--default-black-color);
 }
 
 #search-input {
-    display: flex;
-    gap: 20px;
-    border: 2px solid red;
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  gap: 20px;
+  border: 2px solid red;
 }
 
+/* Buttons Styling */
+#pkm-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
 
+#direction-btn {
+  background-color: var(--secondary-color);
+  color: var(--default-white-color);
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 8px;
+  box-shadow: 4px 4px var(--default-black-color);
+}
 
+#shiny-btn {
+  background-color: var(--secondary-color);
+  color: var(--default-white-color);
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 8px;
+  box-shadow: 4px 4px var(--default-black-color);
+}
+
+/* 9 Pokemon Display (GRID?) */
 #display-pokemon {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-gap: 30px;
-    border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  border: 2px solid red;
 }
-
-/* 3 starters */
-/* primarina WATER FAIRY */
-/* charizard FIRE FLYING */
-/* meowscarada GRASS DARK */

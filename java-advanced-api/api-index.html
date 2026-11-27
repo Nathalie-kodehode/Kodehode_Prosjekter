@@ -1,34 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="api-style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="api-style.css" />
     <script src="api-script.js" defer></script>
     <title>Java Advanced Oppgåve 3</title>
-</head>
-<body>
+  </head>
+  <body>
     <header id="header">
-        <h1>Datamon</h1>
-        <h2>Gotta Promise & Fetch them all!</h2>
+      <h1>Datamon</h1>
+      <h2>Gotta Promise & Fetch them all!</h2>
     </header>
     <main>
-        <form>
-<section id="search-input">
-   <label for="text"></label>
-   <input type="text" placeholder="Example: Pikachu...">
-<button type="submit" id="search-button"><h3>Search</h3></button>
-</section>
-<section id="display-pokemon">
-<div id="pokemon-img"></div>
-<div id="pokemon-name">
-<div><h4>Name:</h4></div>
-</div>
-<div id="pokemon-types">
-<div><h4>Type:</h4></div>
-</div>
-</section>
-</form>
+      <form>
+        <section id="search-input">
+          <input type="text" placeholder="Example: Pikachu..." />
+          <button type="submit" id="search-button"><h3>Search</h3></button>
+        </section>
+        <section id="display-pokemon">
+          <div id="pokemon-img"></div>
+          <div id="pkm-buttons">
+            <button id="direction-btn">Change Direction</button>
+            <button id="shiny-btn">View Shiny/Default</button>
+          </div>
+          <div id="pokemon-name">
+            <div><h4>Name:</h4></div>
+          </div>
+          <div id="pokemon-types">
+            <div><h4>Type:</h4></div>
+          </div>
+        </section>
+      </form>
     </main>
-</body>
+  </body>
 </html>
