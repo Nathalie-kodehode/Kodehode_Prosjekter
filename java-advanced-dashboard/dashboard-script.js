@@ -185,3 +185,35 @@ removeButton.addEventListener("click", function () {
 
   bookOutput.textContent = `${currentBook.title} has been removed from favourites!`;
 });
+
+// Filter books by author
+const filterInput = document.querySelector("#filter-input");
+const filterButton = document.querySelector("#filter-button");
+const bookResults = document.querySelector("#book-results");
+
+filterButton.addEventListener("click", function () {
+  const searchAuthor = filterInput.value.trim().toLowerCase();
+
+  // filter() selects books matching the author
+  const filteredBooks = bookData.filter(({ author }) =>
+    author.toLowerCase().includes(searchAuthor),
+  );
+
+  // map() extracts the title and author from each book
+  const bookTitles = filteredBooks.map(
+    ({ title, author }) => `${title} by ${author}`,
+  );
+
+  // Display the filtered books
+  if (bookTitles.length === 0) {
+    bookResults.textContent = "No books found!";
+  } else {
+    bookResults.innerHTML = "";
+
+    bookTitles.forEach((bookTitle) => {
+      const bookParagraph = document.createElement("p");
+      bookParagraph.textContent = bookTitle;
+      bookResults.appendChild(bookParagraph);
+    });
+  }
+});

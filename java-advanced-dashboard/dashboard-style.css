@@ -159,3 +159,26 @@ button:hover {
   flex-direction: column;
   gap: 15px;
 }
+
+/* FILTER AND RESULTS */
+
+#filter-search {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#book-results {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#book-results p {
+  font-size: 16px;
+  background-color: #c3c37c;
+  padding: 10px;
+  border-radius: 5px;
+}

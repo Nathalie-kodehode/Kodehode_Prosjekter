@@ -11,7 +11,7 @@
     <!-- HEADER -->
     <header id="headings">
       <h1>Welcome to the Bookworm Library</h1>
-      <hr>
+      <hr />
       <h2>Explore our catalog today - it contains over 10,000 books!</h2>
     </header>
     <!-- MAIN -->
@@ -20,16 +20,28 @@
         <!-- BOOK INPUT -->
         <div class="book-search" id="book-search">
           <label for="book-input"> <h3>Enter bookID:</h3></label>
-          <input type="text" id="book-input" placeholder="example: ac1939" />
+          <input type="text" id="book-input" placeholder="Example: ac1939..." />
           <div id="buttons">
             <!-- BUTTONS -->
+            <div class="book-toggle" id="book-toggle"></div>
             <button type="submit" id="submit-button">Find book</button>
             <button type="button" class="fav-button" id="add-book">
               Add to Favourites
             </button>
             <button type="button" id="sort-button">Sort A-Z</button>
-            <!-- BOOKS -->
-            <div class="book-toggle" id="book-toggle"></div>
+            <!-- FILTER BY AUTHOR -->
+            <div id="filter-search">
+              <h3>Filter books by author:</h3>
+              <input
+                type="text"
+                id="filter-input"
+                placeholder="Example: Dan Brown..."
+              />
+              <button type="button" id="filter-button">
+                Filter books by author
+              </button>
+              <div id="book-results"></div>
+            </div>
             <!-- FAVOURITES LIST -->
             <div class="fav-title">
               <h2>My Favourite Books</h2>
